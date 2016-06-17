@@ -29,7 +29,7 @@ public class BasicOperations {
 		sampleArray[9] = 90;
 		// Hold size of the array in a variable
 		int arraySize = sampleArray.length;
-		
+
 		// Printing the elements of the array
 		System.out.println("Elements are inserted. Starting to print them");
 		for (int i=0; i < arraySize; i++) {
@@ -37,7 +37,7 @@ public class BasicOperations {
 		}
 		System.out.println();
 		System.out.println("**********************************");
-		
+
 		// Search the given elements
 		System.out.println("Starting to Search an element");
 		int index = -1;
@@ -51,7 +51,7 @@ public class BasicOperations {
 		if (index == -1) {
 			System.out.println("Element not found");
 		}
-		
+
 		System.out.println("**********************************");
 		// Delete the given element
 		System.out.println("Starting to delete an element and printing updated array");
@@ -66,7 +66,7 @@ public class BasicOperations {
 				break;
 			}
 		}
-		
+
 		// Print the final Array
 		for (int i=0; i < arraySize; i++) {
 			System.out.print(sampleArray[i] + " ");

@@ -1,2 +1,9 @@
-Arrays 
-*******
+**********************
+**		Arrays 		**
+**********************
+
+1. It is the most basic type of data structure that stores similar kind of values.
+2. Some terms related to Array:
+	- index : A 0 based integer used to access element from the array
+	- element : Value from the array
+3. 

@@ -12,11 +12,11 @@ Below topics/problems are covered as of now.
 	- [Binary Search](../master/src/com/deepak/Searching/BinarySearch.java)
 	
 3. Arrays	
-	- [Array Concepts](../master/src/com/deepak/Arrays/ArrayConcepts.txt)
+	- [Array Concepts](../master/src/com/deepak/Arrays/ArrayConcepts)
 	- [Basic Operations on Array](../master/src/com/deepak/Arrays/BasicOperations.java)
 	
 4. LinkedList
-	- [LinkedList Concepts](../master/src/com/deepak/LinkedList/LinkedListConcepts.txt)
+	- [LinkedList Concepts](../master/src/com/deepak/LinkedList/LinkedListConcepts)
 	- [Basic Operations on LinkedList](../master/src/com/deepak/LinkedList/BasicOperations.java)	
 
 

@@ -57,7 +57,7 @@ public class RemoveSpaces {
 		}
 		return new String(strToCharArray);
 	}
-	
+
 	/**
 	 * Method to remove spaces with O(n) complexity [Recommended]
 	 * <p> Algorithm :

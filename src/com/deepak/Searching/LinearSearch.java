@@ -49,10 +49,10 @@ public class LinearSearch {
 	 * 	=> For an array of size N, number of comparisons will be N/2
 	 * </p>
 	 */
-	private static void performLinearSearch(int[] nonSortedValues, int iValueToBeSearched) {
+	private static void performLinearSearch(int[] iListOfValues, int iValueToBeSearched) {
 		int index = -1;
-		for (int i=0; i < nonSortedValues.length; i++) {
-			if (nonSortedValues[i] == iValueToBeSearched) {
+		for (int i=0; i < iListOfValues.length; i++) {
+			if (iListOfValues[i] == iValueToBeSearched) {
 				index = i;
 				break;
 			}
@@ -63,5 +63,5 @@ public class LinearSearch {
 			System.out.println("Element found in the collection at index = " + index);
 		}
 	}
-	
+
 }

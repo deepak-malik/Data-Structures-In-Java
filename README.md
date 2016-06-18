@@ -1,2 +1,8 @@
 # Data-Structures-And-Algorithms-in-Java
-Data Structures and Algorithms in Java provides and insight about various data structures and algorithms that we use in day to day life.
+This repository contains various data structures and algorithms and provide insights about them. 
+Below topics/problems are covered as of now.
+
+1. General problems with Strings
+	- Remove spaces in a given String (../Strings/RemoveSpaces.java)
+
+

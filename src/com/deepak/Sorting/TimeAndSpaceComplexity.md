@@ -60,16 +60,18 @@ Lines 5 to 7 is basically doing a swap and gets executed every time when list is
 	 
 Now, let's see how many times each of the line gets executed
 
-- Line 1 - 1
-- Line 2 - N
-- Line 3 - N² since, we have outer loop running N times + inner loop N times
-- Line 4 - N²
-- Line 5 - if condition at line 4 is satisfied then N² times else 0 times 
-- Line 6 - if condition at line 4 is satisfied then N² times else 0 times
-- Line 7 - if condition at line 4 is satisfied then N² times else 0 times
-- Line 8 - N²
-- Line 9 - N²
-- Line 10 - N
+```
+Line 1 - 1
+Line 2 - N
+Line 3 - N² since, we have outer loop running N times + inner loop N times
+Line 4 - N²
+Line 5 - if condition at line 4 is satisfied then N² times else 0 times 
+Line 6 - if condition at line 4 is satisfied then N² times else 0 times
+Line 7 - if condition at line 4 is satisfied then N² times else 0 times
+Line 8 - N²
+Line 9 - N²
+Line 10 - N
+```
 
 Worst Case of this Algorithm is when all the lines gets executed maximum times and best case is when minimum lines gets executed minimum times.
 

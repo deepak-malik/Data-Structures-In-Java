@@ -40,19 +40,19 @@ Now, Question comes what is O here?
 Let's take Bubble Sort Algorithm now. We have collection of elements as X, and bubble sort can be represented as
 
 ```
-LET N = LEN(X)
-FOR I = 1 TO N
-  FOR J = 1 TO N
-    IF X[I] > X[J] THEN
-      LET T = X[I]
-      LET  X[I] = X[J]
-      LET  X[J] = T
-    END IF
-  NEXT J
-NEXT I
+1 LET N = LEN(X)
+2  FOR I = 1 TO N
+3   FOR J = 1 TO N
+4     IF X[I] > X[J] THEN
+5       LET T = X[I]
+6       LET  X[I] = X[J]
+7       LET  X[J] = T
+8     END IF
+9   NEXT J
+10 NEXT I
 ```
 
-Lines 36 to 38 is basically doing a swap and gets executed every time when list is out of order.
+Lines 5 to 7 is basically doing a swap and gets executed every time when list is out of order.
 
 - if list is sorted, it will never get executed.
 - If list is unsorted, it will get executed every time.
@@ -60,16 +60,16 @@ Lines 36 to 38 is basically doing a swap and gets executed every time when list 
 	 
 Now, let's see how many times each of the line gets executed
 
-- Line 32 - 1
-- Line 33 - N
-- Line 34 - N^2 since, we have outer loop running N times + inner loop N times
-- Line 35 - N^2
-- Line 36 - if condition at line 35 satisfies then N^2 times else 0 times 
-- Line 37 - if condition at line 35 satisfies then N^2 times else 0 times
-- Line 38 - if condition at line 35 satisfies then N^2 times else 0 times
-- Line 39 - N^2
-- Line 40 - N^2
-- Line 41 - N
+- Line 1 - 1
+- Line 2 - N
+- Line 3 - N^2 since, we have outer loop running N times + inner loop N times
+- Line 4 - N^2
+- Line 5 - if condition at line 4 is satisfied then N^2 times else 0 times 
+- Line 6 - if condition at line 4 is satisfied then N^2 times else 0 times
+- Line 7 - if condition at line 4 is satisfied then N^2 times else 0 times
+- Line 8 - N^2
+- Line 9 - N^2
+- Line 10 - N
 
 Worst Case of this Algorithm is when all the lines gets executed maximum times and best case is when minimum lines gets executed minimum times.
 

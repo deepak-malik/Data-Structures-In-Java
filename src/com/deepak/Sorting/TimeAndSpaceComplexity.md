@@ -4,13 +4,13 @@
 
 Let's start with basic mathematics. What are the basic operations that we can do in mathematics?
 
-- Addition
+- _Addition_
 
-- Subtraction
+- _Subtraction_
 
-- Multiplication
+- _Multiplication_
 
-- Division
+- _Division_
 
 	
 When we talk about addition, say we have to add two 4 digit numbers i.e 3498 and 2309. How many times we have to do operation? 
@@ -77,4 +77,4 @@ Worst Case of this Algorithm is when all the lines gets executed maximum times a
 2. Best Case : 4N² + 2N + 1
 3. General term : aN² + bN + c
 
-Here N² is the fastest growing term and decided if algorithm is good or bad. So complexity comes out to be O(N²) 
+Here N² is the fastest growing term and decides if algorithm is good or bad. So complexity comes out to be O(N²) 

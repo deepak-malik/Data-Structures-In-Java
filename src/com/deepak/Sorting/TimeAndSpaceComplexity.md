@@ -1,9 +1,8 @@
-How to calculate Time and Space complexity of a Algorithm?
+#When we talk about Algorithms, basic question arises, How to calculate Time and Space complexity of a Algorithm?
 
-Time Complexity =>
-===============
+<b>Time Complexity</b>
 
-Let's start with basic mathematics. What are the basic operations that we can do?
+Let's start with basic mathematics. What are the basic operations that we can do in mathematics?
 	- Addition
 	- Subtraction
 	- Multiplication

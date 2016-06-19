@@ -13,6 +13,7 @@ Let's start with basic mathematics. What are the basic operations that we can do
 - _Division_
 
 	
+	
 When we talk about addition, say we have to add two 4 digit numbers i.e 3498 and 2309. How many times we have to do operation? 
 4 times i.e Adding 8 with 9, 9 with 0, 4 with 3 and 3 with 2.
 
@@ -23,6 +24,7 @@ So for both addition and subtraction we have,
 
 _This results in linear complexity i.e O(N)_  
 
+
 With respect to Multiplication, say we have to multiply two 4 digit numbers i.e 3498 and 2309. How many times we have to do operation? 
 16 times i.e multiply each of the digit from second number to first number. So for two 4 digit numbers, we will end up doing 16 operations. 
 Generic statement comes out to be,
@@ -31,11 +33,13 @@ Generic statement comes out to be,
 
 _This results in quadratic complexity i.e O(N²)_ 
 
+
 Now, Question comes what is O here?
 
 - This is called as Big-Oh.
 - Big-Oh is relative representation of complexity of Algorithm
 
+	
 	
 Let's take Bubble Sort Algorithm now. We have collection of elements as X, and bubble sort can be represented as
 

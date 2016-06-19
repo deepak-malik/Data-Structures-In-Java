@@ -139,3 +139,27 @@ Worst Case of this Algorithm is when we have to traverse through all the possibl
 Worst Case : O(N!)
 Best Case : O(1)
 ``` 
+
+
+### Summary
+
+* Type of Complexity are as follows, 
+	* Linear
+	* Quadratic
+	* Logarithmic
+	* Factorial
+
+
+### Quick facts about calculation
+
+* Time Complexity
+	* If you have just 1 for loop, then time complexity is O(N).
+	* If you have 1 for loop inside another for loop, then it is O(N squared).
+	* If you have 1 for loop inside another for loop, which is inside yet another for loop, then it is O(N cubed).
+	* If you are using something like binary search or binary tree, then time complexity is O(log N), this is because you are cutting your domain by half each time, so it is log N base 2.
+	* If you have a for loop which loops all N elements and inside it is another for loop but only loops till K elements each time, then time complexity is O(K*N)
+	* If you have some elements and combination is required then it is O(N factorial) complexity
+
+* Space Complexity
+	* If you just use the array of N elements you have without using more space then space complexity is either O (1) or O (log N)
+	* If you use a Copy of the array of N elements, i.e. using more space then space complexity is O (N)

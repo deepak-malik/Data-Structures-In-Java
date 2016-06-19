@@ -27,9 +27,9 @@ With respect to Multiplication, say we have to multiply two 4 digit numbers i.e 
 16 times i.e multiply each of the digit from second number to first number. So for two 4 digit numbers, we will end up doing 16 operations. 
 Generic statement comes out to be,
 
-- Number of Operations = (Number of Elements) ^ 2
+- Number of Operations = (Number of Elements)²
 
-_This results in quadratic complexity i.e O(N^2)_ 
+_This results in quadratic complexity i.e O(N²)_ 
 
 Now, Question comes what is O here?
 
@@ -62,19 +62,19 @@ Now, let's see how many times each of the line gets executed
 
 - Line 1 - 1
 - Line 2 - N
-- Line 3 - N^2 since, we have outer loop running N times + inner loop N times
-- Line 4 - N^2
-- Line 5 - if condition at line 4 is satisfied then N^2 times else 0 times 
-- Line 6 - if condition at line 4 is satisfied then N^2 times else 0 times
-- Line 7 - if condition at line 4 is satisfied then N^2 times else 0 times
-- Line 8 - N^2
-- Line 9 - N^2
+- Line 3 - N² since, we have outer loop running N times + inner loop N times
+- Line 4 - N²
+- Line 5 - if condition at line 4 is satisfied then N² times else 0 times 
+- Line 6 - if condition at line 4 is satisfied then N² times else 0 times
+- Line 7 - if condition at line 4 is satisfied then N² times else 0 times
+- Line 8 - N²
+- Line 9 - N²
 - Line 10 - N
 
 Worst Case of this Algorithm is when all the lines gets executed maximum times and best case is when minimum lines gets executed minimum times.
 
-1. Worst Case : 7N^2 + 2N + 1
-2. Best Case : 4N^2 + 2N + 1
-3. General term : aN^2 + bN + c
+1. Worst Case : 7N² + 2N + 1
+2. Best Case : 4N² + 2N + 1
+3. General term : aN² + bN + c
 
-Here N^2 is the fastest growing term and decided if algorithm is good or bad. So complexity comes out to be O(N^2) 
+Here N² is the fastest growing term and decided if algorithm is good or bad. So complexity comes out to be O(N²) 

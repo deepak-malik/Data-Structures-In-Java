@@ -1,6 +1,6 @@
 How to calculate Time and Space complexity of a Algorithm?
 
-<b>Time Complexity</b> =>
+Time Complexity =>
 ===============
 
 Let's start with basic mathematics. What are the basic operations that we can do?
@@ -9,10 +9,16 @@ Let's start with basic mathematics. What are the basic operations that we can do
 	- Multiplication
 	- Division
 	
-When we talk about addition, say we have to add two 4 digit numbers i.e 3498 and 2309
-How many times we have to do operation? 4 times i.e Adding 8 with 9, 9 with 0, 4 with 3 and 3 with 2
+When we talk about addition, say we have to add two 4 digit numbers i.e 3498 and 2309.
+How many times we have to do operation? 4 times i.e Adding 8 with 9, 9 with 0, 4 with 3 and 3 with 2.
 Same is the case with subtraction. We have to do operation 4 times. 
-So, for both addition and subtraction we have 
+So for both addition and subtraction we have, 
 	Number of Operations = Number of Elements 
 This results in linear complexity i.e O(N)  
+
+With respect to Multiplication, say we have to multiply two 4 digit numbers i.e 3498 and 2309.
+How many times we have to do operation? 16 times i.e multiply each of the digit from second number to first number.
+So for two 4 digit numbers, we will end up doing 16 operations. Generic statement comes out to be,
+	Number of Operations = (Number of Elements) ^ 2
+This results in quadratic complexity i.e O(N^2) 
 	

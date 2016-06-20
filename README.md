@@ -19,6 +19,7 @@ Below topics/problems are covered as of now.
 	- [Remove spaces in a given String](../master/src/com/deepak/Strings/RemoveSpaces.java)
 	- [Reverse words and characters in a given String](../master/src/com/deepak/Strings/ReverseWords.java)
 	- [Reverse vowels in a word](../master/src/com/deepak/Strings/ReverseVowelsInWord.java)
+	- [Duplicate Characters in a String](../master/src/com/deepak/Strings/DuplicateCharacters.java)
 	
 3. Arrays	
 	- [Array Concepts](../master/src/com/deepak/Arrays/ArraysConcepts)

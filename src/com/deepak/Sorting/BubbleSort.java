@@ -1,16 +1,16 @@
 /**
  * Data-Structures-And-Algorithms-in-Java
- * InsertionSort.java
+ * BubbleSort.java
  */
 package com.deepak.Sorting;
 
 import java.util.Arrays;
 
 /**
- * Class for InsertionSort implementation
+ * Class for BubbleSort implementation
  * @author Deepak
  */
-public class InsertionSort {
+public class BubbleSort {
 
 	/**
 	 * Main method to start the flow of program
@@ -18,12 +18,12 @@ public class InsertionSort {
 	 */
 	public static void main(String[] args) {
 		int[] valuesToBeSorted = {7, 10, 47, 40, 83, 84, 65, 61, 32, 55, 49, 46, 25, 20, 93, 63, 54, 10};
-		System.out.println("******************* INSERTION - SORT *******************");
-		performInsertionSort(valuesToBeSorted);
+		System.out.println("******************* BUBBLE - SORT *******************");
+		performBubbleSort(valuesToBeSorted);
 	}
 
 	/**
-	 * Insertion Sort implementation
+	 * Bubble Sort implementation
 	 * <p> Question - When will you consider a list of items to be sorted?
 	 * Answer - When all the elements to the left of each element are smaller then the element
 	 * 
@@ -48,17 +48,17 @@ public class InsertionSort {
 	 * 
 	 * @param listOfValues - List of values passed in the request
 	 */
-	private static void performInsertionSort(int[] listOfValues) {
-		for (int i = 1; i < listOfValues.length; i++) {
-			for (int j = i; j > 0; j--) {
-				if (listOfValues[j] < listOfValues[j-1]) {
-					swap(listOfValues, j, j-1);
+	private static void performBubbleSort(int[] listOfValues) {
+		for (int i = 0; i < listOfValues.length; i++) {
+			for (int j = 1; j < (listOfValues.length - i); j++) {
+				if (listOfValues[j - 1] > listOfValues[j]) {
+					swap(listOfValues, j - 1, j);
 				}
 			}
 		}
 		Arrays.stream(listOfValues).forEach(System.out::println);
 	}
-
+	
 	/**
 	 * Method to swap 2 values
 	 * @param values

@@ -1,4 +1,4 @@
-# Data-Structures-And-Algorithms-in-Java
+## Data-Structures-And-Algorithms-in-Java
 <br />
 This repository contains various data structures and algorithms and provide insights about them.<br /> 
 Below topics/problems are covered as of now.

@@ -148,6 +148,19 @@ Best Case : O(1)
 	* Quadratic
 	* Logarithmic
 	* Factorial
+	
+* Points to consider for Time Complexity
+	* Operations
+	* Comparisons
+	* Loops
+	* Pointer references
+	* Function calls to outside
+	
+* Points to consider for Space Complexity
+	* Variables
+	* Data Structures
+	* Allocations
+	* Function Calls
 
 
 ### Quick facts about calculation
@@ -195,3 +208,4 @@ Best Case : O(1)
 | Radix Sort	|	O(nk)		 	 |	O(nk)			|	O(nk)	      |		O(n+k)		 	 |
 --------------------------------------------------------------------------------------------------
 ```
+Reference : [Complexity Cheat Sheet](http://bigocheatsheet.com/)

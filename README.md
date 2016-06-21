@@ -8,7 +8,7 @@ Below topics/problems are covered as of now.
 	- [Binary Search](../master/src/com/deepak/Searching/BinarySearch.java)
 	
 2. Sorting
-	- [Time and Space complexity](../master/src/com/deepak/Sorting/TimeAndSpaceComplexity)
+	- [Time and Space complexity](../master/src/com/deepak/Sorting/TimeAndSpaceComplexity.md)
 	- [Selection Sort](../master/src/com/deepak/Sorting/SelectionSort.java)
 	- [Insertion Sort](../master/src/com/deepak/Sorting/InsertionSort.java)
 	- [Bubble Sort](../master/src/com/deepak/Sorting/BubbleSort.java)

@@ -25,38 +25,12 @@ public class ReverseWords {
 	public static void main(String[] args) {
 		String inputString = "This is a new String";
 		String reversedString = reverseWordsInAString(inputString);
-		String reversedCharacters = reverseCharactersInEachWord(inputString);
+		String reversedCharactersUsingIteration = reverseCharactersInEachWordUsingIteration(inputString);
+		String reversedCharactersUsingRecursion = reverseCharactersInEachWordAndStringUsingRecursion(inputString);
 		System.out.println("Actual String => " + inputString);
 		System.out.println("String with reversed words => " + reversedString);
-		System.out.println("String with each character as reversed => " + reversedCharacters);
-	}
-
-	/**
-	 * Method to reverse characters of each word in a string
-	 * <p> Algorithm :
-	 * 1. Split the string based in white spaces. This will give Array holding each word of string
-	 * 2. Loop through the arrays, take each word and convert it to charArray
-	 * 3. Loop through the character array, find lowest index, and highest index
-	 * 4. Each iteration, increase low by 1 and decrease high by 1
-	 * 5. Keep swapping words until low < high </p>
-	 * 
-	 * @param iString
-	 * @return {@link String}
-	 */
-	private static String reverseCharactersInEachWord(String iString) {
-		String[] strArray = iString.split(" ");
-		for (int i = 0; i < strArray.length; i++) {
-			char[] charArray = strArray[i].toCharArray();
-			int iLowestIndex = 0;
-			int iHighestIndex = charArray.length - 1;
-			while (iLowestIndex < iHighestIndex) {
-				swap(charArray, iLowestIndex, iHighestIndex);
-				iLowestIndex++;
-				iHighestIndex--;
-			}
-			strArray[i] = new String(charArray);
-		}
-		return String.join(", ", strArray).replace(",", "");
+		System.out.println("String with each character as reversed using Iteration => " + reversedCharactersUsingIteration);
+		System.out.println("String with each character as reversed using Recursion => " + reversedCharactersUsingRecursion);
 	}
 
 	/**
@@ -82,6 +56,52 @@ public class ReverseWords {
 		}
 		return String.join(", ", strArray).replace(",", "");
 	}
+
+	/**
+	 * Method to reverse characters of each word in a string
+	 * <p> Algorithm :
+	 * 1. Split the string based in white spaces. This will give Array holding each word of string
+	 * 2. Loop through the arrays, take each word and convert it to charArray
+	 * 3. Loop through the character array, find lowest index, and highest index
+	 * 4. Each iteration, increase low by 1 and decrease high by 1
+	 * 5. Keep swapping words until low < high </p>
+	 * 
+	 * @param iString
+	 * @return {@link String}
+	 */
+	private static String reverseCharactersInEachWordUsingIteration(String iString) {
+		String[] strArray = iString.split(" ");
+		for (int i = 0; i < strArray.length; i++) {
+			char[] charArray = strArray[i].toCharArray();
+			int iLowestIndex = 0;
+			int iHighestIndex = charArray.length - 1;
+			while (iLowestIndex < iHighestIndex) {
+				swap(charArray, iLowestIndex, iHighestIndex);
+				iLowestIndex++;
+				iHighestIndex--;
+			}
+			strArray[i] = new String(charArray);
+		}
+		return String.join(", ", strArray).replace(",", "");
+	}
+
+	/**
+	 * Method to reverse characters in a string using recursion
+	 * <p> Algorithm : 
+	 * 1. Keep calling the same method with below 2 steps
+	 * 	- Remove the first character from the string and pass it on to the method.
+	 *  - Keep appending the selected character at the end </p>
+	 * 
+	 * @param inputString
+	 * @return {@link String}
+	 */
+	private static String reverseCharactersInEachWordAndStringUsingRecursion(String inputString) {
+		if (inputString.length() < 2) {
+			return inputString;
+		}
+		return reverseCharactersInEachWordAndStringUsingRecursion(inputString.substring(1)) + inputString.charAt(0);
+	}
+
 
 	/**
 	 * Method to swap items in string Array

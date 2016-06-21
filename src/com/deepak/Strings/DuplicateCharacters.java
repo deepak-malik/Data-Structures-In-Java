@@ -1,6 +1,6 @@
 /**
  * Data-Structures-And-Algorithms-in-Java
- * RemoveSpaces.java
+ * DuplicateCharacters.java
  */
 package com.deepak.Strings;
 
@@ -54,7 +54,7 @@ public class DuplicateCharacters {
 			}
 		}
 	}
-	
+
 	/**
 	 * Method to find duplicate characters in the input string without using any data structure
 	 * <p> Without using a data structure, complexity of the program grows from O(N) to O(N^2),

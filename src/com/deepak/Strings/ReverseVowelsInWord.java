@@ -28,7 +28,7 @@ public class ReverseVowelsInWord {
 		System.out.println("Actual Word => " + wordToBeUpdated);
 		System.out.println("Word after swapping Vowels => " + output);
 	}
-	
+
 	/**
 	 * Method to reverse vowels in a word
 	 * <p> Algorithm :
@@ -54,7 +54,7 @@ public class ReverseVowelsInWord {
 		vowels.add('i');
 		vowels.add('o');
 		vowels.add('u');
-		
+
 		char[] charArray = iInputString.toCharArray();
 		int lowestIndex = 0;
 		int highestIndex = charArray.length - 1;
@@ -75,5 +75,5 @@ public class ReverseVowelsInWord {
 		}
 		return Arrays.toString(charArray).replace(", ", "").replace("[", "").replace("]", "");
 	}
-	
+
 }

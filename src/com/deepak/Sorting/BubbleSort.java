@@ -58,7 +58,7 @@ public class BubbleSort {
 		}
 		Arrays.stream(listOfValues).forEach(System.out::println);
 	}
-	
+
 	/**
 	 * Method to swap 2 values
 	 * @param values

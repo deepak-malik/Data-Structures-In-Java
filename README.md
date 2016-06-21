@@ -16,10 +16,11 @@ Below topics/problems are covered as of now.
 	- [Counting Sort](../master/src/com/deepak/Sorting/CountingSort.java)
 	
 2. General problems with Strings
-	- [Remove spaces in a given String](../master/src/com/deepak/Strings/RemoveSpaces.java)
-	- [Reverse words and characters in a given String](../master/src/com/deepak/Strings/ReverseWords.java)
+	- [Remove spaces in a given string](../master/src/com/deepak/Strings/RemoveSpaces.java)
+	- [Reverse words and characters in a given string](../master/src/com/deepak/Strings/ReverseWords.java)
 	- [Reverse vowels in a word](../master/src/com/deepak/Strings/ReverseVowelsInWord.java)
-	- [Duplicate Characters in a String](../master/src/com/deepak/Strings/DuplicateCharacters.java)
+	- [Duplicate characters in a string](../master/src/com/deepak/Strings/DuplicateCharacters.java)
+	- [Print characters only once in reverse order](../master/src/com/deepak/Strings/CharactersPresent.java)
 	
 3. Arrays	
 	- [Array Concepts](../master/src/com/deepak/Arrays/ArraysConcepts)

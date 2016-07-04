@@ -101,7 +101,7 @@ public String toString() {
 Since set cannot contain duplicate elements, when we execute this code our out put will have duplicate elements because we are missing hashCode() implementation. Add the hashCode() implementation back and check the output.
 This time it will be unique elements printed.
 
-Complete implementation of this program is [here](../master/src/com/deepak/Hashing/HashCodeAndEquals.java)
+Complete implementation of this program is [here](../HashCodeAndEquals.java)
 
 #### Important things to remember
 	* Always use same attributes of an object to generate hashCode() and equals() both.

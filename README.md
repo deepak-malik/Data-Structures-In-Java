@@ -33,8 +33,8 @@ Below topics/problems are covered as of now.
 	- [Doubly LinkedList Implementation](../master/src/com/deepak/LinkedList/DoublyLinkedList.java)
 	
 5. Hashing
-	- [HashCode and Equals Contract](../master/src/com/deepak/Hashing/HashCode&EqualsContract)
+	- [HashCode and Equals Contract](../master/src/com/deepak/Hashing/HashCode%26EqualsContract.md)
 	- [CustomHashMap Implementation](../master/src/com/deepak/Hashing/CustomHashMap.java)
 	- [Concurrent Modification Exception](../master/src/com/deepak/Hashing/ConcurrentModificationException.java)
-	- [Concurrent HashMap](../master/src/com/deepak/Hashing/ConcurrentHashMap)
-	- [Weak HashMap Implementation](../master/src/com/deepak/Hashing/WeakHashMapImplementation)
+	- [Concurrent HashMap](../master/src/com/deepak/Hashing/ConcurrentHashMap.md)
+	- [Weak HashMap Implementation](../master/src/com/deepak/Hashing/WeakHashMapImplementation.java)

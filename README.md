@@ -29,5 +29,12 @@ Below topics/problems are covered as of now.
 4. LinkedList
 	- [LinkedList Concepts](../master/src/com/deepak/LinkedList/LinkedListConcepts)
 	- [Basic Operations on LinkedList](../master/src/com/deepak/LinkedList/BasicOperations.java)	
-
-
+	- [Singly LinkedList Implementation](../master/src/com/deepak/LinkedList/SinglyLinkedList.java)
+	- [Doubly LinkedList Implementation](../master/src/com/deepak/LinkedList/DoublyLinkedList.java)
+	
+5. Hashing
+	- [HashCode and Equals Contract](../master/src/com/deepak/Hashing/HashCode&EqualsContract)
+	- [CustomHashMap Implementation](../master/src/com/deepak/Hashing/CustomHashMap.java)
+	- [Concurrent Modification Exception](../master/src/com/deepak/Hashing/ConcurrentModificationException.java)
+	- [Concurrent HashMap](../master/src/com/deepak/Hashing/ConcurrentHashMap)
+	- [Weak HashMap Implementation](../master/src/com/deepak/Hashing/WeakHashMapImplementation)

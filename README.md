@@ -38,3 +38,8 @@ Below topics/problems are covered as of now.
 	- [Concurrent Modification Exception](../master/src/com/deepak/Hashing/ConcurrentModificationException.java)
 	- [Concurrent HashMap](../master/src/com/deepak/Hashing/ConcurrentHashMap.md)
 	- [Weak HashMap Implementation](../master/src/com/deepak/Hashing/WeakHashMapImplementation.java)
+	
+6. Stack
+	- [Simple Stack from already implemented Linked List](../master/src/com/deepak/Stack/SimpleStackFromList.java)
+	- [Array based Stack implementation](../master/src/com/deepak/Stack/ArrayBasedStack.java)
+	- [LinkedList based Stack implementation](../master/src/com/deepak/Stack/LinkedListBasedStack.java)	

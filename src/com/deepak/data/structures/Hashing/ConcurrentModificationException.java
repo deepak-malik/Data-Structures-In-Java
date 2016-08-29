@@ -2,7 +2,7 @@
  * Data-Structures-And-Algorithms-in-Java
  * ConcurrentModificationException.java
  */
-package com.deepak.Hashing;
+package com.deepak.data.structures.Hashing;
 
 import java.util.HashMap;
 import java.util.Iterator;

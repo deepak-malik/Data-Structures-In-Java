@@ -1,7 +1,7 @@
 /**
  * Data-Structures-And-Algorithms-in-Java
  */
-package com.deepak.Arrays;
+package com.deepak.data.structures.Arrays;
 
 /**
  * Class to hold implementation of basic operations in java

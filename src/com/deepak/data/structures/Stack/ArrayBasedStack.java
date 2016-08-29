@@ -1,23 +1,19 @@
 /**
  * Data-Structures-And-Algorithms-in-Java
- * SimpleStackFromList.java
+ * ArrayBasedStack.java
  */
-package com.deepak.Stack;
+package com.deepak.data.structures.Stack;
 
-import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
-/**
- * Class implementing simple stack based on the list
- * @author Deepak
- */
-public class SimpleStackFromList {
+public class ArrayBasedStack {
 
 	/**
 	 * Sample implementation of stack
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SimpleStackFromList stack = new SimpleStackFromList();
+		ArrayBasedStack stack = new ArrayBasedStack(5);
 		System.out.println("Creating a fresh Stack");
 		System.out.println("Size of Stack => " + stack.size());
 		System.out.println("Is Stack Empty => " + stack.isEmpty());
@@ -33,16 +29,32 @@ public class SimpleStackFromList {
 	}
 
 	/**
-	 * Linked list to hold items
+	 * Array of objects representing Stack
 	 */
-	private LinkedList<Object> list = new LinkedList<>();
+	private Object[] array;
+
+	/**
+	 * Size of Stack
+	 */
+	private int size = 0;
+
+	/**
+	 * Constructor to create a new Stack
+	 * @param capacity
+	 */
+	public ArrayBasedStack(int capacity) {
+		array = new Object[capacity];
+	}
 
 	/**
 	 * Method to push a item on top of stack
 	 * @param item
 	 */
 	public void push(Object item) {
-		list.addFirst(item);
+		if (size == array.length) {
+			throw new IllegalStateException("Cannot insert on full Stack");
+		}
+		array[size++] = item;
 	}
 
 	/**
@@ -50,7 +62,12 @@ public class SimpleStackFromList {
 	 * @return {@link Object}
 	 */
 	public Object pop() {
-		return list.removeFirst();
+		if (size == 0) {
+			throw new NoSuchElementException("Cannot delete from a empty Stack");
+		}
+		Object result = array[size - 1];
+		array[size--] = null;
+		return result;
 	}
 
 	/**
@@ -58,7 +75,10 @@ public class SimpleStackFromList {
 	 * @return {@link Object}
 	 */
 	public Object peek() {
-		return list.getFirst();
+		if (size == 0) {
+			throw new NoSuchElementException("Cannot peek from a empty Stack");
+		}
+		return array[size - 1];
 	}
 
 	/**
@@ -66,7 +86,7 @@ public class SimpleStackFromList {
 	 * @return {@link int}
 	 */
 	public int size() {
-		return list.size();
+		return size;
 	}
 
 	/**
@@ -74,7 +94,7 @@ public class SimpleStackFromList {
 	 * @return {@link boolean}
 	 */
 	public boolean isEmpty() {
-		return list.isEmpty();
+		return size == 0;
 	}
 
 }

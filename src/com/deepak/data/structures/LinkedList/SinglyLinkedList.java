@@ -1,4 +1,4 @@
-package com.deepak.LinkedList;
+package com.deepak.data.structures.LinkedList;
 
 public class SinglyLinkedList<E> {
 	

@@ -2,7 +2,7 @@
  * Data-Structures-And-Algorithms-in-Java
  * WeakHashMapImplementation.java
  */
-package com.deepak.Hashing;
+package com.deepak.data.structures.Hashing;
 
 import java.util.Map;
 import java.util.WeakHashMap;

@@ -1,19 +1,23 @@
 /**
  * Data-Structures-And-Algorithms-in-Java
- * ArrayBasedStack.java
+ * LinkedListBasedStack.java
  */
-package com.deepak.Stack;
+package com.deepak.data.structures.Stack;
 
 import java.util.NoSuchElementException;
 
-public class ArrayBasedStack {
+/**
+ * Class implementing Stack based on LinkedList
+ * @author Deepak
+ */
+public class LinkedListBasedStack {
 
 	/**
 	 * Sample implementation of stack
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ArrayBasedStack stack = new ArrayBasedStack(5);
+		LinkedListBasedStack stack = new LinkedListBasedStack();
 		System.out.println("Creating a fresh Stack");
 		System.out.println("Size of Stack => " + stack.size());
 		System.out.println("Is Stack Empty => " + stack.isEmpty());
@@ -29,72 +33,83 @@ public class ArrayBasedStack {
 	}
 
 	/**
-	 * Array of objects representing Stack
+	 * Top node of the Stack
 	 */
-	private Object[] array;
+	private Node top = null;
 
 	/**
-	 * Size of Stack
-	 */
-	private int size = 0;
-
-	/**
-	 * Constructor to create a new Stack
-	 * @param capacity
-	 */
-	public ArrayBasedStack(int capacity) {
-		array = new Object[capacity];
-	}
-
-	/**
-	 * Method to push a item on top of stack
+	 * Method to push a item on the stack
 	 * @param item
 	 */
 	public void push(Object item) {
-		if (size == array.length) {
-			throw new IllegalStateException("Cannot insert on full Stack");
-		}
-		array[size++] = item;
+		top = new Node(item, top);
 	}
 
 	/**
-	 * Method to remove a item from top of stack
+	 * Method to remove a item from the stack
 	 * @return {@link Object}
 	 */
 	public Object pop() {
-		if (size == 0) {
-			throw new NoSuchElementException("Cannot delete from a empty Stack");
+		if (top == null) {
+			throw new IllegalStateException("Cannot pop from a empty stack");
 		}
-		Object result = array[size - 1];
-		array[size--] = null;
+		Object result = peek();
+		top = top.next;
 		return result;
 	}
 
 	/**
-	 * Method to look up top item in stack
+	 * Method to find out top element on Stack
 	 * @return {@link Object}
 	 */
 	public Object peek() {
-		if (size == 0) {
-			throw new NoSuchElementException("Cannot peek from a empty Stack");
+		if (top == null) {
+			throw new NoSuchElementException("Cannot peek from a empty stack");
 		}
-		return array[size - 1];
+		return top.item;
 	}
 
 	/**
-	 * Method to check size of the stack
+	 * Method to find size of the Stack
 	 * @return {@link int}
 	 */
 	public int size() {
+		int size = 0;
+		for (Node node = top; node != null; node = node.next) {
+			size++;
+		}
 		return size;
 	}
 
 	/**
-	 * Method to check if stack is empty
+	 * Method to check if Stack is Empty
 	 * @return {@link boolean}
 	 */
 	public boolean isEmpty() {
-		return size == 0;
+		return top == null;
+	}
+
+	/**
+	 * Node class for Stack
+	 * @author Deepak
+	 */
+	private class Node {
+
+		private Object item;
+		private Node next;
+
+		/**
+		 * Constructor for creating a new Node
+		 * @param item
+		 * @param next
+		 */
+		public Node(Object item, Node next) {
+			this.item = item;
+			this.next = next;
+		}
+
 	}
 
 }
+
+

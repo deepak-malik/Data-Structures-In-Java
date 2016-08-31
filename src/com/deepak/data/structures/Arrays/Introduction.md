@@ -70,13 +70,13 @@ public class MyGenericClass<T> {
 ```
 Instead, they can be created using one of the following methods:  
 
-1. By creating an Object array, and casting it to the generic type:
+**1.** By creating an Object array, and casting it to the generic type:
 ```java
 a = (T[])new Object[5];
 ```
 This is the simplest method, but since the underlying array is still of type Object[], this method does not provide type safety, so the array is best used only within the generic class, not exposed publicly.  
 
-2. By using Array.newInstance with a class parameter:
+**2.** By using Array.newInstance with a class parameter:
 ```java
 public MyGenericClass(Class<T> clazz) {
     a = (T[]) Array.newInstance(clazz, 5);

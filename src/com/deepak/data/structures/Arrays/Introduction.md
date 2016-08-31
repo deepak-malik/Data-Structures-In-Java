@@ -90,6 +90,8 @@ Here the class of T has to be explicitly passed to the constructor. The return t
 **************************************
 
 **Sorted Arrays**  
+Arrays are considered to be sorted in ascending order when each element on left of that element in a array is smaller then that element itself. Vice versa goes for descending order.
+
 **Pros:**
 - Accessing an element is fast using the index - access time is O(1).
 - Much faster to process - see this question.  

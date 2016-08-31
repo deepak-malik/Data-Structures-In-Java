@@ -2,7 +2,7 @@
 This repository contains various data structures and provide insights about them. Below topics/problems are covered as of now.
 
 **1. Arrays**
-- [ ] Introduction to Arrays
+- [X] [Introduction to Arrays](../master/src/com/deepak/data/structures/Arrays/Introduction.md)
 - [ ] Basic operations on Arrays
 
 **2. LinkedList**    

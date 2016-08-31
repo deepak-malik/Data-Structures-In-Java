@@ -6,6 +6,7 @@
 - Size of an array is fixed at runtime when initialized. It can't be changed after initialization.
 - If size has to be changed after initialization, use _ArrayList_ (Collection class) instead.
 - Size of an array can be specified using int only, since arrays are int based index.
+- The ArrayIndexOutOfBoundsException is thrown when a non-existing index of an array is being accessed.
 - Below is the representation, 
 
 <img width="426" alt="screen shot 2016-08-31 at 2 21 49 pm" src="https://cloud.githubusercontent.com/assets/3439029/18146774/600b0d4a-6f86-11e6-8005-3f6da1afc95f.png">
@@ -112,3 +113,21 @@ Arrays are considered to be sorted in ascending order when each element on left 
 | **Dimension** | _Can be multi-dimensional_ | _Normally single dimensional, but can be made multi dimensional_ |
 | **Type Safety** | _Typesafe, meaning that array will contain objects of specific class or primitives of specific data type_ | _Not type safe by default. Generics can be used to make a List type safe_ |
 | **Insertion/Deletion** | _Shifting existing elements may be needed if action is performed not at the end of the array_ | _Easy insertion/deletion methods provided_ |
+**************************************
+
+**Operations on Arrays**
+- Iterating over arrays in regular order and reverse order
+- Converting arrays to String
+- Finding an element in array
+- Getting the length of the array
+- Traversing through the elements of array
+- Copying/Resizing arrays
+- Removing elements from arrays
+- Sorting elements in a array
+- Arrays as method params
+- Arrays in memory
+- Casting arrays
+- Comparing arrays for equality
+- Converting array of objects to array of primitives
+- Converting arrays between primitives and boxed types
+- Reversing an array

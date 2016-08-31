@@ -48,3 +48,12 @@ new int[]{4, -5, 6} // Can be used as argument, without a local variable
 int[] ints = new int[3]; // same as {0, 0, 0}
 int[][] ints = {{1, 2}, {3}, null}; // Multi-dimensional array initialization. int[] extends Object (and so does anyType[]) so null is a valid value.
 ```
+
+**Multi Dimensional Arrays**  
+How to declare?
+```java
+int[][] a = new int[3][4]; // Creates a matrix with 3 rows and 4 columns
+```
+Below is the representation of multi dimensional array  
+
+![two-dimensional-array](https://cloud.githubusercontent.com/assets/3439029/18147340/0729cd8a-6f89-11e6-841f-5ac5bf53bd02.png)

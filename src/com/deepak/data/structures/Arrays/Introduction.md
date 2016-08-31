@@ -99,4 +99,16 @@ Arrays are considered to be sorted in ascending order when each element on left 
 **Cons:**
 - Insertion and deletion are slow, subsequent elements must be moved - complexity for insertion in that case is O(n).
 - A large enough block of memory is needed to hold the array.
-- Easily corrupted (data could be inserted in the middle).
+- Easily corrupted (data could be inserted in the middle).  
+
+**************************************
+
+**Arrays v/s List**
+
+| **Property**        | **Array**           | **List**  |
+| ------------- |-------------| -----|
+| **Size** | _Fixed length. Cannot change the size after creation_ | _Dynamic in size. Capacity grows as the elements are added_ |
+| **Content** | _Can contain primitive data types and objects_ | _Objects only. No primitive data types_ |
+| **Dimension** | _Can be multi-dimensional_ | _Normally single dimensional, but can be made multi dimensional_ |
+| **Type Safety** | _Typesafe, meaning that array will contain objects of specific class or primitives of specific data type_ | _Not type safe by default. Generics can be used to make a List type safe_ |
+| **Insertion/Deletion** | _Shifting existing elements may be needed if action is performed not at the end of the array_ | _Easy insertion/deletion methods provided_ |

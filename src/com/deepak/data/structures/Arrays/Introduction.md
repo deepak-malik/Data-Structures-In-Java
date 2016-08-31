@@ -117,7 +117,7 @@ Arrays are considered to be sorted in ascending order when each element on left 
 
 **Operations on Arrays** 
 
-Below operations on Arrays are implemented [here](../master/src/com.deepak.data.structures.Arrays/BasicOperation.java)
+Below operations on Arrays are implemented [here](../master/src/com/deepak/data/structures/Arrays/BasicOperation.java)
 - Iterating over arrays in regular order and reverse order
 - Converting arrays to String
 - Finding an element in array

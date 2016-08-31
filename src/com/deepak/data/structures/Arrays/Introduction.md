@@ -50,10 +50,35 @@ int[][] ints = {{1, 2}, {3}, null}; // Multi-dimensional array initialization. i
 ```
 
 **Multi Dimensional Arrays**  
-How to declare?
 ```java
 int[][] a = new int[3][4]; // Creates a matrix with 3 rows and 4 columns
 ```
 Below is the representation of multi dimensional array  
 
 ![two-dimensional-array](https://cloud.githubusercontent.com/assets/3439029/18147340/0729cd8a-6f89-11e6-841f-5ac5bf53bd02.png)
+
+**Creating and initializing generic type arrays**
+In generic classes, arrays of generic types cannot be initiated like so due to type erasure:
+```java
+public class MyGenericClass<T> {
+    private T[] a;
+
+    public MyGenericClass() {
+        a = new T[5]; // Compile time error: generic array creation
+    }
+}
+```
+Instead, they can be created using one of the following methods:
+1. By creating an Object array, and casting it to the generic type:
+```java
+a = (T[])new Object[5];
+```
+This is the simplest method, but since the underlying array is still of type Object[], this method does not provide type safety, so the array is best used only within the generic class, not exposed publicly.
+2. By using Array.newInstance with a class parameter:
+```java
+public MyGenericClass(Class<T> clazz) {
+    a = (T[]) Array.newInstance(clazz, 5);
+}
+```
+Here the class of T has to be explicitly passed to the constructor. The return type of Array.newInstance is always Object. However, the newly created array is in fact of type T[], and can be safely externalized.
+

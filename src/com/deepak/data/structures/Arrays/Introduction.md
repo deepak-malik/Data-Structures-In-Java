@@ -9,6 +9,7 @@
 - Below is the representation, 
 
 <img width="426" alt="screen shot 2016-08-31 at 2 21 49 pm" src="https://cloud.githubusercontent.com/assets/3439029/18146774/600b0d4a-6f86-11e6-8005-3f6da1afc95f.png">
+**************************************
 
 **Defining Arrays**
 - Java offers several ways of defining and initializing arrays, including literal and constructor notations. When declaring arrays without explicit values, each element will be initialized with a default value:
@@ -34,6 +35,7 @@ The array size can be determined using a public final field called length:
 System.out.println(array.length); // Prints 0 in this case.
 ```
 **Note:** _array.length_ returns the actual size of the array and not the number of array elements which were assigned a value, unlike ArrayList#size() which returns the number of array elements which were assigned a value.
+**************************************
 
 **Syntax**
 ```java
@@ -48,6 +50,7 @@ new int[]{4, -5, 6} // Can be used as argument, without a local variable
 int[] ints = new int[3]; // same as {0, 0, 0}
 int[][] ints = {{1, 2}, {3}, null}; // Multi-dimensional array initialization. int[] extends Object (and so does anyType[]) so null is a valid value.
 ```
+**************************************
 
 **Multi Dimensional Arrays**  
 ```java
@@ -56,6 +59,7 @@ int[][] a = new int[3][4]; // Creates a matrix with 3 rows and 4 columns
 Below is the representation of multi dimensional array  
 
 ![two-dimensional-array](https://cloud.githubusercontent.com/assets/3439029/18147340/0729cd8a-6f89-11e6-841f-5ac5bf53bd02.png)
+**************************************
 
 **Creating and initializing generic type arrays**  
 In generic classes, arrays of generic types cannot be initiated like so due to type erasure:
@@ -83,4 +87,14 @@ public MyGenericClass(Class<T> clazz) {
 }
 ```
 Here the class of T has to be explicitly passed to the constructor. The return type of Array.newInstance is always Object. However, the newly created array is in fact of type T[], and can be safely externalized.
+**************************************
 
+**Sorted Arrays**  
+**Pros:**
+- Accessing an element is fast using the index - access time is O(1).
+- Much faster to process - see this question.  
+    
+**Cons:**
+- Insertion and deletion are slow, subsequent elements must be moved - complexity for insertion in that case is O(n).
+- A large enough block of memory is needed to hold the array.
+- Easily corrupted (data could be inserted in the middle).

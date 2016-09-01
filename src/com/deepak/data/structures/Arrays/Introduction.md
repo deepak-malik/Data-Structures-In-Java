@@ -3,10 +3,14 @@
 - Arrays is the most basic type of data structure that stores similar kind of values. 
 - Each item in a array is a element and can be accessed using a index. 
     - Normally arrays have 0 based index which means indexing starts from 0 and goes till _n - 1_ where n is the number of elements in array.
+    - Arrays can have 0 based indexing, 1 based indexing or n based indexing (for negative values)
 - Size of an array is fixed at runtime when initialized. It can't be changed after initialization.
 - If size has to be changed after initialization, use _ArrayList_ (Collection class) instead.
 - Size of an array can be specified using int only, since arrays are int based index.
 - The ArrayIndexOutOfBoundsException is thrown when a non-existing index of an array is being accessed.
+- Arrays are used to implement mathematical vectors and matrices, as well as other kinds of rectangular tables. 
+- Many databases, small and large, consist of (or include) one-dimensional arrays whose elements are records.
+- Arrays are used to implement other data structures, such as heaps, hash tables, deques, queues, stacks, strings, and VLists.
 - Below is the representation, 
 
 <img width="426" alt="screen shot 2016-08-31 at 2 21 49 pm" src="https://cloud.githubusercontent.com/assets/3439029/18146774/600b0d4a-6f86-11e6-8005-3f6da1afc95f.png">
@@ -60,6 +64,15 @@ int[][] a = new int[3][4]; // Creates a matrix with 3 rows and 4 columns
 Below is the representation of multi dimensional array  
 
 ![two-dimensional-array](https://cloud.githubusercontent.com/assets/3439029/18147340/0729cd8a-6f89-11e6-841f-5ac5bf53bd02.png)
+
+There are two orders that can exists in a multi dimensional array, i.e  
+_Row major_ and _Column major_  
+For ex, consider below matrix
+
+<img width="185" alt="screen shot 2016-08-31 at 9 50 23 pm" src="https://cloud.githubusercontent.com/assets/3439029/18155706/04e2045c-6fc5-11e6-847e-8d8f406de844.png">
+
+Here, in row-major layout, elements can be represented as **[1,2,3,4,5,6,7,8,9]** whereas in column-major layout, elements can be represented as **[1,4,7,2,5,8,3,6,9]**
+
 **************************************
 
 **Creating and initializing generic type arrays**  

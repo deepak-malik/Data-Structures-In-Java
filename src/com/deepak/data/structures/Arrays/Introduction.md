@@ -76,6 +76,7 @@ Here, in row-major layout, elements can be represented as **[1,2,3,4,5,6,7,8,9]*
 **************************************
 
 **Creating and initializing generic type arrays**  
+
 In generic classes, arrays of generic types cannot be initiated like so due to type erasure:
 ```java
 public class MyGenericClass<T> {
@@ -104,6 +105,7 @@ Here the class of T has to be explicitly passed to the constructor. The return t
 **************************************
 
 **Sorted Arrays**  
+
 Arrays are considered to be sorted in ascending order when each element on left of that element in a array is smaller then that element itself. Vice versa goes for descending order.
 
 **Pros:**

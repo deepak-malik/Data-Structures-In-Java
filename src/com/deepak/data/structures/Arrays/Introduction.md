@@ -146,3 +146,9 @@ Below operations on Arrays are implemented [here](../Arrays/BasicOperations.java
 - Converting array of objects to array of primitives
 - Converting arrays between primitives and boxed types
 - Reversing an array
+
+**************************************
+
+**Comparison with other Data Structures**
+
+<img width="972" alt="screen shot 2016-09-01 at 4 21 12 pm" src="https://cloud.githubusercontent.com/assets/3439029/18187642/2d5f48cc-7060-11e6-8a59-4affd3fdd885.png">

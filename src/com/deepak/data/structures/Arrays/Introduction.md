@@ -134,7 +134,7 @@ Arrays are considered to be sorted in ascending order when each element on left 
 
 Below operations on Arrays are implemented [here](../Arrays/BasicOperations.java)
 - Iterating over arrays in regular order and reverse order
-- Converting arrays to String
+- Converting arrays to Stream
 - Finding an element in array
 - Getting the length of the array
 - Traversing through the elements of array

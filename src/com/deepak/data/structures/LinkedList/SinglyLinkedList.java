@@ -157,7 +157,7 @@ public class SinglyLinkedList<E> {
 		} /* Validation passed, let's search for value using the index */
 		Node<E> temp = head;
 		for (int i = 0; i < index; i++) { /* Start from 0 and go till one less then index 
-											because we are jumping to next node inside the loop */
+						because we are jumping to next node inside the loop */
 			temp = temp.next;
 		}
 		return temp;

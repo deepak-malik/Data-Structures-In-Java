@@ -14,9 +14,7 @@ package com.deepak.data.structures.LinkedList;
  * - Search a element by index.
  * - Search a element by value.
  * - Delete a element from the list - This can again be at beginning, at end or at given position.
- * - Converting a list to and from a Array.
- * - Reverse a linked list using iteration and recursion.
- * - Print elements in forward and reverse order
+ * - Converting a Array from linked list.
  * </br>
  * 
  * @author Deepak
@@ -182,6 +180,70 @@ public class SinglyLinkedList<E> {
 		return null;
 	}
 
+	/**
+	 * Delete's the element present at head node 
+	 */
+	public void deleteFromHead() {
+		if (null == head) { /* If list is empty, return */
+			return;
+		}
+		head = head.next;
+		size--;
+	}
+
+	/**
+	 * Delete's the element present at tail node
+	 */
+	public void deleteFromTail() {
+		if (null == head) {
+			return;
+		}
+		Node<E> currentNode = head;
+		Node<E> nextNode = currentNode.next;
+		while (currentNode.next != null && nextNode.next != null) {
+			currentNode = currentNode.next;
+			nextNode = nextNode.next;
+		}
+		currentNode.next = null;
+		size--;
+	}
+
+	/**
+	 * Delete's the element present at index position
+	 * 
+	 * @param position
+	 */
+	public void deleteFromPosition(int position) {
+		if (position < 0 || position > size) {
+			throw new IllegalArgumentException("Position is Invalid");
+		} /* Conditions check passed, let's delete the node */
+		Node<E> nodeToBeDeleted = head;
+		for (int i = 0; i < position; i++) {
+			nodeToBeDeleted = nodeToBeDeleted.next;
+		}
+		if (nodeToBeDeleted.next == null) { /* If this is a last node */
+			deleteFromTail();
+		} else {
+			nodeToBeDeleted.item = nodeToBeDeleted.next.item;
+			nodeToBeDeleted.next = nodeToBeDeleted.next.next;
+		}
+	}
+	
+	/**
+	 * Returns a array containing each element 
+	 * from the list from start to end
+	 * 
+	 * @return
+	 */
+	public Object[] toArray() {
+		Object[] result = new Object[size];
+		int i = 0;
+		for (Node<E> x = head; x != null; x = x.next) {
+			result[i++] = x.item;
+		}
+		return result;
+	}
+	
 	/**
 	 * Node class of a linked list
 	 * This is needed since entire linked list is a collection 

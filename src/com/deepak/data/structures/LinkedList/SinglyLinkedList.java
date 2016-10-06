@@ -1,161 +1,117 @@
+/**
+ * Data-Structures-in-Java
+ */
 package com.deepak.data.structures.LinkedList;
 
+/**
+ * Implementation of Singly linked list 
+ * 
+ * <br> Operations supported are
+ * - Inserting a element in the list - This can be at beginning, at end or at a given position. 
+ * - Traversing through linked list.
+ * - Check if list is empty.
+ * - Check the size of the list.
+ * - Search a element by index.
+ * - Search a element by value.
+ * - Delete a element from the list - This can again be at beginning, at end or at given position.
+ * - Converting a list to and from a Array.
+ * - Reverse a linked list using iteration and recursion.
+ * - Print elements in forward and reverse order
+ * </br>
+ * 
+ * @author Deepak
+ *
+ * @param <E>
+ */
 public class SinglyLinkedList<E> {
-	
+
+	/* First Node is needed to keep track of head */
 	private Node<E> firstNode;
+
+	/* Size to keep track of number of elements in list 
+	 * This needs to be increased by 1 when a element is added
+	 * and needs to be reduced by 1 when a element is deleted */
 	private int size = 0;
-	
+
 	/**
-	 * Main method to start the program and do some operations
-	 * <p> Steps :
-	 * 1. Create a new blank linked list of type of your choice (We will create integer)
-	 * 2. Insert some elements in it. ex. 3, 6, 8, 2, and 7
-	 * 3. Print the linked list </p>
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// Create a linked list and insert elements in it
-		SinglyLinkedList<Integer> iLinkedList = new SinglyLinkedList<>();
-		iLinkedList.insert(3);
-		iLinkedList.insert(6);
-		iLinkedList.insert(8);
-		iLinkedList.insert(2);
-		iLinkedList.insert(7);
-		
-		// Print all the elements in the list
-		System.out.println("Printing Elements in the list => ");
-		System.out.println(iLinkedList.list());
-		
-		// Search element by index
-		System.out.println("Searching Element at index => ");
-		SinglyLinkedList<Integer>.Node<Integer> node = iLinkedList.searchByIndex(2);
-		System.out.println(node.element);
-		
-		// Search by value
-		System.out.println("\n");
-		iLinkedList.searchByValue(8);
-		
-		// Delete the value from linked list and print size
-		System.out.println("Size of Linked list => " + iLinkedList.size);
-		iLinkedList.delete(null);
-		System.out.println("Size of Linked list => " + iLinkedList.size);
-	}
-	
-	/**
-	 * Method to insert values in linked list
-	 * @param iValue
-	 */
-	public void insert(E iValue) {
-		if (null == firstNode) {
-			firstNode = new Node<E>(iValue);
-			size++;
-		} else {
-			Node<E> tempNode = firstNode;
-			while (null != tempNode.nextNode) {
-				tempNode = tempNode.nextNode;
-			}
-			Node<E> newNode = new Node<E>(iValue);
-			newNode.nextNode = null;
-			tempNode.nextNode = newNode;
-			size++;
-		}
-	}
-	
-	/**
-	 * Method to print the elements of linked list
-	 * @return {@link String}
-	 */
-	public String list() {
-		StringBuilder builder = new StringBuilder();
-		Node<E> tempNode = firstNode;
-		while (null != tempNode) {
-			builder.append(tempNode.element).append("\n");
-			tempNode = tempNode.nextNode;
-		}
-		return builder.toString();
-	};
-	
-	/**
-	 * Method to search an element by index
-	 * @param index
-	 * @return
-	 */
-	public Node<E> searchByIndex(int index) {
-		if (index > size) {
-			return null;
-		}
-		Node<E> tempNode = firstNode;
-		for (int i = 0; i < index; i++) {
-			tempNode = tempNode.nextNode;
-		}
-		return tempNode;
-	}
-	
-	/**
-	 * Method to find the index based on the value
-	 * @param value
-	 * @return
-	 */
-	public Node<E> searchByValue(E value) {
-		Node<E> tempNode = firstNode;
-		if (null == tempNode) {
-			return null;
-		}
-		while (null != tempNode && tempNode.element != value) {
-			tempNode = tempNode.nextNode;
-		}
-		return tempNode;
-	}
-	
-	/**
-	 * Method to return size of the linked list
-	 * @return
-	 */
-	public int size() {
-		return size;
-	}
-	
-	/**
-	 * Method to delete the value from the linked list
+	 * Inserts a element into a linked list at head position.
+	 * This does not require to traverse through entire list.
+	 * 
+	 * <br> Complexity :
+	 * Since there is no traversal involved here, and insertion
+	 * always happens at the head, this can be done in constant 
+	 * time. Hence, complexity comes out to be O(1) 
+	 * </br>
+	 * 
 	 * @param value
 	 */
-	public void delete(E value) {
-		if (null == firstNode || null == value) {
-			return;
-		}
-		if (firstNode.element == value) {
-			firstNode = firstNode.nextNode;
-			size--;
-		} else {
-			Node<E> currentNode = firstNode;
-			Node<E> nextNode = currentNode.nextNode;
-			while (null != currentNode) {
-				if (currentNode.element == value) {
-					currentNode = nextNode;
-					size--;
-					return;
-				} else {
-					currentNode = nextNode;
-					nextNode = currentNode.nextNode;
-				}
-			}
-		}
+	public void insertAtHead(E value) {
+
 	}
 
 	/**
-	 * Node Class
+	 * Inserts a element into a linked list at tail position.
+	 * This needs traversal through entire list before insertion happens.
+	 * 
+	 * <br> Complexity :
+	 * Since, traversal through entire list is involved here before
+	 * new node gets inserted, and let's assume list has n elements, 
+	 * so insertion at tail will take O(n) time
+	 * </br>
+	 * 
+	 * @param value
+	 */
+	public void insertAtTail(E value) {
+
+	}
+
+	/**
+	 * Inserts a element into a linked list at a given position.
+	 * This needs traversal through the linked list till the given position.
+	 * 
+	 * <br> Complexity :
+	 * This insertion can possibly happen at last node, means in worst case 
+	 * we may have to traverse entire linked list. On an average case with 
+	 * linked list having n elements, this will take n/2 time and after ignoring
+	 * the constant term, complexity comes out to be O(n)
+	 * </br>
+	 * 
+	 * @param value
+	 * @param position
+	 */
+	public void insertAtPosition(E value, int position) {
+
+	}
+
+	/**
+	 * Node class of a linked list
+	 * This is needed since entire linked list is a collection 
+	 * of nodes connected to each other through links
+	 * 
+	 * <br> We are keeping it generic so that it can be used with 
+	 * Integer, String or something else </br>
+	 * 
+	 * <br> Each node contains a data item and pointer to next node.
+	 * Since this is a Singly linked list and each node points in 
+	 * one direction, we maintain only pointer to one (next) node </br>
+	 * 
 	 * @author Deepak
 	 *
 	 * @param <T>
 	 */
 	public class Node<T> {
 
-		T element;
-		Node<T> nextNode;
+		/* Data item in the node */
+		T item;
 
-		public Node(T iElement) {
-			this.element = iElement;
+		/* Pointer to next node */
+		Node<T> next;
+
+		/* Constructor to create a node */
+		public Node(T item) {
+			this.item = item;
 		}
 
 	}
+
 }

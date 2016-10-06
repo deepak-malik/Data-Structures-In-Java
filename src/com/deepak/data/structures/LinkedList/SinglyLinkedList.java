@@ -6,11 +6,11 @@ package com.deepak.data.structures.LinkedList;
 /**
  * Implementation of Singly linked list 
  * 
- * <br> Operations supported are
+ * <br> Operations supported are :
  * - Inserting a element in the list - This can be at beginning, at end or at a given position. 
  * - Traversing through linked list.
- * - Check if list is empty.
  * - Check the size of the list.
+ * - Check if list is empty.
  * - Search a element by index.
  * - Search a element by value.
  * - Delete a element from the list - This can again be at beginning, at end or at given position.
@@ -25,17 +25,17 @@ package com.deepak.data.structures.LinkedList;
  */
 public class SinglyLinkedList<E> {
 
-	/* First Node is needed to keep track of head */
-	private Node<E> firstNode;
+	/* Head is needed to keep track of first node */
+	private Node<E> head;
 
-	/* Size to keep track of number of elements in list 
-	 * This needs to be increased by 1 when a element is added
-	 * and needs to be reduced by 1 when a element is deleted */
+	/* Size to keep track of number of elements in list. 
+	 * This should be increased by 1 when a element is added
+	 * and should be reduced by 1 when a element is deleted */
 	private int size = 0;
 
 	/**
 	 * Inserts a element into a linked list at head position.
-	 * This does not require to traverse through entire list.
+	 * This does not require traversal through entire list.
 	 * 
 	 * <br> Complexity :
 	 * Since there is no traversal involved here, and insertion
@@ -46,7 +46,10 @@ public class SinglyLinkedList<E> {
 	 * @param value
 	 */
 	public void insertAtHead(E value) {
-
+		Node<E> newNode = new Node<E>(value); 
+		newNode.next = head; 
+		head = newNode;
+		size++;
 	}
 
 	/**
@@ -62,7 +65,19 @@ public class SinglyLinkedList<E> {
 	 * @param value
 	 */
 	public void insertAtTail(E value) {
-
+		Node<E> newNode = new Node<E>(value);
+		newNode.next = null; /* Since this insertion is at tail, this new node will point to null */
+		if (null == head) { /* When list is empty */
+			head = newNode;
+			size++;
+		} else {
+			Node<E> tempNode = head;
+			while (null != tempNode.next) {
+				tempNode = tempNode.next;
+			}
+			tempNode.next = newNode;
+			size++;
+		}
 	}
 
 	/**
@@ -80,7 +95,91 @@ public class SinglyLinkedList<E> {
 	 * @param position
 	 */
 	public void insertAtPosition(E value, int position) {
+		if (position < 0 || position > size) {
+			throw new IllegalArgumentException("Position is Invalid");
+		} /* Conditions check passed, let's insert the node */
+		Node<E> newNode = new Node<E>(value);
+		if (position == 0) {
+			newNode.next = head;
+			size++;
+		} else {
+			Node<E> tempNode = head;
+			for (int i = 0; i < position - 1; i++) {
+				tempNode = tempNode.next;
+			}
+			Node<E> nodeNextToNewNode = tempNode.next;
+			tempNode.next = newNode;
+			newNode.next = nodeNextToNewNode;
+			size++;
+		}
+	}
 
+	/**
+	 * Traverse through the linked list and print the items
+	 */
+	public void traverse() {
+		Node<E> temp = head;
+		while (temp != null) {
+			System.out.println(temp.item);
+			temp = temp.next;
+		}
+	}
+
+	/**
+	 * Returns size of the linked list
+	 * 
+	 * @return
+	 */
+	public int size() {
+		return size;
+	}
+
+	/**
+	 * Returns true is list is empty
+	 * 
+	 * @return
+	 */
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
+	/**
+	 * Returns the Node containing data item after searching
+	 * for a given index. If invalid index is passed, proper
+	 * exception is thrown. 
+	 *  
+	 * @param index
+	 * @return
+	 */
+	public Node<E> searchByIndex(int index) {
+		if (index < 0 || index >= size) {
+			throw new IllegalArgumentException("Invalid index passed while searching for a value");
+		} /* Validation passed, let's search for value using the index */
+		Node<E> temp = head;
+		for (int i = 0; i < index; i++) { /* Start from 0 and go till one less then index 
+											because we are jumping to next node inside the loop */
+			temp = temp.next;
+		}
+		return temp;
+	}
+
+	/**
+	 * Returns the node containing data item after searching 
+	 * for a given value. If there are multiple same values
+	 * in linked list, first one will be returned.
+	 * 
+	 * @param value
+	 * @return
+	 */
+	public Node<E> searchByValue(E value) { /* Traverse through each node until this value is found */
+		Node<E> temp = head;
+		while (null != temp.next && temp.item != value) {
+			temp = temp.next;
+		}
+		if (temp.item == value) {
+			return temp;
+		}
+		return null;
 	}
 
 	/**
@@ -110,6 +209,12 @@ public class SinglyLinkedList<E> {
 		/* Constructor to create a node */
 		public Node(T item) {
 			this.item = item;
+		}
+
+		/* toString implementation to print just the data */
+		@Override
+		public String toString() {
+			return "Data Item = " + item;
 		}
 
 	}

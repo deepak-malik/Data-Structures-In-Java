@@ -11,9 +11,9 @@ package com.deepak.data.structures.LinkedList;
  * - Traversing through linked list.
  * - Check the size of the list.
  * - Check if list is empty.
- * - Search a element by index.
- * - Search a element by value.
- * - Delete a element from the list - This can again be at beginning, at end or at given position.
+ * - Search an element by index.
+ * - Search an element by value.
+ * - Delete an element from the list - This can again be at beginning, at end or at given position.
  * - Converting a Array from linked list.
  * </br>
  * 
@@ -151,7 +151,7 @@ public class SinglyLinkedList<E> {
 	 */
 	public Node<E> searchByIndex(int index) {
 		if (index < 0 || index >= size) {
-			throw new IllegalArgumentException("Invalid index passed while searching for a value");
+			throw new IndexOutOfBoundsException("Invalid index passed while searching for a value");
 		} /* Validation passed, let's search for value using the index */
 		Node<E> temp = head;
 		for (int i = 0; i < index; i++) { /* Start from 0 and go till one less then index 
@@ -214,7 +214,7 @@ public class SinglyLinkedList<E> {
 	 * @param position
 	 */
 	public void deleteFromPosition(int position) {
-		if (position < 0 || position > size) {
+		if (position < 0 || position >= size) {
 			throw new IllegalArgumentException("Position is Invalid");
 		} /* Conditions check passed, let's delete the node */
 		Node<E> nodeToBeDeleted = head;

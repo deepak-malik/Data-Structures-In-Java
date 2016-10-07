@@ -6,14 +6,12 @@ This repository contains various data structures and provide insights about them
 - [ ] Basic operations on Arrays
 
 **2. LinkedList**    
-- [ ] Singly LinkedList
-    - [ ] Introduction
-    - [ ] Implementation
-- [ ] Doubly LinkedList
-    - [ ] Introduction
-    - [ ] Implementation
+- [X] [Linked List concepts](../master/src/com/deepak/data/structures/LinkedList/LinkedListConcepts.md)
+- [X] Singly LinkedList
+    - [X] [Implementation](../master/src/com/deepak/data/structures/LinkedList/SinglyLinkedList.java)
+- [X] Doubly LinkedList
+    - [X] [Implementation](../master/src/com/deepak/data/structures/LinkedList/DoublyLinkedList.java)
 - [ ] Circular LinkedList
-    - [ ] Introduction
     - [ ] Implementation
 
 **3. Stack**

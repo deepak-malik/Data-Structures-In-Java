@@ -3,8 +3,6 @@
  */
 package com.deepak.data.structures.LinkedList;
 
-
-
 /**
  * Implementation of Doubly linked list 
  * 

@@ -140,7 +140,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 	/**
 	 * private structure used to represent each item in this
 	 * data structure.
-	 * @author Ashish Chopra
+	 * @author Deepak
 	 *
 	 */
 	private class Node {
@@ -151,8 +151,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 	
 	/**
 	 * An iterator implementation for Deque data structure.
-	 * @author Ashish Chopra
-	 *
+	 * @author Deepak
 	 */
 	private class DequeIterator implements Iterator<Item> {
 		private Node current = first;

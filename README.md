@@ -3,7 +3,7 @@ This repository contains various data structures and provide insights about them
 
 **1. Arrays**
 - [X] [Introduction to Arrays](../master/src/com/deepak/data/structures/Arrays/Introduction.md)
-- [ ] Basic operations on Arrays
+- [X] Basic operations on Arrays(../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
 
 **2. LinkedList**    
 - [X] [Linked List concepts](../master/src/com/deepak/data/structures/LinkedList/LinkedListConcepts.md)
@@ -16,15 +16,16 @@ This repository contains various data structures and provide insights about them
 
 **3. Stack**
 - [ ] Introduction
-- [ ] Array based Implementation
-- [ ] LinkedList based Implementation 
+- [X] [Simple stack from list](../master/src/com/deepak/data/structures/Stack/SimpleStackFromList.java)
+- [X] [Array based Implementation](../master/src/com/deepak/data/structures/Stack/ArrayBasedStack.java)
+- [X] [LinkedList based Implementation](../master/src/com/deepak/data/structures/Stack/LinkedListBasedStack.java) 
 
 **4. Queue**
 - [ ] Introduction
-- [ ] Array based Implementation
-- [ ] LinkedList based Implementation 
+- [X] [Array based Implementation](../master/src/com/deepak/data/structures/Queue/ArrayBasedQueue.java)
+- [X] [LinkedList based Implementation](../master/src/com/deepak/data/structures/Queue/LinkedListBasedQueue.java) 
 - [ ] Stack based Implementation
-- [ ] Deque
+- [X] [Dequeue](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
 - [ ] Priority Queue
 
 **5. Trees**

@@ -3,7 +3,7 @@ This repository contains various data structures and provide insights about them
 
 **1. Arrays**
 - [X] [Introduction to Arrays](../master/src/com/deepak/data/structures/Arrays/Introduction.md)
-- [X] Basic operations on Arrays(../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
+- [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
 
 **2. LinkedList**    
 - [X] [Linked List concepts](../master/src/com/deepak/data/structures/LinkedList/LinkedListConcepts.md)

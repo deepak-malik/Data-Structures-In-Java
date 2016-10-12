@@ -24,10 +24,12 @@ public class BinaryTree {
 		System.out.println("Printing the Tree");
 		System.out.println();
 		printByLevel(root);
+		System.out.println();
+		System.out.println(getDepth(root));
 	}
 
 	static Node root;
-	int size = 0;
+	static int size = 0;
 
 	public void addNode(int value) {
 		if (size == 0) {
@@ -43,14 +45,18 @@ public class BinaryTree {
 			return null;
 		}
 		Node newNode = new Node(value);
-		if (rootNode.left == null) {
-			rootNode.left = new Node(value);
-		} else if (rootNode.left != null && newNode.data <= rootNode.data) {
-			rootNode.left = addNode(rootNode.left, value);
-		} else if (rootNode.right == null && newNode.data > rootNode.data) {
-			rootNode.right = new Node(value);
-		} else if (rootNode.right != null) {
-			rootNode.right = addNode(rootNode.right, value);
+		if (newNode.data <= rootNode.data) {
+			if (rootNode.left != null) {
+				rootNode.left = addNode(rootNode.left, value);
+			} else {
+				rootNode.left = newNode;
+			}
+		} else {
+			if (rootNode.right != null) {
+				rootNode.right = addNode(rootNode.right, value);
+			} else {
+				rootNode.right = newNode;
+			}
 		}
 		size++;
 		return rootNode;	
@@ -65,11 +71,19 @@ public class BinaryTree {
 	}
 
 	public boolean isEmpty() {
-		return size == 0;
+		return size() == 0;
 	}
 
 	public int size() {
-		return size;
+		return size(root);
+	}
+
+	private int size(Node root) {
+		if (root == null) {
+			return 0;
+		} else {
+			return (size(root.left)) + 1 + (size(root.right));
+		}
 	}
 
 	public boolean isRoot(Node node) {
@@ -126,8 +140,13 @@ public class BinaryTree {
 		return !hasLeft(node) && !hasRight(node);
 	}
 	
-	public int getLevel() {
-		return (int)(Math.log(size) / Math.log(2));
+	public static int getDepth(Node node) {
+		if (node == null) {
+			return 0;
+		}
+		int left = getDepth(node.left);
+		int right = getDepth(node.right);
+		return left > right ? left + 1 : right + 1; 
 	}
 	
 	public static void printInOrder(Node node) {

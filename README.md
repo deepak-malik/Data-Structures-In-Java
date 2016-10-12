@@ -33,7 +33,7 @@ This repository contains various data structures and provide insights about them
 
 **5. Trees**
 - [ ] Introduction
-- [ ] Binary Tree
+- [X] [Binary Tree](../master/src/com/deepak/data/structures/Tree/BinaryTree.java)
 - [ ] Binary Search Tree
 - [ ] AVL Tree
 - [ ] Splay Tree

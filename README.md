@@ -2,6 +2,7 @@
 This repository contains various data structures and provide insights about them. Below topics/problems are covered as of now.
 
 **1. Arrays**
+- [ ] Choosing the right data structure
 - [X] [Introduction to Arrays](../master/src/com/deepak/data/structures/Arrays/Introduction.md)
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
 
@@ -27,6 +28,8 @@ This repository contains various data structures and provide insights about them
 - [ ] Stack based Implementation
 - [X] [Dequeue](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
 - [ ] Priority Queue
+- [ ] Implement Stack using Queues
+- [ ] Implement Queue using Stacks
 
 **5. Trees**
 - [ ] Introduction

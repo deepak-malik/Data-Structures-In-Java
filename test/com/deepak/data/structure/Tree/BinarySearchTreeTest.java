@@ -10,14 +10,39 @@ import org.junit.Test;
  */
 public class BinarySearchTreeTest {
 	
+	/**
+	 * Test case of adding N nodes
+	 */
 	@Test
 	public void testNodeAddition() {
-		BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
-		binarySearchTree.addNode(10);
-		binarySearchTree.addNode(8);
-		binarySearchTree.addNode(12);
-		binarySearchTree.addNode(13);
-		Assert.assertTrue(binarySearchTree.size() == 4);
+		/* Integer type */
+		BinarySearchTree<Integer> binarySearchTreeInt = new BinarySearchTree<>();
+		binarySearchTreeInt.addNode(10);
+		binarySearchTreeInt.addNode(8);
+		binarySearchTreeInt.addNode(12);
+		binarySearchTreeInt.addNode(13);
+		Assert.assertTrue(binarySearchTreeInt.size() == 4);
+		
+		/* String type */
+		BinarySearchTree<String> binarySearchTreeString = new BinarySearchTree<>();
+		binarySearchTreeString.addNode("Alex");
+		binarySearchTreeString.addNode("Tom");
+		binarySearchTreeString.addNode("Steve");
+		binarySearchTreeString.addNode("Bob");
+		Assert.assertTrue(binarySearchTreeString.size() == 4);
+	}
+	
+	@Test
+	public void testSizeAndEmptyTree() {
+		BinarySearchTree<Integer> binarySearchTreeInt = new BinarySearchTree<>();
+		Assert.assertTrue(binarySearchTreeInt.isEmpty());
+		Assert.assertTrue(binarySearchTreeInt.size() == 0);
+		binarySearchTreeInt.addNode(7);
+		Assert.assertFalse(binarySearchTreeInt.isEmpty());
+		Assert.assertFalse(binarySearchTreeInt.size() == 0);
+		binarySearchTreeInt.addNode(9);
+		binarySearchTreeInt.addNode(5);
+		Assert.assertTrue(binarySearchTreeInt.size() == 3);
 	}
 
 }

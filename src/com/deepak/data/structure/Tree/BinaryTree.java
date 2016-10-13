@@ -3,57 +3,26 @@ package com.deepak.data.structure.Tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinaryTree {
-	
-	public static void main(String[] args) {
-		BinaryTree tree = new BinaryTree();
-		System.out.println("Initial Size of Tree => " + tree.size());
-		tree.addNode(10);
-		System.out.println("Inserted 10");
-		System.out.println("Size of tree after insertion => " + tree.size());
-		System.out.println("Printing the Tree");
-		printByLevel(root);
-		System.out.println();
-		tree.addNode(17);
-		tree.addNode(13);
-		tree.addNode(9);
-		tree.addNode(4);
-		tree.addNode(16);
-		tree.addNode(3);
-		tree.addNode(8);
-		System.out.println("Size of tree after insertion => " + tree.size());
-		System.out.println("Printing the Tree");
-		System.out.println();
-		printByLevel(root);
-		System.out.println();
-		System.out.println(getDepth(root));
-		System.out.println();
-		System.out.println("Inorder");
-		printInOrder(root);
-		System.out.println("\nPreorder");
-		printPreorder(root);
-		System.out.println("\nPostorder");
-		printPostorder(root);
-	}
+public class BinaryTree<E extends Comparable<E>> {
 
-	static Node root;
-	static int size = 0;
+	private Node<E> root;
+	private int size = 0;
 
-	public void addNode(int value) {
+	public void addNode(E value) {
 		if (size == 0) {
-			root = new Node(value);
+			root = new Node<E>(value);
 			size++;
 		} else {
 			addNode(root, value);
 		}
 	}
 	
-	private Node addNode(Node rootNode, int value) {
+	private Node<E> addNode(Node<E> rootNode, E value) {
 		if (rootNode == null) {
 			return null;
 		}
-		Node newNode = new Node(value);
-		if (newNode.data <= rootNode.data) {
+		Node<E> newNode = new Node<E>(value);
+		if ((newNode.data).compareTo(rootNode.data) <= 0) {
 			if (rootNode.left != null) {
 				rootNode.left = addNode(rootNode.left, value);
 			} else {
@@ -70,7 +39,7 @@ public class BinaryTree {
 		return rootNode;	
 	}
 
-	public Node root() {
+	public Node<E> root() {
 		if (isEmpty()) {
 			return null;
 		} else {
@@ -86,7 +55,7 @@ public class BinaryTree {
 		return size(root);
 	}
 
-	private int size(Node root) {
+	private int size(Node<E> root) {
 		if (root == null) {
 			return 0;
 		} else {
@@ -94,22 +63,22 @@ public class BinaryTree {
 		}
 	}
 
-	public boolean isRoot(Node node) {
+	public boolean isRoot(Node<E> node) {
 		if (root == node) {
 			return true;
 		}
 		return false;
 	}
 	
-	public Node findParent(Node node) {
+	public Node<E> findParent(Node<E> node) {
 		return findParent(node.data, root, null);
 	}
 
-	private Node findParent(int data, Node root, Node parent) {
+	private Node<E> findParent(E data, Node<E> root, Node<E> parent) {
 		if (root == null) {
 			return null;
 		}
-		if (root.data != data) {
+		if ((root.data).compareTo(data) != 0) {
 			parent = findParent(data, root.left, root);
 			if (parent == null) {
 				parent = findParent(data, root.right, root); 
@@ -118,37 +87,37 @@ public class BinaryTree {
 		return parent;
 	}
 
-	public boolean hasParent(Node node) {
+	public boolean hasParent(Node<E> node) {
 		return findParent(node) != null;
 	}
 
-	public boolean hasLeft(Node node) {
+	public boolean hasLeft(Node<E> node) {
 		return node.left != null;
 	}
 
-	public Node left(Node node) {
+	public Node<E> left(Node<E> node) {
 		if (hasLeft(node)) {
 			return node.left;
 		}
 		return null;
 	}
 
-	public boolean hasRight(Node node) {
+	public boolean hasRight(Node<E> node) {
 		return node.right != null;
 	}
 
-	public Node right(Node node) {
+	public Node<E> right(Node<E> node) {
 		if (hasRight(node)) {
 			return node.right;
 		}
 		return null;
 	}
 	
-	public boolean isLeaf(Node node) {
+	public boolean isLeaf(Node<E> node) {
 		return !hasLeft(node) && !hasRight(node);
 	}
 	
-	public static int getDepth(Node node) {
+	public int getDepth(Node<E> node) {
 		if (node == null) {
 			return 0;
 		}
@@ -157,7 +126,7 @@ public class BinaryTree {
 		return left > right ? left + 1 : right + 1; 
 	}
 	
-	public static void printInOrder(Node node) {
+	public void printInOrder(Node<E> node) {
 		if (node == null) {
 			return;
 		}
@@ -166,31 +135,31 @@ public class BinaryTree {
 		printInOrder(node.right);
 	}
 	
-	public static void printPreorder(Node node) {
+	public void printPreorder(Node<E> node) {
 	    if (node == null) return;
 	    System.out.print(node.data + " ");
 	    printPreorder(node.left);
 	    printPreorder(node.right);
 	}
 
-	public static void printPostorder(Node node) {
+	public void printPostorder(Node<E> node) {
 	    if (node == null) return;
 	    printPostorder(node.left);
 	    printPostorder(node.right);
 	    System.out.print(node.data + " ");
 	}
 	
-	public static void printByLevel(Node root) {
-	    Queue<Node> firstQ = new LinkedList<>();
+	public void printByLevel(Node<E> root) {
+	    Queue<Node<E>> firstQ = new LinkedList<>();
 	    firstQ.add(root);
 
-	    Queue<Queue<Node>> mainQ = new LinkedList<>();
+	    Queue<Queue<Node<E>>> mainQ = new LinkedList<>();
 	    mainQ.add(firstQ);
 
 	    while (!mainQ.isEmpty()) {
-	        Queue<Node> levelQ = mainQ.remove();
-	        Queue<Node> nextLevelQ = new LinkedList<>();
-	        for (Node x : levelQ) {
+	        Queue<Node<E>> levelQ = mainQ.remove();
+	        Queue<Node<E>> nextLevelQ = new LinkedList<>();
+	        for (Node<E> x : levelQ) {
 	            System.out.print(x.data + " ");
 	            if (x.left != null)    nextLevelQ.add(x.left);
 	            if (x.right != null)   nextLevelQ.add(x.right);
@@ -200,13 +169,13 @@ public class BinaryTree {
 	    }
 	}
 
-	public class Node {
+	public class Node<T> {
 
-		private Node left;
-		private Node right;
-		private int data;
+		private Node<T> left;
+		private Node<T> right;
+		private T data;
 
-		public Node(int data) {
+		public Node(T data) {
 			this.data = data;
 		}
 

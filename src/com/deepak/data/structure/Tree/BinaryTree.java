@@ -14,18 +14,26 @@ public class BinaryTree {
 		System.out.println("Printing the Tree");
 		printByLevel(root);
 		System.out.println();
-		tree.addNode(7);
-		tree.addNode(12);
+		tree.addNode(17);
 		tree.addNode(13);
-		tree.addNode(8);
-		tree.addNode(15);
 		tree.addNode(9);
+		tree.addNode(4);
+		tree.addNode(16);
+		tree.addNode(3);
+		tree.addNode(8);
 		System.out.println("Size of tree after insertion => " + tree.size());
 		System.out.println("Printing the Tree");
 		System.out.println();
 		printByLevel(root);
 		System.out.println();
 		System.out.println(getDepth(root));
+		System.out.println();
+		System.out.println("Inorder");
+		printInOrder(root);
+		System.out.println("\nPreorder");
+		printPreorder(root);
+		System.out.println("\nPostorder");
+		printPostorder(root);
 	}
 
 	static Node root;

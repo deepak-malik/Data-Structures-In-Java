@@ -1,4 +1,4 @@
-package com.deepak.data.structure.Tree;
+package com.deepak.data.structures.Tree;
 
 import java.util.LinkedList;
 import java.util.Queue;

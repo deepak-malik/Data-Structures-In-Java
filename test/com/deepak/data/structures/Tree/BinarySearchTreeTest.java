@@ -1,7 +1,9 @@
-package com.deepak.data.structure.Tree;
+package com.deepak.data.structures.Tree;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.deepak.data.structures.Tree.BinarySearchTree;
 
 /**
  * TODO : Test cases implementation

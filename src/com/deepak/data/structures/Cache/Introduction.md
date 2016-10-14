@@ -30,7 +30,10 @@ Objects are stored in the cache for very long time, but in the meantime it is ve
 When cache miss happens, it ejects some objects to make space for new entries. We have to select some objects for deletion at this point of time. Policy which decides which elements will be replaced is called replacement policy. For example, a cache entry that is not going to be used for the next 10 seconds will be replaced by an entry that is going to be used within the next 2 seconds.  
 
 _Below are some of the caching algorithms (Replacement policy),_  
-1. Least frequently used cache (_LFU_)  
+
+**1. Least frequently used cache (_LFU_)**  
+- This cache keeps a track how often a entry is fetched from cache by keeping a counter against each entry. When time for eviction comes, entries with least number in counter will be deleted. This is not that good since keeping a track of extra counter is a overhead.  
+
 2. Least recently used cache (_LRU_)  
 3. Least recently used cache 2 (_LRU 2_)  
 4. Two Queues  

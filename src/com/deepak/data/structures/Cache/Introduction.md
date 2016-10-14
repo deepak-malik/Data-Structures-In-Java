@@ -49,6 +49,7 @@ There are some improved versions of LRU as well normally known as LRU 2 and 2Q.
 
 **6. Most recently used cache (_MRU_)**  
 - Unlike LRU, this cache removes the most recently accessed element from the cache first when cache becomes full. This is because accessing resources is highly unpredictable. It works on the theory that if a element is accessed just now, it won't be accesed for some time now and the one's which were accessed last, it's there turn now. So this removes the item which is most recently used.  
+ex. You are standing at a bus stop and checking the entries of the bus based on the route number. So, if you have seen a bus of route 16 entering the stop just now, it is very unlikely to see another bus of route number 16.  
 
 **7. First in first out (_FIFO_)**  
 - This is first in first out cache, and is implemented using a queue. This queue keeps the most recently accessed entry at the back and least recently at the front. When cache becomes full or we have to make space for the new entry, we remove the entry that is at the front. 

@@ -71,6 +71,6 @@ This repository contains various data structures and provide insights about them
 - [ ] Introduction
 
 **12. Cache**
-- [ ] Introduction
+- [X] [Introduction](../master/src/com/deepak/data/structures/Cache/Introduction.md)
 - [ ] LRU Cache
 - [ ] MRU Cache

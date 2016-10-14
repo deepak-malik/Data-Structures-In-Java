@@ -1,21 +1,18 @@
-Choosing the right data structure : 
+## Choosing the right Data Structure
 
-Data structure is the way how data is stored in the computer. Developer should choose data structure very wisely else system will not perform well.
-Below are the bunch of DS and reasons when to use which one.
+Data structure is the way how data is stored in the computer. We should choose data structure very wisely else system will not perform well. Below are the bunch of DS and reasons when to use which one.
 
-1. Array
-- Data Structure used to store similar kind of elements in contiguous memory. Can be used in below cases, 
-    a) Fast element access is needed (Can be done using the index)
-    b) When number of elements i.e size of array is known before hand
-    c) When iterating through all the elements in sequence is needed
-    d) When less memory has to be used. (Arrays take less memory as compared to LinkedList)
+**1. Array** - It used to store similar kind of elements in contiguous memory. Can be used in below cases, 
+- When fast element access is needed (Can be done using the index)  
+- When number of elements i.e size of array is known before hand  
+- When iterating through all the elements in sequence is needed  
+- When less memory has to be used. (Arrays take less memory as compared to LinkedList)  
 
-2. Singly Linked List
-- Data Structure used to store data in nodes, and nodes are connected to each other pointing in one direction. Can be used in below cases,
-    a) When constant time of insertion and deletion is needed (On head)
-    b) When data dynamically grows
-    c) When random elements are not needed to be accessed
-    d) When insertion is needed at any point in the list
+**2. Singly Linked List** - It is used to store data in nodes, which are connected to each other and points in one direction. Can be used in below cases,
+- When constant time of insertion and deletion is needed (On head)
+- When data dynamically grows
+- When random elements are not needed to be accessed
+- When insertion is needed at any point in the list
 
 3. Doubly Linked List
 - Data Structure used to store data in nodes, and those nodes are connected to each other pointing in both the directions. Can be used in below cases,

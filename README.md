@@ -34,7 +34,7 @@ This repository contains various data structures and provide insights about them
 **5. Trees**
 - [ ] Introduction
 - [X] [Binary Tree](../master/src/com/deepak/data/structures/Tree/BinaryTree.java)
-- [X] Binary Search Tree(../master/src/com/deepak/data/structures/Tree/BinarySearchTree.java)
+- [X] [Binary Search Tree](../master/src/com/deepak/data/structures/Tree/BinarySearchTree.java)
 - [ ] AVL Tree
 - [ ] Splay Tree
 - [ ] B Tree
@@ -73,3 +73,4 @@ This repository contains various data structures and provide insights about them
 **12. Cache**
 - [ ] Introduction
 - [ ] LRU Cache
+- [ ] MRU Cache

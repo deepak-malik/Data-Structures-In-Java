@@ -39,11 +39,24 @@ _Below are some of the caching algorithms (Replacement policy),_
 There are some improved versions of LRU as well normally known as LRU 2 and 2Q.  
 
 **3. Least recently used cache 2 (_LRU 2_)**  
+- This cache add entry to it when a element is accessed twice in a row. When cache becomes full it removes the element which has second most recent access. Because of need to track two most recently accessed items, there is an overhead involved. This also needs to keep track of elements which are accessed one time, so that they can be added to cache when accessed twice.  
 
-4. Two Queues  
-5. Adaptive replacement cache (_ARC_)  
-6. Most recently used cache (_MRU_)  
-7. First in first out (_FIFO_)  
-8. Second Chance  
-9. Clock  
-10. Simple time based  
+**4. Two Queues**  
+- Two queues add entries to cache as and when they are accessed. If a entry is accessed twice, it is moved to a bigger cache. This is called two queue cache because it is maintained by two different queues. First queue (small one) is generally kept 1/3rd of the size of second queue. It provides advantage of LRU2 cache and reduce the effort of maintaining the track of two items.  
+
+**5. Adaptive replacement cache (_ARC_)**  
+Sometimes it is said that this cache balances out between LFU and LRU, but that's not 100% true. In this cache, 2 lists are maintained. First list contains the entries that are seen just once recently, whereas second list contains the entries which are seen atleast twice recently. So, first list maintains _"recency"_ and second list maintains _"frequency"_. This is fast and considered one of the best replacement algorithm.  
+
+**6. Most recently used cache (_MRU_)**  
+Unlike LRU, this cache removes the most recently accessed element from the cache first when cache becomes full. This is because accessing resources is highly unpredictable. It works on the theory that if a element is accessed just now, it won't be accesed for some time now and the one's which were accessed last, it's there turn now. So this removes the item which is most recently used.  
+
+**7. First in first out (_FIFO_)**  
+This is first in first out cache, and is implemented using a queue. This queue keeps the most recently accessed entry at the back and least recently at the front. When cache becomes full or we have to make space for the new entry, we remove the entry that is at the front. 
+Accessed Just Now **> > > > > >** Accessed some time back.  
+
+**8. Second Chance**  
+This works on the same concept as FIFO works, i.e it keeps the track of entries in the queue. But when cache becomes full, instead of removing the first entry blindly, this checks if there is a bit set to the entry. This bit is set based on the fact if this entry was accessed earlier as well. For ex. If a entry is accessed once bit can have 0, or if it is accessed more then once, bit can have value as 1. So if this cache finds the bit associated with a entry as 1, it knows that is entry was accessed twice before and it moves it back to the queue instead of removing it. This can be implemented using a circular list.  
+
+**9. Simple time based**  
+This works based on the time. Entries in the cache remains for some specific amount of time. When that time limit hits, this cache invalidates all the entries and populate the cache again with fresh data.  
+

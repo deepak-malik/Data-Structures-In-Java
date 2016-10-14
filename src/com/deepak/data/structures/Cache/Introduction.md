@@ -34,8 +34,12 @@ _Below are some of the caching algorithms (Replacement policy),_
 **1. Least frequently used cache (_LFU_)**  
 - This cache keeps a track how often a entry is fetched from cache by keeping a counter against each entry. When time for eviction comes, entries with least number in counter will be deleted. This is not that good since keeping a track of extra counter is a overhead.  
 
-2. Least recently used cache (_LRU_)  
-3. Least recently used cache 2 (_LRU 2_)  
+**2. Least recently used cache (_LRU_)**  
+- This cache removes the least recently used item from the cache i.e the one which is not used for longest time. Web browser uses this technique for caching. New items are placed on top of cache and when limit exceeds, items from bottom of the list are removed. So, when a new item is accessed it is placed on top of the list. This means, items which are frequently accessed tends to remain in the cache. There are 2 ways to implement this i.e either using Arrays or Linked List. 
+There are some improved versions of LRU as well normally known as LRU 2 and 2Q.  
+
+**3. Least recently used cache 2 (_LRU 2_)**  
+
 4. Two Queues  
 5. Adaptive replacement cache (_ARC_)  
 6. Most recently used cache (_MRU_)  

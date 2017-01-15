@@ -6,6 +6,9 @@ package com.deepak.data.structures.Stack;
 
 import java.util.NoSuchElementException;
 
+/**
+ * Class implementing Stack based on Array
+ */
 public class ArrayBasedStack {
 
 	/**

@@ -28,7 +28,7 @@ Below topics/problems are covered as of now.
 
 **1. Arrays**
 - [X] [Choosing the right data structure](../master/src/com/deepak/data/structures/Arrays/RightDataStructure.md)
-- [X] [Introduction to Arrays](../master/src/com/deepak/data/structures/Arrays/Introduction.md)
+- [X] [Introduction to Arrays](../master/src/com/deepak/data/structures/Arrays/ArraysIntroduction.md)
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
 
 **2. LinkedList**    
@@ -52,10 +52,10 @@ Below topics/problems are covered as of now.
 - [ ] Implement Queue using Stacks
 
 **5. Trees**
-- [ ] Introduction
+- [X] [Introduction](../master/src/com/deepak/data/structures/Tree/Introduction.md)
 - [X] [Binary Tree](../master/src/com/deepak/data/structures/Tree/BinaryTree.java)
 - [X] [Binary Search Tree](../master/src/com/deepak/data/structures/Tree/BinarySearchTree.java)
-- [ ] AVL Tree
+- [X] [AVL Tree](../master/src/com/deepak/data/structures/Tree/AVLTree.java)
 - [ ] Splay Tree
 - [ ] B Tree
 - [ ] Segment Tree
@@ -70,11 +70,17 @@ Below topics/problems are covered as of now.
 
 **7. Hashing**
 - [ ] Introduction
+- [X] [HashTable v/s HashMap](../master/src/com/deepak/data/structures/Hashing/HashTable_vs_HashMap.md)
+- [X] [Iterator v/s Enumeration](../master/src/com/deepak/data/structures/Hashing/Iterator_vs_Enumeration.md)
 - [ ] Collision Handling - Separate Chaining
 - [ ] Collision Handling - Linear Probing
-- [ ] HashCode and Equals Contract
-- [ ] HashMap Implementation
-- [ ] Concurrent HashMap
+- [X] [HashCode and Equals Contract](../master/src/com/deepak/data/structures/Hashing/HashCode&EqualsContract.md)
+- [X] [HashMap Implementation](../master/src/com/deepak/data/structures/Hashing/CustomHashMap.java)
+- [X] [ConcurrentHashMap Introduction](../master/src/com/deepak/data/structures/Hashing/ConcurrentHashMap.md)
+- [X] [ConcurrentHashMap Implementation](../master/src/com/deepak/data/structures/Hashing/ConcurrentHashMapImplementation.java)
+- [X] [ConcurrentModification Exception](../master/src/com/deepak/data/structures/Hashing/ConcurrentModificationException.java)
+- [X] [WeakHashMap Implementation](../master/src/com/deepak/data/structures/Hashing/WeakHashMapImplementation.java)
+- [X] [HashTable Implementation](../master/src/com/deepak/data/structures/Hashing/CustomHashTable.java)
 
 **8. Graphs**
 - [ ] Introduction
@@ -82,8 +88,8 @@ Below topics/problems are covered as of now.
 - [ ] DFS for Graphs
 
 **9. Set**
-- [ ] Introduction
-- [ ] Implement Set
+- [X] [Introduction](../master/src/com/deepak/data/structures/Set/SetIntroduction.md)
+- [X] [Implement Set](../master/src/com/deepak/data/structures/Set/ArrayBasedSet.java)
 
 **10. Priority Queue**
 - [ ] Introduction
@@ -101,6 +107,6 @@ Below topics/problems are covered as of now.
 - [ ] Introduction
 
 **14. Cache**
-- [X] [Introduction](../master/src/com/deepak/data/structures/Cache/Introduction.md)
+- [X] [Introduction](../master/src/com/deepak/data/structures/Cache/CacheIntroduction.md)
 - [ ] LRU Cache
 - [ ] MRU Cache

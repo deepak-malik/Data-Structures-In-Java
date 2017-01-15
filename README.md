@@ -33,12 +33,9 @@ Below topics/problems are covered as of now.
 
 **2. LinkedList**    
 - [X] [Linked List concepts](../master/src/com/deepak/data/structures/LinkedList/LinkedListConcepts.md)
-- [X] Singly LinkedList
-    - [X] [Implementation](../master/src/com/deepak/data/structures/LinkedList/SinglyLinkedList.java)
-- [X] Doubly LinkedList
-    - [X] [Implementation](../master/src/com/deepak/data/structures/LinkedList/DoublyLinkedList.java)
-- [ ] Circular LinkedList
-    - [ ] Implementation
+- [X] [Singly LinkedList Implementation](../master/src/com/deepak/data/structures/LinkedList/SinglyLinkedList.java)
+- [X] [Doubly LinkedList Implementation](../master/src/com/deepak/data/structures/LinkedList/DoublyLinkedList.java)
+- [ ] Circular LinkedList Implementation
 
 **3. Stack**
 - [ ] Introduction
@@ -51,8 +48,6 @@ Below topics/problems are covered as of now.
 - [X] [Array based Implementation](../master/src/com/deepak/data/structures/Queue/ArrayBasedQueue.java)
 - [X] [LinkedList based Implementation](../master/src/com/deepak/data/structures/Queue/LinkedListBasedQueue.java) 
 - [ ] Stack based Implementation
-- [X] [Dequeue](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
-- [ ] Priority Queue
 - [ ] Implement Stack using Queues
 - [ ] Implement Queue using Stacks
 
@@ -94,6 +89,7 @@ Below topics/problems are covered as of now.
 - [ ] Introduction
 - [ ] Implement Priority Queue using Arrays
 - [ ] Implement Priority Queue using Stack 
+- [X] [Dequeue](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
 
 **11. Trie**
 - [ ] Introduction

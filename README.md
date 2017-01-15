@@ -86,16 +86,25 @@ Below topics/problems are covered as of now.
 - [ ] BFS for Graphs
 - [ ] DFS for Graphs
 
-**9. Trie**
+**9. Set**
+- [ ] Introduction
+- [ ] Implement Set
+
+**10. Priority Queue**
+- [ ] Introduction
+- [ ] Implement Priority Queue using Arrays
+- [ ] Implement Priority Queue using Stack 
+
+**11. Trie**
 - [ ] Introduction
 
-**10. Treap**
+**12. Treap**
 - [ ] Introduction
 
-**11. Matrix**
+**13. Matrix**
 - [ ] Introduction
 
-**12. Cache**
+**14. Cache**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Cache/Introduction.md)
 - [ ] LRU Cache
 - [ ] MRU Cache

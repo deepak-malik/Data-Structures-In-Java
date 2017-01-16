@@ -25,6 +25,6 @@ Below are the graphs which are created using directed edges and undirected edges
 
 Directed edge is represented as **(S, D)** where **S** is source and **D** is destination, whereas UnDirected edge is represented as **{S, D}**. Typically in a graph, either all edges are directed or all of them are undirected but it can be both as well.
 
-**Undirected V/S Directed Graphs**
+**Undirected v/s Directed Graphs**
 - A social media network like **Facebook** can be a example of **Undirected Graph** where each user is connected to some other user and vice versa. There is a mutual relationship here (i.e if you are a friend of some other person, then he is also your friend).  Now, let's talk about a use case of _"Suggest Friends"_. We can do this by suggesting friends of friends which are not connected to each other i.e find all the nodes where path = 2 (2 because 1 refers to our own friend and second will be the friend of friend).
 - **WWW (World Wide Web)** can be a perfect example of **Directed Graph** where each of the web page is connected to some other web page. Here relationship is not mutual. i.e if Page A has a link to Page B, then it's not necessary that Page B will also have a link to Page A. Though there can be self links to the pages. We Crawler does the same thing as well. It traverses through the web pages and create a directed graph.  

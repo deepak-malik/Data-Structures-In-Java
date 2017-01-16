@@ -28,11 +28,11 @@ Below topics/problems are covered as of now.
 
 **1. Arrays**
 - [X] [Choosing the right data structure](../master/src/com/deepak/data/structures/Arrays/RightDataStructure.md)
-- [X] [Introduction to Arrays](../master/src/com/deepak/data/structures/Arrays/ArraysIntroduction.md)
+- [X] [Arrays Introduction](../master/src/com/deepak/data/structures/Arrays/ArraysIntroduction.md)
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
 
 **2. LinkedList**    
-- [X] [Linked List concepts](../master/src/com/deepak/data/structures/LinkedList/LinkedListConcepts.md)
+- [X] [Linked List Introduction](../master/src/com/deepak/data/structures/LinkedList/LinkedListIntroduction.md)
 - [X] [Singly LinkedList Implementation](../master/src/com/deepak/data/structures/LinkedList/SinglyLinkedList.java)
 - [X] [Doubly LinkedList Implementation](../master/src/com/deepak/data/structures/LinkedList/DoublyLinkedList.java)
 - [ ] Circular LinkedList Implementation
@@ -52,7 +52,7 @@ Below topics/problems are covered as of now.
 - [ ] Implement Queue using Stacks
 
 **5. Trees**
-- [X] [Introduction](../master/src/com/deepak/data/structures/Tree/Introduction.md)
+- [X] [Introduction](../master/src/com/deepak/data/structures/Tree/TreesIntroduction.md)
 - [X] [Binary Tree](../master/src/com/deepak/data/structures/Tree/BinaryTree.java)
 - [X] [Binary Search Tree](../master/src/com/deepak/data/structures/Tree/BinarySearchTree.java)
 - [X] [AVL Tree](../master/src/com/deepak/data/structures/Tree/AVLTree.java)

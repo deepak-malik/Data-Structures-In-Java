@@ -83,7 +83,7 @@ Below topics/problems are covered as of now.
 - [X] [HashTable Implementation](../master/src/com/deepak/data/structures/Hashing/CustomHashTable.java)
 
 **8. Graphs**
-- [ ] Introduction
+- [ ] [Introduction](../master/src/com/deepak/data/structures/Graph/GraphsIntroduction.md)
 - [ ] BFS for Graphs
 - [ ] DFS for Graphs
 

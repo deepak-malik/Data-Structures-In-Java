@@ -88,6 +88,26 @@ public class Graph<T> {
 	}
 
 	/**
+	 * Method to print the graph
+	 */
+	public void printGraph() {
+		System.out.println("Graph");
+		for (Vertex<T> vertex : adjacencyList.keySet()) {
+			System.out.println("\n[" + vertex.toString() + "] --> ");
+			ArrayList<Edge<T>> edges = adjacencyList.get(vertex);
+			if (null != edges) {
+				for (Edge<T> edge : edges) {
+					if (edge.getFirstVertex().equals(vertex)) {
+						System.out.println(edge.getSecondVertex().toString());
+					} else {
+						System.out.println(edge.getFirstVertex().toString());
+					}
+				}
+			}
+		}
+	}
+
+	/**
 	 * Method to find a vertex when a element is given
 	 * @param element
 	 * @return {@link Vertex<T>}
@@ -235,6 +255,13 @@ public class Graph<T> {
 			return data.equals(vertex.getData());
 		}
 
+		/**
+		 * toString implementation
+		 */
+		public String toString() {
+			return data.toString();
+		}
+
 	}
 
 	/**
@@ -302,6 +329,13 @@ public class Graph<T> {
 				return true;
 			}
 			return false;
+		}
+
+		/**
+		 * toString method
+		 */
+		public String toString() {
+			return firstVertex.toString() + "," + secondVertex.toString();
 		}
 
 	}

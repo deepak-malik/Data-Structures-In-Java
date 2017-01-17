@@ -5,6 +5,7 @@
 package com.deepak.data.structures.Graph;
 
 import java.util.ArrayDeque;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -27,23 +28,23 @@ public class BFSGraphs<T> {
 	 * @param value
 	 * @return {@link boolean}
 	 */
-	public static <T> boolean performBFS(GraphNode<T> root, T value) {
+	public static <T> boolean performBFS(BFSGraphNode<T> root, T value) {
 		if (root.getValue() == value) {
 			System.out.println("GraphNode found. Root = " + root);
 			return true; /* Value exists at root node */
 		}
 
 		/* Create a queue. Set root as visited. Add the root to queue */
-		Queue<GraphNode<T>> queue = new ArrayDeque<>();
+		Queue<BFSGraphNode<T>> queue = new ArrayDeque<>();
 		root.setVisited(true);
 		queue.add(root);
 
 		/* Check if queue is not empty */
 		while (queue.peek() != null) {
 			/* Remove the first element from the queue */
-			GraphNode<T> currentNode = queue.poll();
+			BFSGraphNode<T> currentNode = queue.poll();
 			/* Check for all of the neighbors */
-			for (GraphNode<T> graphNode : currentNode.getNeighbors()) {
+			for (BFSGraphNode<T> graphNode : currentNode.getNeighbors()) {
 				/* If the neighbor is unvisited, mark it as visited and add to the queue */
 				if (!graphNode.isVisited()) {
 					graphNode.setVisited(true);
@@ -59,24 +60,24 @@ public class BFSGraphs<T> {
 	}
 
 	/**
-	 * Static class GraphNode
+	 * Static class BFSGraphNode
 	 * 
 	 * @author Deepak
 	 *
 	 * @param <E>
 	 */
-	public static class GraphNode<E> {
+	public static class BFSGraphNode<E> {
 
 		private E value;
-		private GraphNode<E> next;
-		private GraphNode<E>[] neighbors;
+		private BFSGraphNode<E> next;
+		private List<BFSGraphNode<E>> neighbors;
 		private boolean visited;
 
 		/**
 		 * Parameterized Constructor
 		 * @param value
 		 */
-		public GraphNode(E value) {
+		public BFSGraphNode(E value) {
 			this.value = value;
 		}
 
@@ -84,7 +85,7 @@ public class BFSGraphs<T> {
 		 * Parameterized Constructor
 		 * @param neighbors
 		 */
-		public GraphNode(GraphNode<E>[] neighbors) {
+		public BFSGraphNode(List<BFSGraphNode<E>> neighbors) {
 			this.neighbors = neighbors;
 		}
 
@@ -95,17 +96,17 @@ public class BFSGraphs<T> {
 			this.value = value;
 		}
 
-		public GraphNode<E> getNext() {
+		public BFSGraphNode<E> getNext() {
 			return next;
 		}
-		public void setNext(GraphNode<E> next) {
+		public void setNext(BFSGraphNode<E> next) {
 			this.next = next;
 		}
 
-		public GraphNode<E>[] getNeighbors() {
+		public List<BFSGraphNode<E>> getNeighbors() {
 			return neighbors;
 		}
-		public void setNeighbours(GraphNode<E>[] neighbors) {
+		public void setNeighbors(List<BFSGraphNode<E>> neighbors) {
 			this.neighbors = neighbors;
 		}
 

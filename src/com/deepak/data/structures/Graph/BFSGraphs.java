@@ -25,7 +25,7 @@ public class BFSGraphs<T> {
 	 * Method to perform Breadth First Search on a Graph
 	 * @param root
 	 * @param value
-	 * @return {@link true}
+	 * @return {@link boolean}
 	 */
 	public static <T> boolean performBFS(GraphNode<T> root, T value) {
 		if (root.getValue() == value) {
@@ -43,7 +43,7 @@ public class BFSGraphs<T> {
 			/* Remove the first element from the queue */
 			GraphNode<T> currentNode = queue.poll();
 			/* Check for all of the neighbors */
-			for (GraphNode<T> graphNode : currentNode.neighbors) {
+			for (GraphNode<T> graphNode : currentNode.getNeighbors()) {
 				/* If the neighbor is unvisited, mark it as visited and add to the queue */
 				if (!graphNode.isVisited()) {
 					graphNode.setVisited(true);
@@ -117,6 +117,5 @@ public class BFSGraphs<T> {
 		}
 
 	}
-
 
 }

@@ -85,8 +85,8 @@ Below topics/problems are covered as of now.
 **8. Graphs**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Graph/GraphsIntroduction.md)
 - [X] [Graph Implementation](../master/src/com/deepak/data/structures/Graph/Graph.java)
-- [ ] BFS for Graphs
-- [ ] DFS for Graphs
+- [X] [BFS for Graphs](../master/src/com/deepak/data/structures/Graph/BFSGraphs.java)
+- [X] [DFS for Graphs](../master/src/com/deepak/data/structures/Graph/DFSGraphs.java)
 
 **9. Set**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Set/SetIntroduction.md)

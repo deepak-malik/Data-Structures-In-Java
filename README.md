@@ -99,7 +99,8 @@ Below topics/problems are covered as of now.
 - [X] [Dequeue](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
 
 **11. Trie**
-- [ ] Introduction
+- [X] [Introduction](../master/src/com/deepak/data/structures/Trie/TrieIntroduction.md)
+- [X] [Implement Trie](../master/src/com/deepak/data/structures/Trie/TrieImplementation.java)
 
 **12. Treap**
 - [ ] Introduction

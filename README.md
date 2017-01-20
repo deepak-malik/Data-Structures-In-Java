@@ -30,6 +30,7 @@ Below topics/problems are covered as of now.
 - [X] [Choosing the right data structure](../master/src/com/deepak/data/structures/Arrays/RightDataStructure.md)
 - [X] [Arrays Introduction](../master/src/com/deepak/data/structures/Arrays/ArraysIntroduction.md)
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
+- [X] [ArrayList Implementation](../master/src/com/deepak/data/structures/Arrays/CustomArrayList.java)
 
 **2. LinkedList**    
 - [X] [Linked List Introduction](../master/src/com/deepak/data/structures/LinkedList/LinkedListIntroduction.md)

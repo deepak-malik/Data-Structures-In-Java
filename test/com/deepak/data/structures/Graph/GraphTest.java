@@ -1,6 +1,6 @@
 /**
  * Data-Structures-in-Java
- * GraohTest.java
+ * GraphTest.java
  */
 package com.deepak.data.structures.Graph;
 

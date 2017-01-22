@@ -1,5 +1,5 @@
 /**
- * Data-Structures-And-Algorithms-in-Java
+ * Data-Structures-In-Java
  * LinkedListBasedQueue.java
  */
 package com.deepak.data.structures.Queue;
@@ -8,29 +8,10 @@ import java.util.NoSuchElementException;
 
 /**
  * Linked List based implementation of queue
+ * 
  * @author Deepak
  */
 public class LinkedListBasedQueue {
-
-	/**
-	 * Method to test queue implementation
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		System.out.println("Creating a new LinkedList based queue.");
-		LinkedListBasedQueue queue = new LinkedListBasedQueue();
-		System.out.println("Size of Queue => " + queue.size());
-		System.out.println("Is Queue Empty => " + queue.isEmpty());
-		System.out.println("Inserting two items in Queue.");
-		queue.enqueue(10);
-		queue.enqueue(20);
-		System.out.println("After Insertion, Size of Queue => " + queue.size());
-		System.out.println("After Insertion, Is Queue Empty => " + queue.isEmpty());
-		System.out.println("Removing an item from Queue.");
-		queue.dequeue();
-		System.out.println("After Removal, Size of Queue => " + queue.size());
-		System.out.println("Top element on Queue => " + queue.peek());
-	}
 
 	/**
 	 * Since in queue, we have to keep track of both the ends
@@ -41,6 +22,7 @@ public class LinkedListBasedQueue {
 
 	/**
 	 * Method to insert a item in the queue
+	 * 
 	 * @param item
 	 */
 	public void enqueue(Object item) {
@@ -55,7 +37,8 @@ public class LinkedListBasedQueue {
 
 	/**
 	 * Method to remove the item from the queue
-	 * @return
+	 * 
+	 * @return {@link object}
 	 */
 	public Object dequeue() {
 		if (isEmpty()) {
@@ -71,7 +54,8 @@ public class LinkedListBasedQueue {
 
 	/**
 	 * Method to check the first item from the queue
-	 * @return
+	 * 
+	 * @return {@link object}
 	 */
 	public Object peek() {
 		if (head == null) {
@@ -82,7 +66,8 @@ public class LinkedListBasedQueue {
 
 	/**
 	 * Method to check the size of the queue
-	 * @return
+	 * 
+	 * @return {@link int}
 	 */
 	public int size() {
 		int count = 0;
@@ -94,15 +79,16 @@ public class LinkedListBasedQueue {
 
 	/**
 	 * Method to check if queue is empty
-	 * @return
+	 * 
+	 * @return {@link boolean}
 	 */
 	public boolean isEmpty() {
 		return head == null;
 	}
 
-
 	/**
 	 * Node class for LinkedList based queue
+	 * 
 	 * @author Deepak
 	 */
 	class Node {
@@ -119,6 +105,7 @@ public class LinkedListBasedQueue {
 
 		/**
 		 * Constructor to create a new node
+		 * 
 		 * @param item
 		 * @param next
 		 */

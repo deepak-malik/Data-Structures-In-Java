@@ -308,7 +308,7 @@ public class DoublyLinkedList<E> {
 		/* toString implementation to print just the data */
 		@Override
 		public String toString() {
-			return "Data Item = " + item;
+			return String.valueOf(item);
 		}
 
 	}

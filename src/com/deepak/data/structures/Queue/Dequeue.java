@@ -1,5 +1,5 @@
 /**
- * Data-Structures-And-Algorithms-in-Java
+ * Data-Structures-In-Java
  * Dequeue.java
  */
 package com.deepak.data.structures.Queue;

@@ -68,15 +68,14 @@ public class SinglyLinkedList<E> {
 		newNode.next = null; /* Since this insertion is at tail, this new node will point to null */
 		if (null == head) { /* When list is empty */
 			head = newNode;
-			size++;
 		} else {
 			Node<E> tempNode = head;
 			while (null != tempNode.next) {
 				tempNode = tempNode.next;
 			}
 			tempNode.next = newNode;
-			size++;
 		}
+		size++;
 	}
 
 	/**
@@ -100,7 +99,6 @@ public class SinglyLinkedList<E> {
 		Node<E> newNode = new Node<E>(value);
 		if (position == 0) {
 			newNode.next = head;
-			size++;
 		} else {
 			Node<E> tempNode = head;
 			for (int i = 0; i < position - 1; i++) {
@@ -109,8 +107,8 @@ public class SinglyLinkedList<E> {
 			Node<E> nodeNextToNewNode = tempNode.next;
 			tempNode.next = newNode;
 			newNode.next = nodeNextToNewNode;
-			size++;
 		}
+		size++;
 	}
 
 	/**

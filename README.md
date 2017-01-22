@@ -95,9 +95,9 @@ Below topics/problems are covered as of now.
 
 **10. Priority Queue**
 - [ ] Introduction
-- [ ] Implement Priority Queue using Arrays
-- [ ] Implement Priority Queue using Stack 
-- [X] [Dequeue](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
+- [ ] Array based Implementation
+- [ ] Stack based Implementation 
+- [X] [Dequeue Implementation](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
 
 **11. Trie**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Trie/TrieIntroduction.md)

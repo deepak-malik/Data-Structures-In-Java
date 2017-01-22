@@ -1,5 +1,5 @@
 /**
- * Data-Structures-And-Algorithms-in-Java
+ * Data-Structures-In-Java
  * ArrayBasedQueue.java
  */
 package com.deepak.data.structures.Queue;
@@ -8,29 +8,10 @@ import java.util.NoSuchElementException;
 
 /**
  * Implementation of array based queue
+ * 
  * @author Deepak
  */
 public class ArrayBasedQueue {
-
-	/**
-	 * Method to test queue implementation
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		System.out.println("Creating a new Array based queue.");
-		ArrayBasedQueue queue = new ArrayBasedQueue(10);
-		System.out.println("Size of Queue => " + queue.size());
-		System.out.println("Is Queue Empty => " + queue.isEmpty());
-		System.out.println("Inserting two items in Queue.");
-		queue.enqueue(10);
-		queue.enqueue(20);
-		System.out.println("After Insertion, Size of Queue => " + queue.size());
-		System.out.println("After Insertion, Is Queue Empty => " + queue.isEmpty());
-		System.out.println("Removing an item from Queue.");
-		queue.dequeue();
-		System.out.println("After Removal, Size of Queue => " + queue.size());
-		System.out.println("Top element on Queue => " + queue.peek());
-	}
 
 	/**
 	 * Array of objects
@@ -51,6 +32,7 @@ public class ArrayBasedQueue {
 
 	/**
 	 * Constructor to create new array based queue
+	 * 
 	 * @param capacity
 	 */
 	public ArrayBasedQueue(int capacity) {
@@ -60,6 +42,7 @@ public class ArrayBasedQueue {
 	/**
 	 * Method to push a new item in queue
 	 * We will deal only with tail while adding new item
+	 * 
 	 * @param item
 	 */
 	public void enqueue(Object item) {
@@ -74,7 +57,8 @@ public class ArrayBasedQueue {
 	/**
 	 * Method to pop a item from queue
 	 * We will deal only with head while deleting a element
-	 * @return
+	 * 
+	 * @return {@link Object}
 	 */
 	public Object dequeue() {
 		if (size == 0) {
@@ -89,18 +73,20 @@ public class ArrayBasedQueue {
 
 	/**
 	 * Method to check the top item in queue
-	 * @return
+	 * 
+	 * @return {@link Object}
 	 */
 	public Object peek() {
 		if (size == 0) {
 			throw new NoSuchElementException("Cannot peek from empty queue");
 		}
-		return array[size - 1];
+		return array[head];
 	}
 
 	/**
 	 * Method to check size of queue
-	 * @return
+	 * 
+	 * @return {@link int}
 	 */
 	public int size() {
 		return size;
@@ -108,7 +94,8 @@ public class ArrayBasedQueue {
 
 	/**
 	 * Method to check if queue is empty
-	 * @return
+	 * 
+	 * @return {@link boolean}
 	 */
 	public boolean isEmpty() {
 		return size == 0;

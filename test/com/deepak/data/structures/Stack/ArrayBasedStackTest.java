@@ -43,9 +43,9 @@ public class ArrayBasedStackTest {
 		stack.push(35);
 		stack.push(13);
 		Assert.assertTrue(stack.size() == 4);
-		Assert.assertEquals(stack.pop(), 3);
-		Assert.assertEquals(stack.pop(), 17);
+		Assert.assertEquals(stack.pop(), 13);
 		Assert.assertEquals(stack.pop(), 35);
+		Assert.assertEquals(stack.pop(), 17);
 		Assert.assertTrue(stack.size() == 1);
 	}
 
@@ -62,11 +62,11 @@ public class ArrayBasedStackTest {
 		stack.push(35);
 		stack.push(13);
 		Assert.assertTrue(stack.size() == 4);
-		Assert.assertEquals(stack.peek(), 3);
+		Assert.assertEquals(stack.peek(), 13);
 		Assert.assertTrue(stack.size() == 4);
 		stack.pop();
 		Assert.assertTrue(stack.size() == 3);
-		Assert.assertEquals(stack.peek(), 17);
+		Assert.assertEquals(stack.peek(), 35);
 	}
 
 }

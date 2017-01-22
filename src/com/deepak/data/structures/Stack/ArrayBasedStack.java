@@ -53,10 +53,8 @@ public class ArrayBasedStack {
 		if (size == 0) {
 			throw new NoSuchElementException("Cannot delete from a empty Stack");
 		}
-		Object result = array[0];
-		for (int i = 0; i < array.length - 1; i++) {
-			array[i] = array[i + 1];
-		}
+		Object result = array[size - 1];
+		array[size - 1] = null;
 		size--;
 		return result;
 	}
@@ -70,7 +68,7 @@ public class ArrayBasedStack {
 		if (size == 0) {
 			throw new NoSuchElementException("Cannot peek from a empty Stack");
 		}
-		return array[0];
+		return array[size - 1];
 	}
 
 	/**

@@ -1,6 +1,6 @@
 /**
  * Data-Structures-in-Java
- * SimpleStackTest.java
+ * QueueBasedStackTest.java
  */
 package com.deepak.data.structures.Stack;
 
@@ -8,18 +8,18 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Test cases for simple stack
+ * Test cases for queue based stack
  * 
  * @author Deepak
  */
-public class SimpleStackTest {
+public class QueueBasedStackTest {
 
 	/**
 	 * Test case for push feature
 	 */
 	@Test
 	public void testPush() {
-		SimpleStackFromList stack = new SimpleStackFromList();
+		QueueBasedStack<Integer> stack = new QueueBasedStack<>();
 		Assert.assertTrue(stack.isEmpty());
 		Assert.assertTrue(stack.size() == 0);
 		stack.push(3);
@@ -35,7 +35,7 @@ public class SimpleStackTest {
 	 */
 	@Test
 	public void testPop() {
-		SimpleStackFromList stack = new SimpleStackFromList();
+		QueueBasedStack<Integer> stack = new QueueBasedStack<>();
 		Assert.assertTrue(stack.isEmpty());
 		Assert.assertTrue(stack.size() == 0);
 		stack.push(3);
@@ -43,9 +43,9 @@ public class SimpleStackTest {
 		stack.push(35);
 		stack.push(13);
 		Assert.assertTrue(stack.size() == 4);
-		Assert.assertEquals(stack.pop(), 13);
-		Assert.assertEquals(stack.pop(), 35);
-		Assert.assertEquals(stack.pop(), 17);
+		Assert.assertTrue(stack.pop() == 13);
+		Assert.assertTrue(stack.pop() == 35);
+		Assert.assertTrue(stack.pop() == 17);
 		Assert.assertTrue(stack.size() == 1);
 	}
 
@@ -54,7 +54,7 @@ public class SimpleStackTest {
 	 */
 	@Test
 	public void testPeek() {
-		SimpleStackFromList stack = new SimpleStackFromList();
+		QueueBasedStack<Integer> stack = new QueueBasedStack<>();
 		Assert.assertTrue(stack.isEmpty());
 		Assert.assertTrue(stack.size() == 0);
 		stack.push(3);
@@ -62,11 +62,11 @@ public class SimpleStackTest {
 		stack.push(35);
 		stack.push(13);
 		Assert.assertTrue(stack.size() == 4);
-		Assert.assertEquals(stack.peek(), 13);
+		Assert.assertTrue(stack.peek() == 13);
 		Assert.assertTrue(stack.size() == 4);
 		stack.pop();
 		Assert.assertTrue(stack.size() == 3);
-		Assert.assertEquals(stack.peek(), 35);
+		Assert.assertTrue(stack.peek() == 35);
 	}
 
 }

@@ -1,17 +1,18 @@
 /**
  * Data-Structures-in-Java
- * LRUCache.java
+ * MRUCache.java
  */
 package com.deepak.data.structures.Cache;
 
 import java.util.HashMap;
 
 /**
- * Custom implementation of LRU cache
+ * Custom implementation of MRU cache
+ * NOTE : Only the eviction differs in LRU and MRU
  * 
  * @author Deepak
  */
-public class LRUCache<K, V> {
+public class MRUCache<K, V> {
 
 	/**
 	 * HashMap for cache
@@ -36,7 +37,7 @@ public class LRUCache<K, V> {
 	/**
 	 * Default Constructor
 	 */
-	public LRUCache() {
+	public MRUCache() {
 		setCapacity(DEFAULT_CAPACITY);
 	}
 
@@ -45,7 +46,7 @@ public class LRUCache<K, V> {
 	 * 
 	 * @param capacity
 	 */
-	public LRUCache(int capacity) {
+	public MRUCache(int capacity) {
 		setCapacity(capacity);
 	}
 
@@ -64,8 +65,8 @@ public class LRUCache<K, V> {
 		/* If key exists, get the key and return the value */
 		Node<K, V> node = cache.get(key);
 		/* Since this node is least recently used now, move it to the end.
-		 * When eviction will happen, this will be the first entry to be removed.
-		 * Removal will happen at head. */
+		 * When eviction will happen, this will be the last entry to be removed.
+		 * Removal will happen at tail. */
 		moveNodeToLast(node);
 		return node.getValue();
 	}
@@ -88,7 +89,7 @@ public class LRUCache<K, V> {
 			return;
 		}
 		/* If cache has reached the capacity,
-		 * evict the LRU node and remove it from cache */
+		 * evict the MRU node and remove it from cache */
 		Node<K, V> newNode;
 		if (cache.size() == capacity) {
 			newNode = evict();
@@ -170,10 +171,10 @@ public class LRUCache<K, V> {
 		if (head == null) {
 			throw new AssertionError("Cannot evict from an empty cache!!");
 		}
-		/* Evict the head, update next and evicted node */
-		Node<K, V> evicted = head;
-		head = evicted.getNext();
-		head.setPrevious(null);
+		/* Evict the tail, update next and evicted node */
+		Node<K, V> evicted = tail;
+		tail = evicted.getPrevious();
+		tail.setNext(null);
 		evicted.setNext(null);
 		return evicted;
 	}
@@ -220,7 +221,7 @@ public class LRUCache<K, V> {
 	}
 
 	/**
-	 * Class Node for LRU cache
+	 * Class Node for MRU cache
 	 * 
 	 * @author Deepak
 	 *
@@ -284,6 +285,5 @@ public class LRUCache<K, V> {
 		}
 
 	}
-
 
 }

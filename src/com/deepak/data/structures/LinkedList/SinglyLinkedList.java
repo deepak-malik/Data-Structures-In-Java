@@ -229,7 +229,7 @@ public class SinglyLinkedList<E> {
 			nodeToBeDeleted.next = nodeToBeDeleted.next.next;
 		}
 	}
-	
+
 	/**
 	 * Returns a array containing each element 
 	 * from the list from start to end
@@ -244,7 +244,7 @@ public class SinglyLinkedList<E> {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Node class of a linked list
 	 * This is needed since entire linked list is a collection 

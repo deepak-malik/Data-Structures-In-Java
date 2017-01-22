@@ -16,7 +16,7 @@ public class BinaryTree<E extends Comparable<E>> {
 			addNode(root, value);
 		}
 	}
-	
+
 	private Node<E> addNode(Node<E> rootNode, E value) {
 		if (rootNode == null) {
 			return null;
@@ -69,7 +69,7 @@ public class BinaryTree<E extends Comparable<E>> {
 		}
 		return false;
 	}
-	
+
 	public Node<E> findParent(Node<E> node) {
 		return findParent(node.data, root, null);
 	}
@@ -112,11 +112,11 @@ public class BinaryTree<E extends Comparable<E>> {
 		}
 		return null;
 	}
-	
+
 	public boolean isLeaf(Node<E> node) {
 		return !hasLeft(node) && !hasRight(node);
 	}
-	
+
 	public int getDepth(Node<E> node) {
 		if (node == null) {
 			return 0;
@@ -125,7 +125,7 @@ public class BinaryTree<E extends Comparable<E>> {
 		int right = getDepth(node.right);
 		return left > right ? left + 1 : right + 1; 
 	}
-	
+
 	public void printInOrder(Node<E> node) {
 		if (node == null) {
 			return;
@@ -134,39 +134,39 @@ public class BinaryTree<E extends Comparable<E>> {
 		System.out.print(node.data + " ");
 		printInOrder(node.right);
 	}
-	
+
 	public void printPreorder(Node<E> node) {
-	    if (node == null) return;
-	    System.out.print(node.data + " ");
-	    printPreorder(node.left);
-	    printPreorder(node.right);
+		if (node == null) return;
+		System.out.print(node.data + " ");
+		printPreorder(node.left);
+		printPreorder(node.right);
 	}
 
 	public void printPostorder(Node<E> node) {
-	    if (node == null) return;
-	    printPostorder(node.left);
-	    printPostorder(node.right);
-	    System.out.print(node.data + " ");
+		if (node == null) return;
+		printPostorder(node.left);
+		printPostorder(node.right);
+		System.out.print(node.data + " ");
 	}
-	
+
 	public void printByLevel(Node<E> root) {
-	    Queue<Node<E>> firstQ = new LinkedList<>();
-	    firstQ.add(root);
+		Queue<Node<E>> firstQ = new LinkedList<>();
+		firstQ.add(root);
 
-	    Queue<Queue<Node<E>>> mainQ = new LinkedList<>();
-	    mainQ.add(firstQ);
+		Queue<Queue<Node<E>>> mainQ = new LinkedList<>();
+		mainQ.add(firstQ);
 
-	    while (!mainQ.isEmpty()) {
-	        Queue<Node<E>> levelQ = mainQ.remove();
-	        Queue<Node<E>> nextLevelQ = new LinkedList<>();
-	        for (Node<E> x : levelQ) {
-	            System.out.print(x.data + " ");
-	            if (x.left != null)    nextLevelQ.add(x.left);
-	            if (x.right != null)   nextLevelQ.add(x.right);
-	        }
-	        if (!nextLevelQ.isEmpty()) mainQ.add(nextLevelQ);
-	        System.out.println();
-	    }
+		while (!mainQ.isEmpty()) {
+			Queue<Node<E>> levelQ = mainQ.remove();
+			Queue<Node<E>> nextLevelQ = new LinkedList<>();
+			for (Node<E> x : levelQ) {
+				System.out.print(x.data + " ");
+				if (x.left != null)    nextLevelQ.add(x.left);
+				if (x.right != null)   nextLevelQ.add(x.right);
+			}
+			if (!nextLevelQ.isEmpty()) mainQ.add(nextLevelQ);
+			System.out.println();
+		}
 	}
 
 	public class Node<T> {
@@ -183,7 +183,7 @@ public class BinaryTree<E extends Comparable<E>> {
 		public String toString() {
 			return "Node [data=" + data + "]";
 		}
-		
+
 	}
 
 }

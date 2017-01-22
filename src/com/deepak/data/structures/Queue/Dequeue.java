@@ -24,7 +24,7 @@ import java.util.NoSuchElementException;
 public class Dequeue<Item> implements Iterable<Item> {
 
 	private Node first, last;
-	
+
 	/**
 	 * constructs the object.
 	 */
@@ -32,7 +32,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 		first = null;
 		last = null;
 	}
-	
+
 	/**
 	 * checks to see if deque is empty.
 	 * @return <code>true</code> if no elements present, 
@@ -41,7 +41,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 	public boolean isEmpty() {
 		return first == null && last == null;
 	}
-	
+
 	/**
 	 * returns the number of elements in the deque.
 	 * @return the size as int.
@@ -54,7 +54,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 		}
 		return count;
 	}
-	
+
 	/**
 	 * adds an element at the front of the queue.
 	 * @param item element to be inserted, should be not null.
@@ -72,7 +72,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 		else
 			oldFirst.prev = first;
 	}
-	
+
 	/**
 	 * removes an item from the front of the deque.
 	 * @return an item at the front of the deque.
@@ -80,7 +80,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 	public Item removeFirst() {
 		if (isEmpty())
 			throw new NoSuchElementException("no element exists on deque.");
-		
+
 		Item item = first.item;
 		if (first == last)
 			first = last = null;
@@ -90,7 +90,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 		}
 		return item;
 	}
-	
+
 	/**
 	 * adds an item at the end of the deque.
 	 * @param item item to be added at the end of the deque.
@@ -98,7 +98,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 	public void addLast(Item item) {
 		if (item == null)
 			throw new NullPointerException("null values cannot be inserted.");
-		
+
 		if (isEmpty())
 			addFirst(item);
 		else {
@@ -110,7 +110,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 			oldLast.next = last;
 		}
 	}
-	
+
 	/**
 	 * removes an item at the end of the deque.
 	 * @return item from the end.
@@ -127,7 +127,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 		}
 		return item;
 	}
-	
+
 	/**
 	 * returns an iterator over the elements in the deque 
 	 * from front to end fashion.
@@ -136,7 +136,7 @@ public class Dequeue<Item> implements Iterable<Item> {
 	public Iterator<Item> iterator() {
 		return new DequeIterator();
 	}
-	
+
 	/**
 	 * private structure used to represent each item in this
 	 * data structure.
@@ -148,14 +148,14 @@ public class Dequeue<Item> implements Iterable<Item> {
 		Node next;
 		Node prev;
 	}
-	
+
 	/**
 	 * An iterator implementation for Deque data structure.
 	 * @author Deepak
 	 */
 	private class DequeIterator implements Iterator<Item> {
 		private Node current = first;
-		
+
 		public boolean hasNext() {
 			return current != null;
 		}
@@ -172,5 +172,5 @@ public class Dequeue<Item> implements Iterable<Item> {
 			throw new UnsupportedOperationException("remove operation not supported");
 		}
 	}
-	
+
 }

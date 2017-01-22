@@ -209,7 +209,7 @@ public class DoublyLinkedList<E> {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Delete's the element present at head node
 	 */
@@ -222,7 +222,7 @@ public class DoublyLinkedList<E> {
 		head.prev = null;
 		size--;
 	}
-	
+
 	/**
 	 * Delete's the element present at tail node
 	 */
@@ -235,7 +235,7 @@ public class DoublyLinkedList<E> {
 		tail.next = null;
 		size--;
 	}
-	
+
 	/**
 	 * Delete's the element present at given position
 	 * 
@@ -255,7 +255,7 @@ public class DoublyLinkedList<E> {
 		nextNode.prev = previousNode;
 		size--;
 	}
-	
+
 	/**
 	 * Returns a array containing each element 
 	 * from the list from start to end

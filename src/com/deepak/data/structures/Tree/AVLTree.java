@@ -11,21 +11,21 @@ package com.deepak.data.structures.Tree;
  * @author Deepak
  */
 public class AVLTree {
-	
+
 	private AVLTreeNode root;
-	
+
 	public boolean isEmpty() {
 		return root == null;
 	}
-	
+
 	public void makeEmpty() {
 		root = null;
 	}
-	
+
 	public void insert(int data) {
 		root = insert(data, root);
 	}
-	
+
 	private AVLTreeNode insert(int data, AVLTreeNode node) {
 		if (node == null) {
 			root = new AVLTreeNode(data);
@@ -60,7 +60,7 @@ public class AVLTree {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	private AVLTreeNode doubleRotateLeft(AVLTreeNode node) {
 		// TODO Auto-generated method stub
 		return null;
@@ -70,7 +70,7 @@ public class AVLTree {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	private AVLTreeNode doubleRotateRight(AVLTreeNode node) {
 		// TODO Auto-generated method stub
 		return null;
@@ -79,33 +79,33 @@ public class AVLTree {
 	public int height(AVLTreeNode node) {
 		return node == null ? -1 : node.height;
 	}
-	
+
 	/**
 	 * AVL Tree Node
 	 * 
 	 * @author Deepak
 	 */
 	public class AVLTreeNode {
-		
+
 		private AVLTreeNode left;
 		private AVLTreeNode right;
 		private int data;
 		private int height;
-		
+
 		public AVLTreeNode() {
 			this.left = null;
 			this.right = null;
 			this.data = 0;
 			this.height = 0;
 		}
-		
+
 		public AVLTreeNode(int data) {
 			this.left = null;
 			this.right = null;
 			this.data = data;
 			this.height = 0;
 		}
-		
+
 	}
 
 }

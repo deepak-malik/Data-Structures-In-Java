@@ -11,7 +11,7 @@ import com.deepak.data.structures.Tree.BinarySearchTree;
  * @author Deepak
  */
 public class BinarySearchTreeTest {
-	
+
 	/**
 	 * Test case of adding N nodes
 	 */
@@ -24,7 +24,7 @@ public class BinarySearchTreeTest {
 		binarySearchTreeInt.addNode(12);
 		binarySearchTreeInt.addNode(13);
 		Assert.assertTrue(binarySearchTreeInt.size() == 4);
-		
+
 		/* String type */
 		BinarySearchTree<String> binarySearchTreeString = new BinarySearchTree<>();
 		binarySearchTreeString.addNode("Alex");
@@ -33,7 +33,7 @@ public class BinarySearchTreeTest {
 		binarySearchTreeString.addNode("Bob");
 		Assert.assertTrue(binarySearchTreeString.size() == 4);
 	}
-	
+
 	@Test
 	public void testSizeAndEmptyTree() {
 		BinarySearchTree<Integer> binarySearchTreeInt = new BinarySearchTree<>();

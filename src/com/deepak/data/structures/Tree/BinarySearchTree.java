@@ -72,11 +72,11 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	public boolean isRoot(Node<E> node) {
 		return node == root;
 	}
-	
+
 	public Node<E> findParent(Node<E> node) {
 		return findParent(node.value, root, null);
 	}
-	
+
 	private Node<E> findParent(E value, Node<E> root, Node<E> parent) {
 		if (root == null) {
 			return null;
@@ -89,37 +89,37 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		}
 		return parent;
 	}
-	
+
 	public boolean hasParent(Node<E> node) {
 		return findParent(node) != null;
 	}
-	
+
 	public boolean hasLeftNode(Node<E> node) {
 		return node.left != null;
 	}
-	
+
 	public boolean hasRightNode(Node<E> node) {
 		return node.right != null;
 	}
-	
+
 	public Node<E> findLeft(Node<E> node) {
 		if (hasLeftNode(node)) {
 			return node.left;
 		}
 		return null;
 	}
-	
+
 	public Node<E> findRight(Node<E> node) {
 		if (hasRightNode(node)) {
 			return node.right;
 		}
 		return null;
 	}
-	
+
 	public boolean isLeafNode(Node<E> node) {
 		return !hasLeftNode(node) && !hasRightNode(node);
 	}
-	
+
 	public int getDepth(Node<E> node) {
 		if (node == null) {
 			return 0;
@@ -128,11 +128,11 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		int right = getDepth(node.right);
 		return left > right ? left + 1 : right + 1;
 	}
-	
+
 	public boolean contains(E value) {
 		return search(value) != null;
 	}
-	
+
 	public Node<E> search(E value) {
 		Node<E> node = root;
 		while (node != null && node.value != value) {
@@ -144,11 +144,11 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		}
 		return node;
 	}
-	
+
 	public Node<E> delete(E value) {
 		return delete(root, value);
 	}
-	
+
 	/* There are 3 cases here, 
 	 * 1. Node to be removed has no child
 	 * 2. Node to be removed has one child
@@ -171,17 +171,17 @@ public class BinarySearchTree<E extends Comparable<E>> {
 				return root.left;
 			}
 			E minv = root.value;
-	        while (root.left != null)
-	        {
-	            minv = root.left.value;
-	            root = root.left;
-	        }
+			while (root.left != null)
+			{
+				minv = root.left.value;
+				root = root.left;
+			}
 			root.value = minv;
-            root.right = delete(root.right, root.value);
+			root.right = delete(root.right, root.value);
 		}
 		return root;
 	}
-	
+
 	public E getMinimum() {
 		Node<E> node = root;
 		while (node.left != null) {
@@ -189,7 +189,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		}
 		return node.value;
 	}
-	
+
 	public E getMaximum() {
 		Node<E> node = root;
 		while (node.right != null) {
@@ -197,7 +197,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		}
 		return node.value;
 	}
-	
+
 	/* All of these are DFS */
 	/* Left -> Root -> Right */
 	public void traverseInOrder(Node<E> node) {
@@ -208,7 +208,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		System.out.println(node.value + " ");
 		traverseInOrder(node.right);
 	}
-	
+
 	/* Root -> Left -> Right */
 	public void traversePreOrder(Node<E> node) {
 		if (node == null) {
@@ -218,7 +218,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		traversePreOrder(node.left);
 		traversePreOrder(node.right);
 	}
-	
+
 	/* Left -> Root -> Right */
 	public void traversePostOrder(Node<E> node) {
 		if (node == null) {
@@ -228,27 +228,27 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		System.out.println(node.value + " ");
 		traversePostOrder(node.right);
 	}
-	
+
 	/* This is BFS */
 	/* Level by Level */
 	public void traverseLevelOrder(Node<E> root) {
 		Queue<Node<E>> firstQ = new LinkedList<>();
 		firstQ.add(root);
-		
+
 		Queue<Queue<Node<E>>> mainQ = new LinkedList<>();
 		mainQ.add(firstQ);
-		
+
 		while (!mainQ.isEmpty()) {
-	        Queue<Node<E>> levelQ = mainQ.remove();
-	        Queue<Node<E>> nextLevelQ = new LinkedList<>();
-	        for (Node<E> x : levelQ) {
-	            System.out.print(x.value + " ");
-	            if (x.left != null)    nextLevelQ.add(x.left);
-	            if (x.right != null)   nextLevelQ.add(x.right);
-	        }
-	        if (!nextLevelQ.isEmpty()) mainQ.add(nextLevelQ);
-	        System.out.println();
-	    }
+			Queue<Node<E>> levelQ = mainQ.remove();
+			Queue<Node<E>> nextLevelQ = new LinkedList<>();
+			for (Node<E> x : levelQ) {
+				System.out.print(x.value + " ");
+				if (x.left != null)    nextLevelQ.add(x.left);
+				if (x.right != null)   nextLevelQ.add(x.right);
+			}
+			if (!nextLevelQ.isEmpty()) mainQ.add(nextLevelQ);
+			System.out.println();
+		}
 	}
 
 	/**

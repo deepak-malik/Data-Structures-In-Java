@@ -35,7 +35,7 @@ public class WeakHashMapImplementation {
 
 		// Check the size of Map
 		System.out.println("Size of Map after one Strong reference and two weak references insertion. => "
-		+ ordersMap.size());
+				+ ordersMap.size());
 
 		// Force run garbage collection
 		System.gc();

@@ -111,5 +111,5 @@ Below topics/problems are covered as of now.
 
 **14. Cache**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Cache/CacheIntroduction.md)
-- [ ] LRU Cache
+- [X] [LRU Cache](../master/src/com/deepak/data/structures/Cache/LRUCache.java)
 - [ ] MRU Cache

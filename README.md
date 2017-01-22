@@ -106,10 +106,7 @@ Below topics/problems are covered as of now.
 **12. Treap**
 - [ ] Introduction
 
-**13. Matrix**
-- [ ] Introduction
-
-**14. Cache**
+**13. Cache**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Cache/CacheIntroduction.md)
 - [X] [LRU Cache](../master/src/com/deepak/data/structures/Cache/LRUCache.java)
 - [X] [MRU Cache](../master/src/com/deepak/data/structures/Cache/MRUCache.java)

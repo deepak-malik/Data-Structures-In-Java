@@ -4,7 +4,6 @@
  */
 package com.deepak.data.structures.LinkedList;
 
-
 /**
  * Implementation of Circular Linked List
  *

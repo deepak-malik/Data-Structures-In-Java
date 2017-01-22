@@ -17,7 +17,7 @@ If we want to traverse through the list, we have to start from head and then che
 
 We have three types of Linked List : _Singly Linked List, Doubly Linked List and Circular Linked List._
 
-1. **Singly Linked List** : It provides access to list from the head node. Traversal is allowed only one way and there is no going back. Some of the applications of singly linked list are,
+- **Singly Linked List** : It provides access to list from the head node. Traversal is allowed only one way and there is no going back. Some of the applications of singly linked list are,
     - Implement stacks, queues, graphs, trees.
     - Symbol table management in compiler design
     - Separate chaining in Hash tables
@@ -31,7 +31,7 @@ Complexity of various operations can be defines as follows,
 
 <img width="493" alt="singly_linked_list" src="https://cloud.githubusercontent.com/assets/3439029/22179122/e3ad7596-dffe-11e6-81bf-823e8ed38c64.png">
 
-2. **Doubly Linked List** : It provides access to list from head and tail nodes. Traversal is allowed from both the sides of the list. Some of the applications of doubly linked list are,
+- **Doubly Linked List** : It provides access to list from head and tail nodes. Traversal is allowed from both the sides of the list. Some of the applications of doubly linked list are,
     - Maintain references to active processes, threads, and other dynamic objects in operating system.
     - Stack, hash table, and binary tree can be implemented using a doubly linked list.
     - Separate chaining in Hash tables
@@ -41,7 +41,7 @@ Complexity of various operations can be defines as follows,
 
 <img width="493" alt="singly_linked_list" src="https://cloud.githubusercontent.com/assets/3439029/22179122/e3ad7596-dffe-11e6-81bf-823e8ed38c64.png">
 
-3. **Circular Linked List** : It provides access to list from the head node. But pointer of last node again points back to first node. Circular Queue is important data structure when the data needs to be cache. Some of the applications of circular linked list are,
+- **Circular Linked List** : It provides access to list from the head node. But pointer of last node again points back to first node. Circular Queue is important data structure when the data needs to be cache. Some of the applications of circular linked list are,
     - Corners of a polygon.
     - Pool of buffers that are used and released in FIFO ("first in, first out") order.
     - Set of processes that should be time-shared in round-robin order

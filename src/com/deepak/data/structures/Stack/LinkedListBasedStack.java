@@ -1,5 +1,5 @@
 /**
- * Data-Structures-And-Algorithms-in-Java
+ * Data-Structures-In-Java
  * LinkedListBasedStack.java
  */
 package com.deepak.data.structures.Stack;
@@ -7,30 +7,11 @@ package com.deepak.data.structures.Stack;
 import java.util.NoSuchElementException;
 
 /**
- * Class implementing Stack based on LinkedList
+ * Linked List based implementation of stack
+ * 
  * @author Deepak
  */
 public class LinkedListBasedStack {
-
-	/**
-	 * Sample implementation of stack
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		LinkedListBasedStack stack = new LinkedListBasedStack();
-		System.out.println("Creating a fresh Stack");
-		System.out.println("Size of Stack => " + stack.size());
-		System.out.println("Is Stack Empty => " + stack.isEmpty());
-		System.out.println("Inserting two items in Stack.");
-		stack.push(10);
-		stack.push(20);
-		System.out.println("After Insertion, Size of Stack => " + stack.size());
-		System.out.println("After Insertion, Is Stack Empty => " + stack.isEmpty());
-		System.out.println("Removing an item from Stack.");
-		stack.pop();
-		System.out.println("After Removal, Size of Stack => " + stack.size());
-		System.out.println("Top element on Stack => " + stack.peek());
-	}
 
 	/**
 	 * Top node of the Stack
@@ -39,6 +20,7 @@ public class LinkedListBasedStack {
 
 	/**
 	 * Method to push a item on the stack
+	 * 
 	 * @param item
 	 */
 	public void push(Object item) {
@@ -47,6 +29,7 @@ public class LinkedListBasedStack {
 
 	/**
 	 * Method to remove a item from the stack
+	 * 
 	 * @return {@link Object}
 	 */
 	public Object pop() {
@@ -60,6 +43,7 @@ public class LinkedListBasedStack {
 
 	/**
 	 * Method to find out top element on Stack
+	 * 
 	 * @return {@link Object}
 	 */
 	public Object peek() {
@@ -71,6 +55,7 @@ public class LinkedListBasedStack {
 
 	/**
 	 * Method to find size of the Stack
+	 * 
 	 * @return {@link int}
 	 */
 	public int size() {
@@ -83,6 +68,7 @@ public class LinkedListBasedStack {
 
 	/**
 	 * Method to check if Stack is Empty
+	 * 
 	 * @return {@link boolean}
 	 */
 	public boolean isEmpty() {
@@ -91,6 +77,7 @@ public class LinkedListBasedStack {
 
 	/**
 	 * Node class for Stack
+	 * 
 	 * @author Deepak
 	 */
 	private class Node {
@@ -100,6 +87,7 @@ public class LinkedListBasedStack {
 
 		/**
 		 * Constructor for creating a new Node
+		 * 
 		 * @param item
 		 * @param next
 		 */

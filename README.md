@@ -50,7 +50,7 @@ Below topics/problems are covered as of now.
 - [X] [Queue Introduction](../master/src/com/deepak/data/structures/Queue/QueueIntroduction.md)
 - [X] [Array based Implementation](../master/src/com/deepak/data/structures/Queue/ArrayBasedQueue.java)
 - [X] [LinkedList based Implementation](../master/src/com/deepak/data/structures/Queue/LinkedListBasedQueue.java) 
-- [ ] Stack based Implementation
+- [X] [Stack based Implementation](../master/src/com/deepak/data/structures/Queue/StackBasedQueue.java)
 
 **5. Trees**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Tree/TreesIntroduction.md)
@@ -91,7 +91,7 @@ Below topics/problems are covered as of now.
 
 **9. Set**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Set/SetIntroduction.md)
-- [X] [Implement Set](../master/src/com/deepak/data/structures/Set/ArrayBasedSet.java)
+- [X] [Set Implementation](../master/src/com/deepak/data/structures/Set/ArrayBasedSet.java)
 
 **10. Priority Queue**
 - [ ] Introduction
@@ -101,7 +101,7 @@ Below topics/problems are covered as of now.
 
 **11. Trie**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Trie/TrieIntroduction.md)
-- [X] [Implement Trie](../master/src/com/deepak/data/structures/Trie/TrieImplementation.java)
+- [X] [Trie Implementation](../master/src/com/deepak/data/structures/Trie/TrieImplementation.java)
 
 **12. Treap**
 - [ ] Introduction

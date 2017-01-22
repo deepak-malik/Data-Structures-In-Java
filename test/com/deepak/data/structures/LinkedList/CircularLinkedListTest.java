@@ -10,5 +10,8 @@ package com.deepak.data.structures.LinkedList;
  * @author Deepak
  */
 public class CircularLinkedListTest {
+	
+	public CircularLinkedListTest() {
+	}
 
 }

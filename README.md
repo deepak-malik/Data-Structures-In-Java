@@ -37,16 +37,16 @@ Below topics/problems are covered as of now.
 - [X] [Linked List Introduction](../master/src/com/deepak/data/structures/LinkedList/LinkedListIntroduction.md)
 - [X] [Singly LinkedList Implementation](../master/src/com/deepak/data/structures/LinkedList/SinglyLinkedList.java)
 - [X] [Doubly LinkedList Implementation](../master/src/com/deepak/data/structures/LinkedList/DoublyLinkedList.java)
-- [ ] Circular LinkedList Implementation
+- [X] [Circular LinkedList Implementation](../master/src/com/deepak/data/structures/LinkedList/CircularLinkedList.java)
 
 **3. Stack**
-- [ ] Introduction
+- [X] [Stack Introduction](../master/src/com/deepak/data/structures/Stack/StackIntroduction.md)
 - [X] [Simple stack from list](../master/src/com/deepak/data/structures/Stack/SimpleStackFromList.java)
 - [X] [Array based Implementation](../master/src/com/deepak/data/structures/Stack/ArrayBasedStack.java)
 - [X] [LinkedList based Implementation](../master/src/com/deepak/data/structures/Stack/LinkedListBasedStack.java) 
 
 **4. Queue**
-- [ ] Introduction
+- [X] [Queue Introduction](../master/src/com/deepak/data/structures/Queue/QueueIntroduction.md)
 - [X] [Array based Implementation](../master/src/com/deepak/data/structures/Queue/ArrayBasedQueue.java)
 - [X] [LinkedList based Implementation](../master/src/com/deepak/data/structures/Queue/LinkedListBasedQueue.java) 
 - [ ] Stack based Implementation

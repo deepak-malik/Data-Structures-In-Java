@@ -44,7 +44,7 @@ Below topics/problems are covered as of now.
 - [X] [Simple stack from list](../master/src/com/deepak/data/structures/Stack/SimpleStackFromList.java)
 - [X] [Array based Implementation](../master/src/com/deepak/data/structures/Stack/ArrayBasedStack.java)
 - [X] [LinkedList based Implementation](../master/src/com/deepak/data/structures/Stack/LinkedListBasedStack.java)
-- [ ] Queue based Implementation 
+- [X] [Queue based Implementation](../master/src/com/deepak/data/structures/Stack/QueueBasedStack.java) 
 
 **4. Queue**
 - [X] [Queue Introduction](../master/src/com/deepak/data/structures/Queue/QueueIntroduction.md)

@@ -42,14 +42,15 @@ public class CircularLinkedList<E> {
 	public void insertAtBeginning(E value) {
 		Node<E> newNode = new Node<E>(value); 
 		if (head == null) {
-			newNode.next = newNode;
+			head = newNode;
+			head.next = head;
 		} else {
 			Node<E> temp = head;
 			while (temp.next != head) {
 				temp = temp.next;
 			}
-			temp.next = newNode;
 			newNode.next = head;
+			temp.next = newNode;
 		}
 		size++;
 	}
@@ -117,7 +118,7 @@ public class CircularLinkedList<E> {
 	 * 
 	 * @param position
 	 */
-	public void deleteAtPosition(int position) {
+	public void deleteFromPosition(int position) {
 		if (position < 0 || position >= size) {
 			throw new IllegalArgumentException("Position is Invalid");
 		}

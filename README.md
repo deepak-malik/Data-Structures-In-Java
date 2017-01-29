@@ -26,7 +26,7 @@ This repository contains various data structures and provide insights about them
 
 Below topics/problems are covered as of now.  
 
-**1. Arrays**
+**1. Arrays and Strings**
 - [X] [Choosing the right data structure](../master/src/com/deepak/data/structures/Arrays/RightDataStructure.md)
 - [X] [Arrays Introduction](../master/src/com/deepak/data/structures/Arrays/ArraysIntroduction.md)
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)

@@ -1,3 +1,7 @@
+/**
+ * Data-Structures-in-Java
+ * BinaryTree.java
+ */
 package com.deepak.data.structures.Tree;
 
 import java.util.LinkedList;
@@ -17,9 +21,11 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	private Node<E> root;
 
 	/**
-	 * Add Node to the tree
+	 * Method to add Node to the tree
 	 */
 	public void addNode(E value) {
+		/* If root is null, make a new node 
+		 * and insert at root, else insert in tree */
 		if (root == null) {
 			root = new Node<E>(value);
 		} else {
@@ -27,17 +33,27 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		}
 	}
 
+	/**
+	 * Method to add Node to the tree
+	 * 
+	 * @param root
+	 * @param value
+	 * @return {@link Node}
+	 */
 	private Node<E> addNode(Node<E> root, E value) {
+		/* If root is null, return null */
 		if (root == null) {
 			return null;
 		} 
-		if ((root.value).compareTo(value) <= 0) { /* We will insert left */
+		/* Compare the values and check if we need to
+		 * insert in left subtree or right subtree */
+		if ((root.value).compareTo(value) <= 0) {
 			if (root.left != null) {
 				addNode(root.left, value);
 			} else {
 				root.left = new Node<E>(value);
 			}
-		} else { /* We will insert right */
+		} else {
 			if (root.right != null) {
 				addNode(root.right, value);
 			} else {
@@ -47,21 +63,44 @@ public class BinarySearchTree<E extends Comparable<E>> {
 		return root;
 	}
 
+	/**
+	 * Method to get size from the root
+	 * 
+	 * @return {@link int}
+	 */
 	public int size() {
 		return size(root);
 	}
 
-	private int size(Node<E> root) {
-		if (root == null) {
+	/**
+	 * Method to get size from a given node
+	 * 
+	 * @param node
+	 * @return {@link int}
+	 */
+	private int size(Node<E> node) {
+		/* If node is null, size is zero */
+		if (node == null) {
 			return 0;
 		}
-		return (size(root.left)) + 1 + (size(root.right));
+		/* Return size of left subtree + size of right subtree + 1 for root */
+		return (size(node.left)) + 1 + (size(node.right));
 	}
 
+	/**
+	 * Method to check if tree is empty
+	 * 
+	 * @return {@link boolean}
+	 */
 	public boolean isEmpty() {
 		return size() == 0;
 	}
 
+	/**
+	 * Method to get the root
+	 * 
+	 * @return {@link Node}
+	 */
 	public Node<E> getRoot() {
 		if (isEmpty()) {
 			return null;
@@ -232,21 +271,42 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	/* This is BFS */
 	/* Level by Level */
 	public void traverseLevelOrder(Node<E> root) {
-		Queue<Node<E>> firstQ = new LinkedList<>();
-		firstQ.add(root);
-
-		Queue<Queue<Node<E>>> mainQ = new LinkedList<>();
-		mainQ.add(firstQ);
-
-		while (!mainQ.isEmpty()) {
-			Queue<Node<E>> levelQ = mainQ.remove();
-			Queue<Node<E>> nextLevelQ = new LinkedList<>();
-			for (Node<E> x : levelQ) {
-				System.out.print(x.value + " ");
-				if (x.left != null)    nextLevelQ.add(x.left);
-				if (x.right != null)   nextLevelQ.add(x.right);
+		/* If root is null, return */
+		if (root == null) {
+			return;
+		}
+		/* Define two queues and add root to queue 1 */
+		Queue<Node<E>> queue1 = new LinkedList<>();
+		Queue<Node<E>> queue2 = new LinkedList<>();
+		queue1.add(root);
+		/* Keep going until both are empty */
+		while (!queue1.isEmpty() || !queue2.isEmpty()) {
+			/* While queue 1 is not empty, keep polling and printing */
+			while (!queue1.isEmpty()) {
+				root = queue1.poll();
+				System.out.println(root.value + " ");
+				/* Add children to the other queue */
+				if (root.left != null) {
+					queue2.add(root.left);
+				}
+				if (root.right != null) {
+					queue2.add(root.right);
+				}
 			}
-			if (!nextLevelQ.isEmpty()) mainQ.add(nextLevelQ);
+			/* We are done with one level. Line space */
+			System.out.println();
+			while (!queue2.isEmpty()) {
+				/* Same logic as queue 1 goes with queue 2 */
+				root = queue2.poll();
+				System.out.println(root.value + " ");
+				if (root.left != null) {
+					queue1.add(root.left);
+				}
+				if (root.right != null) {
+					queue1.add(root.right);
+				}
+			}
+			/* Line space when entire tree is printed */
 			System.out.println();
 		}
 	}

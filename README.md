@@ -150,9 +150,9 @@ Below topics/problems are covered as of now.
 - [X] [MRU Cache](../master/src/com/deepak/data/structures/Cache/MRUCache.java)
 
 **17. Common Utils**
-- [ ] StringUtils
+- [X] [StringUtils](../master/src/com/deepak/data/structures/Utils/StringUtils.java)
 - [ ] NumberUtils
-- [ ] ArrayUtils
+- [X] [ArrayUtils](../master/src/com/deepak/data/structures/Utils/ArrayUtils.java)
 - [ ] ListUtils
 - [ ] CollectionUtils
 - [ ] MapUtils

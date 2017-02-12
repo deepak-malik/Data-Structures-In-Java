@@ -1,7 +1,7 @@
 /**
  * Data-Structures-in-Java
  */
-package com.deepak.data.structures.Strings_And_Arrays;
+package com.deepak.data.structures.Arrays;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 
 /**
  * Class to hold implementation of basic operations in java
+ * 
  * <p> Perform following basic operations on Arrays
  * 1. Declare Array
  * 2. Insert elements in Array. ex. 3, 5, 6, 13, 45, 56, 67, 78, 89, 90

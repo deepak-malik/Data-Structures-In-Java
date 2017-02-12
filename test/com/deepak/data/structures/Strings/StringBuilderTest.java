@@ -2,12 +2,12 @@
  * Data-Structures-in-Java
  * StringBuilderTest.java
  */
-package com.deepak.data.structures.Strings_And_Arrays;
+package com.deepak.data.structures.Strings;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.deepak.data.structures.Strings_And_Arrays.CustomStringBuilder;
+import com.deepak.data.structures.Strings.CustomStringBuilder;
 
 /**
  * Test cases for custom string builder implementation

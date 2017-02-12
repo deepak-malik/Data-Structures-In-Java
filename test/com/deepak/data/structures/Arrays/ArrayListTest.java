@@ -2,12 +2,10 @@
  * Data-Structures-in-Java
  * ArrayListTest.java
  */
-package com.deepak.data.structures.Strings_And_Arrays;
+package com.deepak.data.structures.Arrays;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.deepak.data.structures.Strings_And_Arrays.CustomArrayList;
 
 /**
  * Test cases for ArrayList implementation

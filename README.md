@@ -30,11 +30,11 @@ These is just a basic set, we have lot of other data structures as well,
 Below topics/problems are covered as of now.  
 
 **1. Strings** 
-- [ ] String Introduction
-- [X] [StringBuilder Implementation](../master/src/com/deepak/data/structures/Arrays/CustomStringBuilder.java)
+- [X] [String Introduction](../master/src/com/deepak/data/structures/Strings/Strings_Introduction.md)
+- [X] [StringBuilder Implementation](../master/src/com/deepak/data/structures/Strings/CustomStringBuilder.java)
 
 **2. Arrays**
-- [X] [Arrays Introduction](../master/src/com/deepak/data/structures/Arrays/ArraysIntroduction.md)
+- [X] [Arrays Introduction](../master/src/com/deepak/data/structures/Arrays/Arrays_Introduction.md)
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
 - [ ] Associative Array
 - [ ] Sparse Array

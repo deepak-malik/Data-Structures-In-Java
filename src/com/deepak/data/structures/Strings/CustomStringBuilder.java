@@ -2,7 +2,7 @@
  * Data-Structures-in-Java
  * CustomStringBuilder.java
  */
-package com.deepak.data.structures.Strings_And_Arrays;
+package com.deepak.data.structures.Strings;
 
 import java.util.Arrays;
 

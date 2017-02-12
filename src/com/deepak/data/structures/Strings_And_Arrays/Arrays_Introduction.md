@@ -130,6 +130,11 @@ Arrays are considered to be sorted in ascending order when each element on left 
 | **Insertion/Deletion** | _Shifting existing elements may be needed if action is performed not at the end of the array_ | _Easy insertion/deletion methods provided_ |
 **************************************
 
+**Disadvantages of Arrays**
+- **Fixed Size** : The size of the array is static, i.e we define the size when we create the array, which can't change later on.
+- **One block allocation** : To allocate the array in the beginning, we may not have enough memory to hold entire array because of continous block of allocation.
+- **Complex position based insertion** : This is applicable only in case of dynamic array or list, where size can change. If we want to insert an element at position n, we have to shift all the elements in the right by one position to make space for this new element, which is a time consuming and costly operation.
+
 **Operations on Arrays** 
 
 Below operations on Arrays are implemented [here](../Arrays/BasicOperations.java)

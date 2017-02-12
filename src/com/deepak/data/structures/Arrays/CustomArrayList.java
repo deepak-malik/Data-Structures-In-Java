@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * CustomArrayList.java
  */
 package com.deepak.data.structures.Arrays;

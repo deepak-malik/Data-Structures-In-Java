@@ -36,7 +36,7 @@ Below topics/problems are covered as of now.
 **2. Arrays**
 - [X] [Arrays Introduction](../master/src/com/deepak/data/structures/Arrays/Arrays_Introduction.md)
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
-- [ ] Associative Array
+- [X] [Associative Array](../master/src/com/deepak/data/structures/Arrays/AssociativeArray.java)
 - [ ] Sparse Array
 - [ ] Tuple
 - [X] [ArrayList Implementation](../master/src/com/deepak/data/structures/Arrays/CustomArrayList.java)

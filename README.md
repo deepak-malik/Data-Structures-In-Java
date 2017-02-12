@@ -25,7 +25,7 @@ These is just a basic set, we have lot of other data structures as well,
             - B Tree
             - Trie
 
-[X] [Choosing the right data structure](../master/src/com/deepak/data/structures/Arrays/RightDataStructure.md)
+- [X] [Choosing the right data structure](../master/src/com/deepak/data/structures/Arrays/RightDataStructure.md)
 
 Below topics/problems are covered as of now.  
 

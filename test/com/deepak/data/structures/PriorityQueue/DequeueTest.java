@@ -1,8 +1,8 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * DequeueTest.java
  */
-package com.deepak.data.structures.Queue;
+package com.deepak.data.structures.PriorityQueue;
 
 /**
  * Test cases for dequeue

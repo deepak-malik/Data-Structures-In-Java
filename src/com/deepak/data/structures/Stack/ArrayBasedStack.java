@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * ArrayBasedStack.java
  */
 package com.deepak.data.structures.Stack;

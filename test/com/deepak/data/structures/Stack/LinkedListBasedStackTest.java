@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * LinkedListBasedStackTest.java
  */
 package com.deepak.data.structures.Stack;

@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * CircularLinkedListTest.java
  */
 package com.deepak.data.structures.LinkedList;

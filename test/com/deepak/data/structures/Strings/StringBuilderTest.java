@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * StringBuilderTest.java
  */
 package com.deepak.data.structures.Strings;

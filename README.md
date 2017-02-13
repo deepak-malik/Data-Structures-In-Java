@@ -133,7 +133,7 @@ Below topics/problems are covered as of now.
 - [ ] Introduction
 - [ ] Array based Implementation
 - [ ] Stack based Implementation 
-- [X] [Dequeue Implementation](../master/src/com/deepak/data/structures/Queue/Dequeue.java)
+- [X] [Dequeue Implementation](../master/src/com/deepak/data/structures/PriorityQueue/Dequeue.java)
 - [ ] Skip List
 
 **14. Trie**

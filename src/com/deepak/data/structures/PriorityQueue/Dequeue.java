@@ -2,7 +2,7 @@
  * Data-Structures-In-Java
  * Dequeue.java
  */
-package com.deepak.data.structures.Queue;
+package com.deepak.data.structures.PriorityQueue;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -150,7 +150,8 @@ public class Dequeue<Item> implements Iterable<Item> {
 	}
 
 	/**
-	 * An iterator implementation for Deque data structure.
+	 * An iterator implementation for Dequeue data structure.
+	 * 
 	 * @author Deepak
 	 */
 	private class DequeIterator implements Iterator<Item> {
@@ -162,14 +163,14 @@ public class Dequeue<Item> implements Iterable<Item> {
 
 		public Item next() {
 			if(!hasNext())
-				throw new NoSuchElementException("no element exists on deque");
+				throw new NoSuchElementException("No element exists on deque");
 			Item item = current.item;
 			current = current.next;
 			return item;
 		}
 
 		public void remove() {
-			throw new UnsupportedOperationException("remove operation not supported");
+			throw new UnsupportedOperationException("Remove operation not supported");
 		}
 	}
 

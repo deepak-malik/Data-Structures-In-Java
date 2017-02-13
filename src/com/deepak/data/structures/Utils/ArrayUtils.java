@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * ArrayUtils.java
  */
 package com.deepak.data.structures.Utils;

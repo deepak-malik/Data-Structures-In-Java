@@ -62,8 +62,8 @@ Below topics/problems are covered as of now.
 - [X] [Stack based Implementation](../master/src/com/deepak/data/structures/Queue/StackBasedQueue.java)
 
 **6. Vector**
-- [ ] Vector Introduction
-- [ ] Vector Implementation
+- [X] [Vector Introduction](../master/src/com/deepak/data/structures/Vector/VectorIntroduction.md)
+- [X] [Vector Implementation](../master/src/com/deepak/data/structures/Vector/CustomVector.java)
 
 **7. Matrix**
 - [ ] Matrix Introduction

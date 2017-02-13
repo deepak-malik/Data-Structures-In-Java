@@ -39,7 +39,7 @@ Below topics/problems are covered as of now.
 - [X] [Associative Array](../master/src/com/deepak/data/structures/Arrays/AssociativeArray.java)
 - [ ] Sparse Array
 - [X] [Pair](../master/src/com/deepak/data/structures/Arrays/Pair.java)
-- [ ] Tuple
+- [X] [Tuple](../master/src/com/deepak/data/structures/Arrays/Tuple.java)
 - [X] [ArrayList Implementation](../master/src/com/deepak/data/structures/Arrays/CustomArrayList.java)
 
 **3. LinkedList**    

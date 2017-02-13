@@ -156,7 +156,7 @@ Below topics/problems are covered as of now.
 - [ ] ListUtils
 - [X] [BooleanUtils](../master/src/com/deepak/data/structures/Utils/BooleanUtils.java)
 - [ ] CollectionUtils
-- [ ] MapUtils
+- [X] [MapUtils](../master/src/com/deepak/data/structures/Utils/MapUtils.java)
 - [ ] DateUtils
 
 **18. Iterators**

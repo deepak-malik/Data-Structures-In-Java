@@ -142,7 +142,7 @@ Below topics/problems are covered as of now.
 
 **15. Treap**
 - [ ] Introduction
-- [ ] Tream Implementation
+- [ ] Treap Implementation
 
 **16. Cache**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Cache/CacheIntroduction.md)

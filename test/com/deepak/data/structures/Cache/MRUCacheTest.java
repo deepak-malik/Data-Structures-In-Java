@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * MRUCacheTest.java
  */
 package com.deepak.data.structures.Cache;

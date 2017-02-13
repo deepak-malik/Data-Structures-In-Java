@@ -118,4 +118,33 @@ public class StringUtilsTest {
 		Assert.assertTrue(StringUtils.equalsIgnoreCase("abc", "ABC"));
 	}
 
+	/**
+	 * Method to test comparison of 2 strings
+	 */
+	@Test
+	public void testCompare() {
+		Assert.assertEquals(StringUtils.compare(null, null), 0);
+		Assert.assertEquals(StringUtils.compare(null, "a"), -1);
+		Assert.assertEquals(StringUtils.compare("a", null), 1);
+		Assert.assertEquals(StringUtils.compare("abc", "abc"), 0);
+		Assert.assertEquals(StringUtils.compare("a", "b"), -1);
+		Assert.assertEquals(StringUtils.compare("b", "a"), 1);
+		Assert.assertEquals(StringUtils.compare("ab", "abc"), -1);
+	}
+
+	/**
+	 * Method to test index of in a string
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testIndexOf() {
+		Assert.assertEquals(StringUtils.indexOf("aadjsjh", 'a'), 0);
+		Assert.assertEquals(StringUtils.indexOf("aabaabaa", 'b'), 2);
+		Assert.assertEquals(StringUtils.indexOf("aabaabaa", 'b', 0), 2);
+		Assert.assertEquals(StringUtils.indexOf("aabaabaa", 'b', 3), 5);
+		Assert.assertEquals(StringUtils.indexOf("aabaabaa", 'b', 9), -1);
+		Assert.assertEquals(StringUtils.indexOf("aabaabaa", 'b', -1), 2);
+		Assert.assertEquals(StringUtils.indexOf(null, 'a'), -1);
+		Assert.assertEquals(StringUtils.indexOf("", 'a'), -1);
+	}
+
 }

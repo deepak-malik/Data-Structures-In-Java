@@ -179,17 +179,74 @@ public class StringUtils {
 		return equals(updatedStr1, updatedStr2);
 	}
 
+	/**
+	 * Method to compare two strings
+	 * 
+	 * @param str1
+	 * @param str2
+	 * @return {@link int}
+	 */
 	public static int compare(final String str1, final String str2) {
-		return 0;
+		return compare(str1, str2, true);
 	}
 
+	/**
+	 * Method to compare two strings when null has to be considered or not
+	 * 
+	 * @param str1
+	 * @param str2
+	 * @param shouldConsiderNull
+	 * @return {@link int}
+	 */
+	public static int compare(final String str1, final String str2, final boolean shouldConsiderNull) {
+		/* If both are same, return 0 */
+		if (str1 == str2) {
+			return 0;
+		}
+		/* If str1 is less, return < 0 */
+		if (str1 == null) {
+			return shouldConsiderNull ? -1 : 1;
+		}
+		/* If str2 is less, return > 0 */
+		if (str2 == null) {
+			return shouldConsiderNull ? 1 : -1;
+		}
+		return str1.compareTo(str2);
+	}
+
+	/**
+	 * Method to find the index of first occurrence of character in a string
+	 * 
+	 * @param seq
+	 * @param searchChar
+	 * @return {@link int}
+	 */
 	public static int indexOf(final CharSequence seq, final int searchChar) {
-
-		return 0;
+		return indexOf(seq, searchChar, 0);
 	}
 
+	/**
+	 * Method to find the index of a character after a given position
+	 * 
+	 * @param seq
+	 * @param searchChar
+	 * @param startPos
+	 * @return {@link int}
+	 */
 	public static int indexOf(final CharSequence seq, final int searchChar, final int startPos) {
-		return 0;
+		if (isEmpty(seq)) {
+			throw new IllegalArgumentException("Invalid character sequence!");
+		}
+		if (startPos < seq.length()) {
+			for (int i = startPos; i < seq.length(); i++) {
+				/* If a negative start position is given, keep jumping until you reach 0 */
+				if (i < 0) continue;
+				if (seq.charAt(i) == searchChar) {
+					return i;
+				}
+			}
+		}
+		return -1;
 	}
 
 	public static int lastIndexOf(final CharSequence seq, final int searchChar) {

@@ -28,9 +28,11 @@ public class TrieImplementation {
 
 	/**
 	 * Method to insert a word in Trie
+	 * 
 	 * @param word
 	 */
 	public void insert(String word) {
+		/* Find the children of root node */
 		HashMap<Character, TrieNode> children = root.children;
 		for (int i = 0; i < word.length(); i++) {
 			char character = word.charAt(i);
@@ -50,6 +52,7 @@ public class TrieImplementation {
 
 	/**
 	 * Method to check if a word in Trie starts with the given prefix
+	 * 
 	 * @param prefix
 	 * @return {@link boolean}
 	 */
@@ -62,6 +65,7 @@ public class TrieImplementation {
 
 	/**
 	 * Method to search TrieNode based on the word
+	 * 
 	 * @param word
 	 * @return {@link TrieNode}
 	 */
@@ -82,6 +86,7 @@ public class TrieImplementation {
 
 	/**
 	 * Method to search the given word in the Trie
+	 * 
 	 * @param word
 	 * @return {@link boolean}
 	 */

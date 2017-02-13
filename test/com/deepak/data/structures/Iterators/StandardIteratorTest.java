@@ -1,5 +1,5 @@
 /**
- * Algorithms-in-Java
+ * Data-Structures-In-Java
  * StandardIterator_Test.java
  */
 package com.deepak.data.structures.Iterators;

@@ -1,6 +1,6 @@
 /**
- * Algorithms-in-Java
- * HoppingIterator_Test.java
+ * Data-Structures-In-Java
+ * HoppingIteratorTest.java
  */
 package com.deepak.data.structures.Iterators;
 

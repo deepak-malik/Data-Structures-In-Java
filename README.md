@@ -159,13 +159,13 @@ Below topics/problems are covered as of now.
 - [ ] DateUtils
 
 **18. Iterators**
-- [ ] Standard Iterator
+- [X] [Standard Iterator](../master/src/com/deepak/data/structures/Iterators/StandardIterator.java)
 - [ ] Deep Iterator
 - [ ] Filtering Iterator
-- [ ] Hopping Iterator
+- [X] [Hopping Iterator](../master/src/com/deepak/data/structures/Iterators/HoppingIterator.java)
 - [ ] InOrder Iterator
-- [ ] LevelOrder Iterator
-- [ ] MaxIterator Iterator
+- [X] [LevelOrder Iterator](../master/src/com/deepak/data/structures/Iterators/LevelOrderIterator.java)
+- [X] [MaxIterator Iterator](../master/src/com/deepak/data/structures/Iterators/MaxIterator.java)
 - [ ] MultiIterator Iterator
 - [ ] Peek Iterator
 - [ ] PreOrder Iterator

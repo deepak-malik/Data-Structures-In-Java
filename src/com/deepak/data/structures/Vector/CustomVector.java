@@ -4,6 +4,7 @@
  */
 package com.deepak.data.structures.Vector;
 
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.NoSuchElementException;
 
@@ -267,12 +268,12 @@ public class CustomVector<T> {
 	 * @param newSize
 	 */
 	private void ensureCapacity(int newSize) {
-		if (newSize >= size) {
+		if (newSize >= capacity()) {
 			/* If capacity increment is given, use that else double the size */
 			if (capacityIncrement > 0) {
-				System.arraycopy(elements, 0, elements, size, size + capacityIncrement);
+				elements = Arrays.copyOf(elements, capacity() + capacityIncrement);
 			} else {
-				System.arraycopy(elements, 0, elements, size, size * 2);
+				elements = Arrays.copyOf(elements, size * 2);
 			}
 		}
 	}

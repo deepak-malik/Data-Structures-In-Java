@@ -45,11 +45,8 @@ public class CircularLinkedList<E> {
 			head.next = head;
 		} else {
 			Node<E> temp = head;
-			while (temp.next != head) {
-				temp = temp.next;
-			}
-			newNode.next = head;
-			temp.next = newNode;
+			newNode.next = temp;
+			head = newNode;
 		}
 		size++;
 	}
@@ -88,14 +85,16 @@ public class CircularLinkedList<E> {
 		/* Conditions check passed, let's insert the node */
 		Node<E> newNode = new Node<E>(value);
 		Node<E> tempNode = head;
+		Node<E> prevNode = null;
 		for (int i = 0; i < position; i++) {
 			if (tempNode.next == head) {
 				break;
 			}
+			prevNode = tempNode;
 			tempNode = tempNode.next;
 		}
-		newNode.next = tempNode.next;
-		tempNode.next = newNode;
+		prevNode.next = newNode;
+		newNode.next = tempNode;
 		size++;
 	}
 

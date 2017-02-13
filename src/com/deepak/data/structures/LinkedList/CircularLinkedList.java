@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * CircularLinkedList.java
  */
 package com.deepak.data.structures.LinkedList;
@@ -61,7 +61,8 @@ public class CircularLinkedList<E> {
 	 */
 	public void insertAtTail(E value) {
 		Node<E> newNode = new Node<E>(value);
-		if (null == head) { /* When list is empty */
+		if (null == head) { 
+			/* When list is empty */
 			head = newNode;
 		} else {
 			Node<E> temp = head;
@@ -83,7 +84,8 @@ public class CircularLinkedList<E> {
 	public void insertAtPosition(E value, int position) {
 		if (position < 0 || position > size) {
 			throw new IllegalArgumentException("Position is Invalid");
-		} /* Conditions check passed, let's insert the node */
+		} 
+		/* Conditions check passed, let's insert the node */
 		Node<E> newNode = new Node<E>(value);
 		Node<E> tempNode = head;
 		for (int i = 0; i < position; i++) {

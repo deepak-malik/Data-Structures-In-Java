@@ -1,5 +1,6 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
+ * DoublyLinkedList.java
  */
 package com.deepak.data.structures.LinkedList;
 
@@ -48,7 +49,8 @@ public class DoublyLinkedList<E> {
 	 */
 	public void insertAtHead(E value) {
 		Node<E> newNode = new Node<E>(value);
-		if (null == head) { /* If list is empty */
+		if (null == head) { 
+			/* If list is empty */
 			newNode.next = null;
 			newNode.prev = null;
 			head = newNode;
@@ -77,7 +79,8 @@ public class DoublyLinkedList<E> {
 	 */
 	public void insertAtTail(E value) {
 		Node<E> newNode = new Node<E>(value);
-		if (null == tail) { /* If list is empty */
+		if (null == tail) { 
+			/* If list is empty */
 			newNode.next = null;
 			newNode.prev = null;
 			head = newNode;
@@ -110,18 +113,23 @@ public class DoublyLinkedList<E> {
 	public void insertAtPosition(E value, int position) {
 		if (position < 0 || position > size) {
 			throw new IllegalArgumentException("Position is Invalid");
-		} /* Conditions check passed, let's insert the node */
-		if (position == 0) { /* Insertion should happen at head */
+		} 
+		/* Conditions check passed, let's insert the node */
+		if (position == 0) { 
+			/* Insertion should happen at head */
 			insertAtHead(value);
-		} else if (position == size -1) { /* Insertion should happen at tail */
+		} else if (position == size -1) { 
+			/* Insertion should happen at tail */
 			insertAtTail(value);
-		} else { /* Insertion is happening somewhere in middle */
+		} else { 
+			/* Insertion is happening somewhere in middle */
 			Node<E> currentNode = head;
 			for (int i = 0; i < position; i++) {
 				currentNode = currentNode.next;
 			}
 			Node<E> previousNode = currentNode.prev;
-			/* Insertion of new node will happen in between previous node and current node */
+			/* Insertion of new node will happen in 
+			 * between previous node and current node */
 			Node<E> newNode = new Node<E>(value);
 			newNode.next = currentNode;
 			newNode.prev = previousNode;
@@ -156,7 +164,7 @@ public class DoublyLinkedList<E> {
 	/**
 	 * Returns the size of the linked list
 	 * 
-	 * @return
+	 * @return {@link int}
 	 */
 	public int size() {
 		return size;
@@ -165,7 +173,7 @@ public class DoublyLinkedList<E> {
 	/**
 	 * Returns true, if linked list is empty
 	 * 
-	 * @return
+	 * @return {@link boolean}
 	 */
 	public boolean isEmpty() {
 		return size == 0;
@@ -177,15 +185,17 @@ public class DoublyLinkedList<E> {
 	 * exception is thrown. 
 	 *  
 	 * @param index
-	 * @return
+	 * @return {@link Node<E>}
 	 */
 	public Node<E> searchByIndex(int index) {
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Invalid index passed while searching for a value");
-		} /* Validation passed, let's search for value using the index */
+		} 
+		/* Validation passed, let's search for value using the index */
 		Node<E> temp = head;
-		for (int i = 0; i < index; i++) { /* Start from 0 and go till one less then index 
-						because we are jumping to next node inside the loop */
+		for (int i = 0; i < index; i++) { 
+			/* Start from 0 and go till one less then index 
+			 * because we are jumping to next node inside the loop */
 			temp = temp.next;
 		}
 		return temp;
@@ -197,9 +207,10 @@ public class DoublyLinkedList<E> {
 	 * in linked list, first one will be returned.
 	 * 
 	 * @param value
-	 * @return
+	 * @return {@link Node<E>}
 	 */
-	public Node<E> searchByValue(E value) { /* Traverse through each node until this value is found */
+	public Node<E> searchByValue(E value) { 
+		/* Traverse through each node until this value is found */
 		Node<E> temp = head;
 		while (null != temp.next && temp.item != value) {
 			temp = temp.next;
@@ -214,7 +225,8 @@ public class DoublyLinkedList<E> {
 	 * Delete's the element present at head node
 	 */
 	public void deleteFromHead() {
-		if (null == head) { /* If list is empty, return */
+		/* If list is empty, return */
+		if (null == head) { 
 			return;
 		}
 		Node<E> temp = head;
@@ -227,7 +239,8 @@ public class DoublyLinkedList<E> {
 	 * Delete's the element present at tail node
 	 */
 	public void deleteFromTail() {
-		if (null == tail) { /* If list is empty, return */
+		/* If list is empty, return */
+		if (null == tail) { 
 			return;
 		}
 		Node<E> temp = tail;
@@ -244,7 +257,8 @@ public class DoublyLinkedList<E> {
 	public void deleteFromPosition(int position) {
 		if (position < 0 || position >= size) {
 			throw new IllegalArgumentException("Position is Invalid");
-		} /* Conditions check passed, let's delete the node */
+		} 
+		/* Conditions check passed, let's delete the node */
 		Node<E> nodeToBeDeleted = head;
 		for (int i = 0; i < position; i++) {
 			nodeToBeDeleted = nodeToBeDeleted.next;

@@ -1,5 +1,5 @@
 /**
- * Data-Structures-in-Java
+ * Data-Structures-In-Java
  * SinglyLinkedList.java
  */
 package com.deepak.data.structures.LinkedList;
@@ -65,8 +65,10 @@ public class SinglyLinkedList<E> {
 	 */
 	public void insertAtTail(E value) {
 		Node<E> newNode = new Node<E>(value);
-		newNode.next = null; /* Since this insertion is at tail, this new node will point to null */
-		if (null == head) { /* When list is empty */
+		newNode.next = null; 
+		/* Since this insertion is at tail, this new node will point to null */
+		if (null == head) { 
+			/* When list is empty */
 			head = newNode;
 		} else {
 			Node<E> tempNode = head;
@@ -95,7 +97,8 @@ public class SinglyLinkedList<E> {
 	public void insertAtPosition(E value, int position) {
 		if (position < 0 || position > size) {
 			throw new IllegalArgumentException("Position is Invalid");
-		} /* Conditions check passed, let's insert the node */
+		} 
+		/* Conditions check passed, let's insert the node */
 		Node<E> newNode = new Node<E>(value);
 		if (position == 0) {
 			newNode.next = head;
@@ -125,7 +128,7 @@ public class SinglyLinkedList<E> {
 	/**
 	 * Returns size of the linked list
 	 * 
-	 * @return
+	 * @return {@link int}
 	 */
 	public int size() {
 		return size;
@@ -134,7 +137,7 @@ public class SinglyLinkedList<E> {
 	/**
 	 * Returns true is list is empty
 	 * 
-	 * @return
+	 * @return {@link boolean}
 	 */
 	public boolean isEmpty() {
 		return size == 0;
@@ -146,15 +149,17 @@ public class SinglyLinkedList<E> {
 	 * exception is thrown. 
 	 *  
 	 * @param index
-	 * @return
+	 * @return {@link Node<E>}
 	 */
 	public Node<E> searchByIndex(int index) {
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Invalid index passed while searching for a value");
-		} /* Validation passed, let's search for value using the index */
+		} 
+		/* Validation passed, let's search for value using the index */
 		Node<E> temp = head;
-		for (int i = 0; i < index; i++) { /* Start from 0 and go till one less then index 
-						because we are jumping to next node inside the loop */
+		for (int i = 0; i < index; i++) { 
+			/* Start from 0 and go till one less then index 
+			 * because we are jumping to next node inside the loop */
 			temp = temp.next;
 		}
 		return temp;
@@ -166,9 +171,10 @@ public class SinglyLinkedList<E> {
 	 * in linked list, first one will be returned.
 	 * 
 	 * @param value
-	 * @return
+	 * @return {@link Node<E>}
 	 */
-	public Node<E> searchByValue(E value) { /* Traverse through each node until this value is found */
+	public Node<E> searchByValue(E value) { 
+		/* Traverse through each node until this value is found */
 		Node<E> temp = head;
 		while (null != temp.next && temp.item != value) {
 			temp = temp.next;
@@ -183,9 +189,11 @@ public class SinglyLinkedList<E> {
 	 * Delete's the element present at head node 
 	 */
 	public void deleteFromHead() {
-		if (null == head) { /* If list is empty, return */
+		/* If list is empty, return */
+		if (null == head) { 
 			return;
 		}
+		/* Update head and reduce size */
 		head = head.next;
 		size--;
 	}
@@ -194,16 +202,21 @@ public class SinglyLinkedList<E> {
 	 * Delete's the element present at tail node
 	 */
 	public void deleteFromTail() {
+		/* If head is null, nothing to delete */
 		if (null == head) {
 			return;
 		}
+		/* Keep a pointer on head node and next node.
+		 * Keep going until next becomes null */
 		Node<E> currentNode = head;
 		Node<E> nextNode = currentNode.next;
 		while (currentNode.next != null && nextNode.next != null) {
 			currentNode = currentNode.next;
 			nextNode = nextNode.next;
 		}
+		/* Now we are removing from tail, so tail - 1 node will point to null */
 		currentNode.next = null;
+		/* Reduce the size */
 		size--;
 	}
 
@@ -215,12 +228,14 @@ public class SinglyLinkedList<E> {
 	public void deleteFromPosition(int position) {
 		if (position < 0 || position >= size) {
 			throw new IllegalArgumentException("Position is Invalid");
-		} /* Conditions check passed, let's delete the node */
+		} 
+		/* Conditions check passed, let's delete the node */
 		Node<E> nodeToBeDeleted = head;
 		for (int i = 0; i < position; i++) {
 			nodeToBeDeleted = nodeToBeDeleted.next;
 		}
-		if (nodeToBeDeleted.next == null) { /* If this is a last node */
+		if (nodeToBeDeleted.next == null) { 
+			/* If this is a last node */
 			deleteFromTail();
 		} else {
 			nodeToBeDeleted.item = nodeToBeDeleted.next.item;
@@ -232,12 +247,15 @@ public class SinglyLinkedList<E> {
 	 * Returns a array containing each element 
 	 * from the list from start to end
 	 * 
-	 * @return
+	 * @return {@link Object[]}
 	 */
 	public Object[] toArray() {
+		/* Create an array of object of same size */
 		Object[] result = new Object[size];
 		int i = 0;
 		for (Node<E> x = head; x != null; x = x.next) {
+			/* Take each node and add it to the array
+			 * at appropriate position*/
 			result[i++] = x.item;
 		}
 		return result;

@@ -80,4 +80,42 @@ public class StringUtilsTest {
 		Assert.assertEquals(StringUtils.trim("    abc    "), "abc");
 	}
 
+	/**
+	 * Test case to check truncation of string
+	 */
+	@Test
+	public void testTruncate() {
+		Assert.assertEquals(StringUtils.truncate(null, 0), null);
+		Assert.assertEquals(StringUtils.truncate(null, 2), null);
+		Assert.assertEquals(StringUtils.truncate("", 4), "");
+		Assert.assertEquals(StringUtils.truncate("abcdefg", 4), "abcd");
+		Assert.assertEquals(StringUtils.truncate("abcdefg", 6), "abcdef");
+		Assert.assertEquals(StringUtils.truncate("abcdefg", 7), "abcdefg");
+		Assert.assertEquals(StringUtils.truncate("abcdefg", 8), "abcdefg");
+	}
+
+	/**
+	 * Method to test equals
+	 */
+	@Test
+	public void testEquals() {
+		Assert.assertTrue(StringUtils.equals(null, null));
+		Assert.assertTrue(StringUtils.equals("abc", "abc"));
+		Assert.assertFalse(StringUtils.equals(null, "abc"));
+		Assert.assertFalse(StringUtils.equals("abc", null));
+		Assert.assertFalse(StringUtils.equals("abc", "ABC"));
+	}
+
+	/**
+	 * Method to test equals ignore case 
+	 */
+	@Test
+	public void testEqualsIgnoreCase() {
+		Assert.assertTrue(StringUtils.equalsIgnoreCase(null, null));
+		Assert.assertTrue(StringUtils.equalsIgnoreCase("abc", "abc"));
+		Assert.assertFalse(StringUtils.equalsIgnoreCase(null, "abc"));
+		Assert.assertFalse(StringUtils.equalsIgnoreCase("abc", null));
+		Assert.assertTrue(StringUtils.equalsIgnoreCase("abc", "ABC"));
+	}
+
 }

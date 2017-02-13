@@ -38,6 +38,7 @@ Below topics/problems are covered as of now.
 - [X] [Basic operations on Arrays](../master/src/com/deepak/data/structures/Arrays/BasicOperations.java)
 - [X] [Associative Array](../master/src/com/deepak/data/structures/Arrays/AssociativeArray.java)
 - [ ] Sparse Array
+- [ ] Pair
 - [ ] Tuple
 - [X] [ArrayList Implementation](../master/src/com/deepak/data/structures/Arrays/CustomArrayList.java)
 
@@ -122,7 +123,6 @@ Below topics/problems are covered as of now.
 - [ ] Dictionary Implementation
 - [ ] MultiMap
 - [ ] Bag
-- [ ] Pair
 
 **12. Set**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Set/SetIntroduction.md)

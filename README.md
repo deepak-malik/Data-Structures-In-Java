@@ -151,7 +151,7 @@ Below topics/problems are covered as of now.
 
 **17. Common Utils**
 - [X] [StringUtils](../master/src/com/deepak/data/structures/Utils/StringUtils.java)
-- [ ] NumberUtils
+- [X] [NumberUtils](../master/src/com/deepak/data/structures/Utils/NumberUtils.java)
 - [X] [ArrayUtils](../master/src/com/deepak/data/structures/Utils/ArrayUtils.java)
 - [ ] ListUtils
 - [X] [BooleanUtils](../master/src/com/deepak/data/structures/Utils/BooleanUtils.java)

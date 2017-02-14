@@ -154,7 +154,7 @@ Below topics/problems are covered as of now.
 - [X] [NumberUtils](../master/src/com/deepak/data/structures/Utils/NumberUtils.java)
 - [X] [ArrayUtils](../master/src/com/deepak/data/structures/Utils/ArrayUtils.java)
 - [X] [BooleanUtils](../master/src/com/deepak/data/structures/Utils/BooleanUtils.java)
-- [ ] CollectionUtils
+- [X] [CollectionUtils](../master/src/com/deepak/data/structures/Utils/CollectionUtils.java)
 - [X] [MapUtils](../master/src/com/deepak/data/structures/Utils/MapUtils.java)
 
 **18. Iterators**

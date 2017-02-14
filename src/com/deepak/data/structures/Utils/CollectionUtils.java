@@ -11,6 +11,7 @@ import java.util.Random;
 
 /**
  * Utilities for collections i.e List
+ * Note : Finding min, max and rotate can also be added here
  * 
  * @author Deepak
  */
@@ -121,11 +122,19 @@ public class CollectionUtils {
 	 */
 	public static <T> List<T> swap(List<T> list, int minIndex, int maxIndex) {
 		if (list != null && list.size() > 2 && maxIndex > minIndex) {
+			List<T> updatedList = new ArrayList<>();
 			T elementAtMinIndex = list.get(minIndex);
 			T elementAtMaxIndex = list.get(maxIndex);
-			list.add(minIndex, elementAtMaxIndex);
-			list.add(maxIndex, elementAtMinIndex);
-			return list;
+			for (int i = 0; i < list.size(); i++) {
+				if (i != minIndex && i != maxIndex) {
+					updatedList.add(i, list.get(i));
+				} else if (i == minIndex) {
+					updatedList.add(i, elementAtMaxIndex);
+				} else if (i == maxIndex) {
+					updatedList.add(i, elementAtMinIndex);
+				}
+			}
+			return updatedList;
 		}
 		return null;
 	}
@@ -139,31 +148,13 @@ public class CollectionUtils {
 	 */
 	public static <T> List<T> fill(List<T> list, T element) {
 		if (list != null && list.size() > 0) {
+			List<T> updatedList = new ArrayList<>();
 			for (int i = 0; i < list.size(); i++) {
-				list.add(i, element);
+				updatedList.add(element);
 			}
-			return list;
+			return updatedList;
 		}
 		return null;
 	}
 
-	/**
-	 * Method to find the minimum from the list
-	 * 
-	 * @param list
-	 * @param comparator
-	 * @return {@link T}
-	 */
-	public static <T> T min(List<T> list, Comparator<T> comparator) {
-		return null;
-	}
-
-	public static <T> T max(List<T> list, Comparator<T> comparator) {
-		return null;
-	}
-
-	public static <T> List<T> rotate(List<T> list, int n) {
-		return null;
-	}
-	
 }

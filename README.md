@@ -122,7 +122,6 @@ Below topics/problems are covered as of now.
 - [ ] HashList Implementation
 - [ ] Dictionary Implementation
 - [ ] MultiMap
-- [ ] Bag
 
 **12. Set**
 - [X] [Introduction](../master/src/com/deepak/data/structures/Set/SetIntroduction.md)
@@ -149,7 +148,12 @@ Below topics/problems are covered as of now.
 - [X] [LRU Cache](../master/src/com/deepak/data/structures/Cache/LRUCache.java)
 - [X] [MRU Cache](../master/src/com/deepak/data/structures/Cache/MRUCache.java)
 
-**17. Common Utils**
+**17. Miscellaneous**
+- [ ] Bag
+	- [X] [Linked List Based](../master/src/com/deepak/data/structures/Bag/CustomBagLL.java)
+	- [ ] Binary Search Tree Based
+
+**18. Common Utils**
 - [X] [StringUtils](../master/src/com/deepak/data/structures/Utils/StringUtils.java)
 - [X] [NumberUtils](../master/src/com/deepak/data/structures/Utils/NumberUtils.java)
 - [X] [ArrayUtils](../master/src/com/deepak/data/structures/Utils/ArrayUtils.java)
@@ -157,7 +161,7 @@ Below topics/problems are covered as of now.
 - [X] [CollectionUtils](../master/src/com/deepak/data/structures/Utils/CollectionUtils.java)
 - [X] [MapUtils](../master/src/com/deepak/data/structures/Utils/MapUtils.java)
 
-**18. Iterators**
+**19. Iterators**
 - [X] [Standard Iterator](../master/src/com/deepak/data/structures/Iterators/StandardIterator.java)
 - [ ] Deep Iterator
 - [ ] Filtering Iterator

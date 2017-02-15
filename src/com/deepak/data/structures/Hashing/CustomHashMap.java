@@ -1,5 +1,5 @@
 /**
- * Data-Structures-And-Algorithms-in-Java
+ * Data-Structures-In-Java
  * CustomHashMap.java
  */
 package com.deepak.data.structures.Hashing;

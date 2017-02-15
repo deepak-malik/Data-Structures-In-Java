@@ -1,5 +1,5 @@
 ## Data-Structures-in-Java
-This repository contains various data structures and provide insights about them.  
+This repository contains various data structures and provide insights about them. Feel free to create an issue if you see one in any of the implementations.
 
 **Data Structures :**  
 These is just a basic set, we have lot of other data structures as well,

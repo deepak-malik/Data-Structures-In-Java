@@ -28,6 +28,7 @@ We have three types of Linked List : _Singly Linked List, Doubly Linked List and
     - Represent polynomials
 
 Complexity of various operations can be defines as follows, 
+Note : Addition and deletion here is happening at head. If it happens at tail, complexity will be O(n)
 
 <img width="493" alt="singly_linked_list" src="https://cloud.githubusercontent.com/assets/3439029/22179122/e3ad7596-dffe-11e6-81bf-823e8ed38c64.png">
 

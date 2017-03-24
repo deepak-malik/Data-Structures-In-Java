@@ -54,13 +54,15 @@ public class AssociativeArray<K, V> {
 		/* Find the hash of the key and bucket it belongs to */
 		int hash = key.hashCode();
 		int bucket = getBucket(hash);
-		/* Loop through each entry of the associative array 
+		Entry<K, V> entry = table[bucket];
+		/* Loop through the entry of the associative array 
 		 * and check if it's just a value update or a new key, value */
-		for (Entry<K, V> entry : table) {
-			if (entry != null && entry.getKey().equals(key)) {
-				entry.value = value;
+		while (entry != null) {
+			if (entry.getHash() == hash && entry.getKey().equals(key)) {
 				isNewEntry = false;
+				entry.value = value;
 			}
+			entry = entry.next;
 		}
 		/* Create a new entry and push to array */
 		if (isNewEntry) {

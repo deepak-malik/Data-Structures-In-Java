@@ -39,25 +39,25 @@ String s3 = new String("Hello").intern();
 
 ```java
 - Below are some basic API's. All are not covered here, 
-    - charAt()
+    1. charAt()
         - returns the character located at the specified index.
-    - equalsIgnoreCase()
+    2. equalsIgnoreCase()
         - determines the equality of two Strings, ignoring their case (upper or lower case doesn't matters with this function.
-    - length()
+    3. length()
         - returns the number of characters in a String.
-    - replace()
+    4. replace()
         - replaces occurrences of character with a specified new character.
-    - substring()
+    5. substring()
         - returns a part of the string. This method has two forms,
             - public String substring(int begin);
             - public String substring(int begin, int end); 
-    - toLowerCase()
+    6. toLowerCase()
         - returns string with all uppercase characters converted to lowercase
-    - valueOf()
+    7. valueOf()
         - used to convert primitive data types into Strings.
-    - toString()
+    8. toString()
         - returns the string representation of the object used to invoke this method. 
         - toString() is used to represent any Java Object into a meaningful string representation
-    - trim()
+    9. trim()
         - returns a string from which any leading and trailing white spaces has been removed
 ```

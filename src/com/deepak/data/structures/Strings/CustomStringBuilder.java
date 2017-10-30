@@ -44,7 +44,11 @@ public class CustomStringBuilder {
 	public void append(String input) {
 		if (input != null) {
 			char[] charArray = input.toCharArray();
-			if (overflow(charArray.length)) {
+			/* Using while loop here because of below use case, 
+			 * 1. Initial character buffer initialized with size 10
+			 * 2. Input string came of size 25
+			 * 3. We need to check for overflow 2 times now because size will be increased by 10 only in one time */
+			while (overflow(charArray.length)) {
 				ensureCapacity();
 			}
 			for (int i = 0; i < charArray.length; i++) {

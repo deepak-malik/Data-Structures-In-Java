@@ -101,7 +101,7 @@ Below topics/problems are covered as of now.
 - [ ] Weak Heap
 
 **11. Hashing**
-- [ ] Introduction
+- [X] [Introduction](../master/src/com/deepak/data/structures/Hashing/Introduction.md)
 - [X] [Iterator v/s Enumeration](../master/src/com/deepak/data/structures/Hashing/Iterator_vs_Enumeration.md)
 - [X] [HashTable v/s HashMap](../master/src/com/deepak/data/structures/Hashing/HashTable_vs_HashMap.md)
 - [X] [HashCode and Equals Contract](../master/src/com/deepak/data/structures/Hashing/HashCode&EqualsContract.md)

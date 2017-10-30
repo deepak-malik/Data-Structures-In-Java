@@ -13,7 +13,7 @@
 - Arrays are used to implement other data structures, such as heaps, hash tables, deques, queues, stacks, strings, and VLists.
 - Below is the representation, 
 
-<img width="426" alt="array" src="https://cloud.githubusercontent.com/assets/3439029/18146774/600b0d4a-6f86-11e6-8005-3f6da1afc95f.png">
+<img width="426" alt="arrays-1" src="https://user-images.githubusercontent.com/3439029/32186457-5b7d71d2-bd5f-11e7-8ab8-5ee19f34ff6b.png">
 **************************************
 
 **Defining Arrays**
@@ -63,13 +63,13 @@ int[][] a = new int[3][4]; // Creates a matrix with 3 rows and 4 columns
 ```
 Below is the representation of multi dimensional array  
 
-![two-dimensional-array](https://cloud.githubusercontent.com/assets/3439029/18147340/0729cd8a-6f89-11e6-841f-5ac5bf53bd02.png)
+![arrays-2](https://user-images.githubusercontent.com/3439029/32186494-70b12fa8-bd5f-11e7-83d4-5f61f38ccb75.png)
 
 There are two orders that can exist in a multidimensional array, i.e  
 _Row major_ and _Column major_  
 ex, consider below matrix
 
-<img width="185" alt="screen shot 2016-08-31 at 9 50 23 pm" src="https://cloud.githubusercontent.com/assets/3439029/18155706/04e2045c-6fc5-11e6-847e-8d8f406de844.png">
+<img width="185" alt="arrays-3" src="https://user-images.githubusercontent.com/3439029/32186517-7c5991ba-bd5f-11e7-9c82-f369b3590492.png">
 
 Here, in row-major layout, elements can be represented as **[1,2,3,4,5,6,7,8,9]** whereas in column-major layout, elements can be represented as **[1,4,7,2,5,8,3,6,9]**
 
@@ -158,4 +158,4 @@ Below operations on Arrays are implemented [here](../Arrays/BasicOperations.java
 
 **Comparison with other Data Structures**
 
-<img width="972" alt="screen shot 2016-09-01 at 4 21 12 pm" src="https://cloud.githubusercontent.com/assets/3439029/18187642/2d5f48cc-7060-11e6-8a59-4affd3fdd885.png">
+<img width="972" alt="arrays-4" src="https://user-images.githubusercontent.com/3439029/32186532-87cb9778-bd5f-11e7-86de-179d914b0d80.png">

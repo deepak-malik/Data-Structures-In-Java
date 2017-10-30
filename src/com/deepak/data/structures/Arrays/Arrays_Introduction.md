@@ -1,19 +1,19 @@
 ## Arrays
 
-- Arrays is the most basic type of data structure that stores similar kind of values. 
-- Each item in a array is a element and can be accessed using a index. 
-    - Normally arrays have 0 based index which means indexing starts from 0 and goes till _n - 1_ where n is the number of elements in array.
+- Arrays are the most basic type of data structure that stores similar kind of values. 
+- Each item in an array is an element and can be accessed using an index. 
+    - Normally arrays have 0 based index which means indexing starts from 0 and goes till _n - 1_ where n is the number of elements in an array.
     - Arrays can have 0 based indexing, 1 based indexing or n based indexing (for negative values)
 - Size of an array is fixed at runtime when initialized. It can't be changed after initialization.
-- If size has to be changed after initialization, use _ArrayList_ (Collection class) instead.
-- Size of an array can be specified using int only, since arrays are int based index.
+- If the size has to be changed after initialization, use _ArrayList_ (Collection class) instead.
+- Size of an array can be specified using int only since arrays are int based index.
 - The ArrayIndexOutOfBoundsException is thrown when a non-existing index of an array is being accessed.
 - Arrays are used to implement mathematical vectors and matrices, as well as other kinds of rectangular tables. 
 - Many databases, small and large, consist of (or include) one-dimensional arrays whose elements are records.
 - Arrays are used to implement other data structures, such as heaps, hash tables, deques, queues, stacks, strings, and VLists.
 - Below is the representation, 
 
-<img width="426" alt="screen shot 2016-08-31 at 2 21 49 pm" src="https://cloud.githubusercontent.com/assets/3439029/18146774/600b0d4a-6f86-11e6-8005-3f6da1afc95f.png">
+<img width="426" alt="array" src="https://cloud.githubusercontent.com/assets/3439029/18146774/600b0d4a-6f86-11e6-8005-3f6da1afc95f.png">
 **************************************
 
 **Defining Arrays**
@@ -30,7 +30,7 @@ However, since it's an empty array, no elements can be assigned to it:
 ```java
 array[0] = 1; // Throws java.lang.ArrayIndexOutOfBoundsException.
 ```
-Such empty arrays are typically useful as return values, so that the calling code only has to worry about dealing with an array, rather than a potential null value that may lead to a NullPointerException.
+Such empty arrays are typically used as return values so that the calling code only has to worry about dealing with an array, rather than a potentially null value that may lead to a NullPointerException.
 The length of an array must be a non-negative integer:
 ```java
 int[] array = new int[-1]; // Throws java.lang.NegativeArraySizeException
@@ -65,9 +65,9 @@ Below is the representation of multi dimensional array
 
 ![two-dimensional-array](https://cloud.githubusercontent.com/assets/3439029/18147340/0729cd8a-6f89-11e6-841f-5ac5bf53bd02.png)
 
-There are two orders that can exists in a multi dimensional array, i.e  
+There are two orders that can exist in a multidimensional array, i.e  
 _Row major_ and _Column major_  
-For ex, consider below matrix
+ex, consider below matrix
 
 <img width="185" alt="screen shot 2016-08-31 at 9 50 23 pm" src="https://cloud.githubusercontent.com/assets/3439029/18155706/04e2045c-6fc5-11e6-847e-8d8f406de844.png">
 
@@ -106,14 +106,14 @@ Here the class of T has to be explicitly passed to the constructor. The return t
 
 **Sorted Arrays**  
 
-Arrays are considered to be sorted in ascending order when each element on left of that element in a array is smaller then that element itself. Vice versa goes for descending order.
+Arrays are considered to be sorted in ascending order when each element on the left of that element in an array is smaller than that element itself. Vice versa goes for descending order.
 
 **Pros:**
 - Accessing an element is fast using the index - access time is O(1).
 - Much faster to process - see this question.  
     
 **Cons:**
-- Insertion and deletion are slow, subsequent elements must be moved - complexity for insertion in that case is O(n).
+- Insertion and deletion are slow, subsequent elements must be moved - complexity for insertion, in that case is O(n).
 - A large enough block of memory is needed to hold the array.
 - Easily corrupted (data could be inserted in the middle).  
 
@@ -126,14 +126,14 @@ Arrays are considered to be sorted in ascending order when each element on left 
 | **Size** | _Fixed length. Cannot change the size after creation_ | _Dynamic in size. Capacity grows as the elements are added_ |
 | **Content** | _Can contain primitive data types and objects_ | _Objects only. No primitive data types_ |
 | **Dimension** | _Can be multi-dimensional_ | _Normally single dimensional, but can be made multi dimensional_ |
-| **Type Safety** | _Typesafe, meaning that array will contain objects of specific class or primitives of specific data type_ | _Not type safe by default. Generics can be used to make a List type safe_ |
+| **Type Safety** | _Typesafe, meaning that array will contain objects of specific class or primitives of specific data type_ | _Not type-safe by default. Generics can be used to make a List type safe_ |
 | **Insertion/Deletion** | _Shifting existing elements may be needed if action is performed not at the end of the array_ | _Easy insertion/deletion methods provided_ |
 **************************************
 
 **Disadvantages of Arrays**
-- **Fixed Size** : The size of the array is static, i.e we define the size when we create the array, which can't change later on.
-- **One block allocation** : To allocate the array in the beginning, we may not have enough memory to hold entire array because of continous block of allocation.
-- **Complex position based insertion** : This is applicable only in case of dynamic array or list, where size can change. If we want to insert an element at position n, we have to shift all the elements in the right by one position to make space for this new element, which is a time consuming and costly operation.
+- **Fixed Size**: The size of the array is static, i.e we define the size when we create the array, which can't change later on.
+- **One block allocation**: To allocate the array, in the beginning, we may not have enough memory to hold entire array because of continuous block of allocation.
+- **Complex position based insertion**: This is applicable only in case of dynamic array or list, where size can change. If we want to insert an element at position n, we have to shift all the elements to the right by one position to make space for this new element, which is a time consuming and costly operation.
 
 **Operations on Arrays** 
 
@@ -145,7 +145,7 @@ Below operations on Arrays are implemented [here](../Arrays/BasicOperations.java
 - Traversing through the elements of array
 - Copying/Resizing arrays
 - Removing elements from arrays
-- Sorting elements in a array
+- Sorting elements in an array
 - Arrays as method params
 - Arrays in memory
 - Casting arrays

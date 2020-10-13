@@ -71,6 +71,21 @@ public class CustomArrayList<T> {
 	}
 
 	/**
+	 * Method to set an element in the list based on given index and a new value
+	 *
+	 * @param element
+	 * @param index
+	 */
+
+	public void set(E element, int index){
+		if(index < 0 || index >= size){
+			throw new IndexOutOfBoundsException("Invalid index passed !!");
+		}
+
+		elementData[index] = element;
+	}
+
+	/**
 	 * Method to remove the element at a given index
 	 * 
 	 * @param index
@@ -86,7 +101,8 @@ public class CustomArrayList<T> {
 		/* Starting from the index till last, move
 		 * each element to the left and decrease the size of list */
 		for (int i = index; i < size; i++) {
-			elementData[i] = elementData[i + 1];
+			if(i + 1 < size)
+				elementData[i] = elementData[i + 1];
 		}
 		size--;
 		return removedElement;

@@ -86,7 +86,8 @@ public class CustomArrayList<T> {
 		/* Starting from the index till last, move
 		 * each element to the left and decrease the size of list */
 		for (int i = index; i < size; i++) {
-			elementData[i] = elementData[i + 1];
+			if(i + 1 < size)
+				elementData[i] = elementData[i + 1];
 		}
 		size--;
 		return removedElement;

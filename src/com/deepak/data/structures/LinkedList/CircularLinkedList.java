@@ -44,9 +44,12 @@ public class CircularLinkedList<E> {
 			head = newNode;
 			head.next = head;
 		} else {
+			newNode.next = head;
 			Node<E> temp = head;
-			newNode.next = temp;
-			head = newNode;
+			while (temp.next != head) {
+				temp = temp.next;
+			}
+			temp.next = newNode;
 		}
 		size++;
 	}
